@@ -55,7 +55,7 @@ const en: LegalDoc = {
       blocks: [
         "If you create an account, you sign in with Sign in with Apple. We receive a stable Apple user identifier and, if you choose to share it, your email address (which may be an Apple private relay address). You may also choose a username and a profile picture, which are public in community features.",
         "When syncing is available, your garage is copied to our servers so you can get it back on a new iPhone. It stays private to you.",
-        "Accounts are managed with Supabase (authentication, database, file storage and server functions).",
+        "Accounts are managed with Supabase (authentication, database, file storage and server functions). Our Supabase project is hosted in the European Union (Paris, France).",
       ],
     },
     {
@@ -70,10 +70,10 @@ const en: LegalDoc = {
     },
     {
       id: "scan",
-      heading: "Scanning (coming soon)",
+      heading: "Scanning",
       blocks: [
-        "Reading a barcode or the text on a card happens on your iPhone, with Apple's on-device frameworks. Those images do not leave your device.",
-        "When on-device reading cannot identify the car, or when you photograph a loose car, the photo is sent over an encrypted connection to our server, which forwards it to a third-party AI provider for the sole purpose of identifying the car. We will name this provider here before the feature is released. We will only work with a provider whose terms allow us to stop it from using your photos to train its own models.",
+        "Scanning reads the barcode and the text on the card on your iPhone, with Apple's on-device frameworks (VisionKit). The camera image is processed on your device and is not sent to us or to anyone else.",
+        "Coming soon: when on-device reading cannot identify the car, or when you photograph a loose car, the photo will be sent over an encrypted connection to our server in the European Union, which will forward it to a third-party AI provider for the sole purpose of identifying the car. This fallback is not active yet. We will name this provider here before the feature is released. We will only work with a provider whose terms allow us to stop it from using your photos to train its own models.",
         "We do not keep scan photos after returning the result, unless you agree to share a confirmed identification (the photo and the car you confirmed) to help us improve recognition. That choice is off by default and you can withdraw it at any time.",
         "To count scan credits, we keep a scan counter linked to your account, or stored on your device if you do not have one.",
       ],
@@ -138,7 +138,7 @@ const en: LegalDoc = {
         {
           list: [
             "Apple Inc. (USA): Sign in with Apple and App Store payments.",
-            "Supabase, Inc. (USA): account, database, file storage and server functions.",
+            "Supabase, Inc. (USA), with data hosted in the European Union (Paris, France): account, database, file storage and server functions.",
             "RevenueCat, Inc. (USA): subscription status.",
             "TelemetryDeck GmbH (Germany): anonymous analytics.",
             "A third-party AI provider, via our server, to identify scanned cars (coming soon, named here before release).",
@@ -260,7 +260,7 @@ const fr: LegalDoc = {
       blocks: [
         "Si vous créez un compte, vous vous connectez avec Se connecter avec Apple. Nous recevons un identifiant Apple stable et, si vous choisissez de la partager, votre adresse email (qui peut être une adresse relais privée d'Apple). Vous pouvez aussi choisir un pseudo et une photo de profil, publics dans les fonctions communautaires.",
         "Quand la synchronisation sera disponible, votre garage sera copié sur nos serveurs pour que vous le retrouviez sur un nouvel iPhone. Il reste privé.",
-        "Les comptes sont gérés avec Supabase (authentification, base de données, stockage de fichiers et fonctions serveur).",
+        "Les comptes sont gérés avec Supabase (authentification, base de données, stockage de fichiers et fonctions serveur). Notre projet Supabase est hébergé dans l'Union européenne (Paris, France).",
       ],
     },
     {
@@ -275,10 +275,10 @@ const fr: LegalDoc = {
     },
     {
       id: "scan",
-      heading: "Le scan (bientôt)",
+      heading: "Le scan",
       blocks: [
-        "La lecture d'un code-barres ou du texte d'un blister se fait sur votre iPhone, avec les outils embarqués d'Apple. Ces images ne quittent pas votre appareil.",
-        "Quand la lecture sur l'iPhone ne suffit pas, ou quand vous photographiez une voiture hors blister, la photo est envoyée par une connexion chiffrée à notre serveur, qui la transmet à un fournisseur d'IA tiers dans le seul but d'identifier la voiture. Nous nommerons ce fournisseur ici avant la sortie de la fonction. Nous ne travaillerons qu'avec un fournisseur dont les conditions nous permettent de l'empêcher d'utiliser vos photos pour entraîner ses propres modèles.",
+        "Le scan lit le code-barres et le texte du blister sur votre iPhone, avec les outils embarqués d'Apple (VisionKit). L'image de l'appareil photo est traitée sur votre appareil et n'est envoyée ni à nous ni à personne d'autre.",
+        "Bientôt : quand la lecture sur l'iPhone ne suffira pas, ou quand vous photographierez une voiture hors blister, la photo sera envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmettra à un fournisseur d'IA tiers dans le seul but d'identifier la voiture. Ce recours n'est pas encore actif. Nous nommerons ce fournisseur ici avant la sortie de la fonction. Nous ne travaillerons qu'avec un fournisseur dont les conditions nous permettent de l'empêcher d'utiliser vos photos pour entraîner ses propres modèles.",
         "Nous ne conservons pas les photos de scan après avoir renvoyé le résultat, sauf si vous acceptez de partager une identification confirmée (la photo et la voiture confirmée) pour nous aider à améliorer la reconnaissance. Ce choix est désactivé par défaut et vous pouvez le retirer à tout moment.",
         "Pour compter les crédits de scan, nous conservons un compteur lié à votre compte, ou stocké sur votre appareil si vous n'en avez pas.",
       ],
@@ -343,7 +343,7 @@ const fr: LegalDoc = {
         {
           list: [
             "Apple Inc. (États-Unis) : Se connecter avec Apple et paiements App Store.",
-            "Supabase, Inc. (États-Unis) : compte, base de données, stockage de fichiers et fonctions serveur.",
+            "Supabase, Inc. (États-Unis), données hébergées dans l'Union européenne (Paris, France) : compte, base de données, stockage de fichiers et fonctions serveur.",
             "RevenueCat, Inc. (États-Unis) : statut des abonnements.",
             "TelemetryDeck GmbH (Allemagne) : statistiques anonymes.",
             "Un fournisseur d'IA tiers, via notre serveur, pour identifier les voitures scannées (bientôt, nommé ici avant la sortie).",
