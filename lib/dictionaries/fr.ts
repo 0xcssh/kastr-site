@@ -26,7 +26,24 @@ export const fr: Dictionary = {
     title: "Sache-le en deux secondes.",
     subtitle:
       "Si tu l'as déjà, si c'est une Treasure Hunt, et combien elle vaut. Directement devant le rayon.",
-    imageAlt: "Des mains tiennent une voiture miniature sous blister au-dessus d'un présentoir, vue de dessus",
+    imageAlt: "Écran de recherche de Kastr pour F40 : six résultats, une Super Treasure Hunt, deux voitures déjà au garage",
+  },
+  mockup: {
+    search: "Recherche",
+    garage: "Garage",
+    hunt: "Chasse",
+    inGarage: "Au garage",
+    toGarage: "Au garage",
+    wishlist: "Liste d'envies",
+    results: "6 résultats",
+    th: "Treasure Hunt",
+    sth: "Super Treasure Hunt",
+    added: "Ajoutée à ton garage",
+    guide: "Super Treasure Hunt 2026",
+    year: "Année",
+    series: "Série",
+    colour: "Couleur",
+    toyNumber: "N° de jouet",
   },
   answer: {
     question: "Qu'est-ce que Kastr ?",
@@ -48,7 +65,7 @@ export const fr: Dictionary = {
       sth: "Super Treasure Hunt",
     },
     chipsLabel: "Ce que Kastr affiche sur un résultat de recherche",
-    imageAlt: "Un pouce fait défiler un résultat pendant que l'autre main tient une voiture, vue de dessus",
+    imageAlt: "Fiche Kastr d'une Honda Civic Custom 2026, marquée comme déjà au garage",
   },
   features: {
     title: "Tout ce qu'il faut pour chasser, hors ligne.",
@@ -78,7 +95,7 @@ export const fr: Dictionary = {
   reveal: {
     title: "Trouve une Super Treasure Hunt. Ressens-le.",
     body: "Quand la voiture est une Treasure Hunt ou une Super Treasure Hunt, Kastr ne la cache pas dans une petite étiquette. L'écran s'illumine d'or Spectraflame et ton iPhone répond d'une vibration franche.",
-    imageAlt: "Une Super Treasure Hunt à la peinture Spectraflame, tenue entre deux doigts",
+    imageAlt: "Écran de révélation de Kastr pour une Super Treasure Hunt, à côté du guide de chasse 2026",
   },
   soon: {
     title: "En route",

@@ -18,6 +18,7 @@ import { AppStoreBadge } from "@/components/app-store-badge";
 import { Faq } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 import { MediaFrame } from "@/components/media-frame";
+import { DetailMockup, RevealMockup, SearchMockup } from "@/components/phone-mockups";
 import { RarityChip } from "@/components/rarity-chip";
 import { SiteShell } from "@/components/site-shell";
 import { getDict } from "@/lib/dictionaries";
@@ -51,7 +52,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         )}
       />
 
-      {/* Hero: promise on the left, faceless aisle photo on the right. */}
+      {/* Hero: promise on the left, the search screen on the right (a real photo replaces it once
+          lib/media.ts has one). */}
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-10 sm:px-8 md:pt-16 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16 lg:pt-12">
         <div>
           <p className="enter text-sm font-semibold uppercase tracking-[0.16em] text-accent">{d.hero.eyebrow}</p>
@@ -65,14 +67,18 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             <AppStoreBadge d={d} />
           </div>
         </div>
-        <MediaFrame
-          slot={media.hero}
-          name="hero"
-          alt={d.hero.imageAlt}
-          priority
-          className="enter enter-delay-2 mx-auto w-full max-w-md lg:max-w-none"
-          sizes="(min-width: 1024px) 40vw, 90vw"
-        />
+        {media.hero.src ? (
+          <MediaFrame
+            slot={media.hero}
+            name="hero"
+            alt={d.hero.imageAlt}
+            priority
+            className="enter enter-delay-2 mx-auto w-full max-w-md lg:max-w-none"
+            sizes="(min-width: 1024px) 40vw, 90vw"
+          />
+        ) : (
+          <SearchMockup m={d.mockup} alt={d.hero.imageAlt} className="enter enter-delay-2 mx-auto w-full max-w-md" />
+        )}
       </section>
 
       <AnswerBlock question={d.answer.question}>{d.answer.text}</AnswerBlock>
@@ -91,7 +97,11 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
 
       {/* The aisle moment: owned, duplicate, TH, STH. */}
       <section className="reveal mx-auto mt-28 grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
-        <MediaFrame slot={media.aisle} name="aisle" alt={d.aisle.imageAlt} className="order-2 lg:order-1" />
+        {media.aisle.src ? (
+          <MediaFrame slot={media.aisle} name="aisle" alt={d.aisle.imageAlt} className="order-2 lg:order-1" />
+        ) : (
+          <DetailMockup m={d.mockup} alt={d.aisle.imageAlt} className="order-2 lg:order-1" />
+        )}
         <div className="order-1 lg:order-2">
           <h2 className="font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-ink md:text-6xl">
             {d.aisle.title}
@@ -166,13 +176,17 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           <span className="text-spectraflame">{d.reveal.title}</span>
         </h2>
         <p className="mx-auto mt-6 max-w-[56ch] text-lg leading-relaxed text-muted">{d.reveal.body}</p>
-        <MediaFrame
-          slot={media.reveal}
-          name="reveal"
-          alt={d.reveal.imageAlt}
-          className="mt-12 w-full"
-          sizes="(min-width: 1280px) 1200px, 100vw"
-        />
+        {media.reveal.src ? (
+          <MediaFrame
+            slot={media.reveal}
+            name="reveal"
+            alt={d.reveal.imageAlt}
+            className="mt-12 w-full"
+            sizes="(min-width: 1280px) 1200px, 100vw"
+          />
+        ) : (
+          <RevealMockup m={d.mockup} alt={d.reveal.imageAlt} className="mt-12 w-full" />
+        )}
       </section>
 
       {/* Coming soon: stacked rows, clearly labelled. */}

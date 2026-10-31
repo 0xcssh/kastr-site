@@ -1,6 +1,6 @@
 // Photos the landing needs. Style (CLAUDE.md §11): faceless, hands and cars only, shot from above,
 // real store aisles. Drop the file in public/media/ and set `src` (e.g. "/media/hero.jpg").
-// While `src` is null, the page renders a neutral carbon panel in the same frame (no layout shift).
+// While `src` is null, the page shows the matching phone mockup (components/phone-mockups.tsx).
 
 export type MediaSlot = { src: string | null; width: number; height: number };
 

@@ -6,6 +6,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   poweredByHeader: false,
+  // No image optimizer in a static export: photos in public/media/ ship as they are.
+  images: { unoptimized: true },
   experimental: {
     // The root layout lives under app/[locale], so unmatched URLs need app/global-not-found.tsx.
     globalNotFound: true,

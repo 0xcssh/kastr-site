@@ -26,7 +26,25 @@ export const en = {
     title: "Know in two seconds.",
     subtitle:
       "If you already own it, if it's a Treasure Hunt, and what it's worth. Right in front of the pegs.",
-    imageAlt: "Hands holding a carded diecast car above a store peg, seen from above",
+    imageAlt: "Kastr search screen for F40: six results, one Super Treasure Hunt, two cars already in the garage",
+  },
+  // Text inside the phone mockups: the app's own strings (Diecast/Localizable.xcstrings).
+  mockup: {
+    search: "Search",
+    garage: "Garage",
+    hunt: "Hunt",
+    inGarage: "In garage",
+    toGarage: "To garage",
+    wishlist: "Wishlist",
+    results: "6 results",
+    th: "Treasure Hunt",
+    sth: "Super Treasure Hunt",
+    added: "Added to your garage",
+    guide: "2026 Super Treasure Hunts",
+    year: "Year",
+    series: "Series",
+    colour: "Color",
+    toyNumber: "Toy #",
   },
   answer: {
     question: "What is Kastr?",
@@ -48,7 +66,7 @@ export const en = {
       sth: "Super Treasure Hunt",
     },
     chipsLabel: "What Kastr shows on a search result",
-    imageAlt: "A thumb scrolling a search result while the other hand holds a car, top view",
+    imageAlt: "Kastr car page for a 2026 Honda Civic Custom, marked as in the garage",
   },
   features: {
     title: "Everything a hunter needs, offline.",
@@ -78,7 +96,7 @@ export const en = {
   reveal: {
     title: "Find a Super Treasure Hunt. Feel it.",
     body: "When the car is a Treasure Hunt or a Super Treasure Hunt, Kastr doesn't hide it in a small label. The screen lights up in Spectraflame gold and your iPhone answers with a firm tap.",
-    imageAlt: "A Super Treasure Hunt car with Spectraflame paint, held between two fingers",
+    imageAlt: "Kastr reveal screen for a Super Treasure Hunt, next to the 2026 hunt guide",
   },
   soon: {
     title: "On the way",
