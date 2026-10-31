@@ -12,7 +12,7 @@ export const config = {
   appStoreUrl: "https://apps.apple.com/app/idTODO",
 
   // Single contact address used on support and legal pages. The founder has not chosen it yet.
-  supportEmail: "TODO@kastr.app",
+  supportEmail: "support@kastr.app",
 
   // Social profiles (none exist yet, CLAUDE.md §11). Add URLs here when they do; they feed Organization.sameAs.
   social: [] as string[],
