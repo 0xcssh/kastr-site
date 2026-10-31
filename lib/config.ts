@@ -11,7 +11,7 @@ export const config = {
   // Replace with https://apps.apple.com/app/id<APP_ID> once the app is created.
   appStoreUrl: "https://apps.apple.com/app/idTODO",
 
-  // Single contact address used on support and legal pages. The founder has not chosen it yet.
+  // Single contact address used on support and legal pages. Cloudflare Email Routing forwards it.
   supportEmail: "support@kastr.app",
 
   // Social profiles (none exist yet, CLAUDE.md §11). Add URLs here when they do; they feed Organization.sameAs.
