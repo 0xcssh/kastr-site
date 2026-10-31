@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Kastr look, matched to the app (Diecast/Design/Theme.swift): carbon black, track orange accent,
+   Spectraflame gold reserved for rarities. Dark only, like the app (forced dark theme). */
+@theme {
+  --color-carbon: #0d0d0f;
+  --color-surface: #16161a;
+  --color-surface-2: #1e1e24;
+  --color-line: #2a2a31;
+  --color-ink: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-faint: #8a8a93;
+  --color-accent: #ff6b00;
+  --color-gold: #fac740;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), "Arial Narrow", ui-sans-serif, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-carbon);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-carbon);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-carbon);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Checkered flag pattern, used as a racing texture. */
+.checker {
+  background-image: conic-gradient(#fff 25%, transparent 0 50%, #fff 0 75%, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Spectraflame: the metallic gold of Super Treasure Hunts. */
+.spectraflame {
+  background-image: linear-gradient(115deg, #fff0a8 0%, #fac740 28%, #c27f1a 52%, #fac740 74%, #fff0a8 100%);
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+}
+
+.text-spectraflame {
+  background-image: linear-gradient(115deg, #fff0a8 0%, #fac740 35%, #e0a032 60%, #fac740 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* The gold sweeps slowly, like light running across paint. Motivated: it is the reward the app shows. */
+  .spectraflame {
+    animation: shine 5s ease-in-out infinite alternate;
+  }
+
+  /* Hero entrance: copy first, then the photo. */
+  .enter {
+    animation: enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .enter-delay {
+    animation-delay: 0.12s;
+  }
+  .enter-delay-2 {
+    animation-delay: 0.24s;
+  }
+
+  /* Sections settle in as they enter the viewport (CSS scroll-driven, no JS). */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,0 +1,45 @@
+# Kastr
+
+> Kastr is an iPhone app for diecast car collectors. It tells you, in the store aisle, in about two seconds, whether you already own a car, whether it is a Treasure Hunt, and (soon) what it is worth. Free to download, iOS 17 or later. Independent, not affiliated with Mattel, Inc.
+
+## What it does today
+
+- Offline catalog of about 78,000 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.
+- Search by name, year, series or toy number, free and unlimited, with no signal needed.
+- "Already in my garage?" badge on every search result, and a duplicate warning.
+- Treasure Hunt (TH) and Super Treasure Hunt (STH) reveal with a gold animation and haptic feedback.
+- Garage with price paid, place found, condition and notes; a wishlist; CSV import and export.
+- Yearly TH and STH hunt guide as a photo grid, with owned cars ticked.
+- Completion tracking with medals.
+
+## Coming soon (not available yet)
+
+- Scanning: barcode, card text, and photo recognition for loose cars.
+- Values in local currency, with the number of sales behind each value and the sales themselves.
+- Community feed with reporting and blocking.
+
+## Business model
+
+- Free to download. No ads, no ad tracking.
+- Kastr Pro is an optional auto-renewing subscription sold through the App Store. Prices are shown in the app.
+
+## Data and privacy
+
+- The collection is stored on the iPhone; an account (Sign in with Apple) is optional.
+- Anonymous analytics (TelemetryDeck). Purchases via Apple and RevenueCat.
+- Catalog text data comes from Fandom wikis under CC BY-SA.
+
+## Pages
+
+- Home (English): https://kastr.app/en
+- Home (French): https://kastr.app/fr
+- Support: https://kastr.app/en/support
+- Privacy policy: https://kastr.app/en/privacy
+- Terms of use: https://kastr.app/en/terms
+- Credits and catalog license: https://kastr.app/en/credits
+
+## FAQ
+
+- Does Kastr work offline? Yes, the whole catalog is stored on the iPhone.
+- Is Kastr on Android? Not yet; iPhone only.
+- Is Kastr affiliated with Mattel? No. Hot Wheels and Matchbox are trademarks of Mattel, Inc.

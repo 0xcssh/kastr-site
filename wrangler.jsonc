@@ -1,0 +1,21 @@
+{
+  // Static export (`npm run build` writes out/) served by a Worker. Deploy: `npm run deploy`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kastr-site",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "account_id": "b6dd8a4e499a671d1cdda258c0410cc6",
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "kastr.app", "custom_domain": true },
+    { "pattern": "www.kastr.app", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "observability": { "enabled": false }
+}
