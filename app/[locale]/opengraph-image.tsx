@@ -28,7 +28,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "#0d0d0f",
+          background: "#0b0b0e",
           color: "#f4f4f5",
           position: "relative",
         }}
@@ -37,12 +37,17 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
           {squares.map((i) => (
             <div
               key={i}
-              style={{ width: 40, height: 40, background: (Math.floor(i / 6) + i) % 2 === 0 ? "#ffffff" : "#0d0d0f" }}
+              style={{ width: 40, height: 40, background: (Math.floor(i / 6) + i) % 2 === 0 ? "#ffffff" : "#0b0b0e" }}
             />
           ))}
         </div>
-        <div style={{ display: "flex", fontSize: 44, fontWeight: 900, fontStyle: "italic", letterSpacing: -1 }}>
-          KASTR<span style={{ color: "#ff6b00" }}>.</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, transform: "skewX(-10deg)" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
+            <div style={{ display: "flex", width: 40, height: 6, borderRadius: 3, background: "#e10a1e" }} />
+            <div style={{ display: "flex", width: 27, height: 6, borderRadius: 3, background: "#e10a1e" }} />
+            <div style={{ display: "flex", width: 16, height: 6, borderRadius: 3, background: "#e10a1e" }} />
+          </div>
+          <div style={{ display: "flex", fontSize: 44, fontWeight: 900, letterSpacing: 2 }}>KASTR</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 92, fontWeight: 900, lineHeight: 1, letterSpacing: -3, textTransform: "uppercase" }}>
@@ -52,7 +57,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
             {d.hero.subtitle}
           </div>
         </div>
-        <div style={{ display: "flex", height: 10, width: 220, background: "#ff6b00" }} />
+        <div style={{ display: "flex", height: 10, width: 220, background: "#e10a1e" }} />
       </div>
     ),
     { ...size },

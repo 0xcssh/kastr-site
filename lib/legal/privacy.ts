@@ -72,9 +72,9 @@ const en: LegalDoc = {
       id: "scan",
       heading: "Scanning",
       blocks: [
-        "Scanning reads the barcode and the text on the card on your iPhone, with Apple's on-device frameworks (VisionKit). The camera image is processed on your device and is not sent to us or to anyone else.",
-        "Coming soon: when on-device reading cannot identify the car, or when you photograph a loose car, the photo will be sent over an encrypted connection to our server in the European Union, which will forward it to a third-party AI provider for the sole purpose of identifying the car. This fallback is not active yet. We will name this provider here before the feature is released. We will only work with a provider whose terms allow us to stop it from using your photos to train its own models.",
-        "We do not keep scan photos after returning the result, unless you agree to share a confirmed identification (the photo and the car you confirmed) to help us improve recognition. That choice is off by default and you can withdraw it at any time.",
+        "Scanning first reads the barcode and the toy number on the card on your iPhone, with Apple's on-device frameworks (VisionKit). That image stays on your device.",
+        "When on-device reading cannot identify the car, or when you photograph a loose car, Kastr can identify it with AI. The app asks for your permission the first time, and you can turn this off at any time in Settings > Scanner. The photo is then sent over an encrypted connection to our server in the European Union, which forwards it to OpenAI for the sole purpose of identifying the car. Our scan server does not store or log the photo. OpenAI does not use it to train its models and may keep it for up to 30 days to detect abuse, then deletes it.",
+        "Helping train Kastr's recognition: when you add a car to your garage from a scan, the photo and the car you confirmed can be kept to build Kastr's own recognition model. This setting turns on when you allow AI identification, as the permission prompt explains, and you can turn it off at any time in Settings > Scanner. These photos are kept in private storage with the car and a hashed device identifier, without your account or your name. Their retention period has not been set yet and will be stated here; until then, you can ask us to delete them at support@kastr.app.",
         "To count scan credits, we keep a scan counter linked to your account, or stored on your device if you do not have one.",
       ],
     },
@@ -99,6 +99,15 @@ const en: LegalDoc = {
       heading: "Catalog photos",
       blocks: [
         "Car photos in the catalog are downloaded from image servers when you view them. Today, some are served by Fandom, Inc., which hosts the wikis our catalog comes from. Like any web request, downloading a photo reveals your IP address to the server that sends it. No account data is shared with it.",
+      ],
+    },
+    {
+      id: "prices",
+      heading: "Values, currencies and eBay links",
+      blocks: [
+        "Values come from recent eBay sales, which our server collects through eBay's programming interfaces and through a sales data provider (Trawl), and from the prices collectors share in Kastr. Our server only sends these services its own searches about cars, never data about you.",
+        "Prices are converted to your currency with the daily reference rates published by the European Central Bank. The original price is shown next to it.",
+        "\"Where to find it\" shows eBay listings open right now. Opening one takes you to eBay, whose own privacy policy then applies. These links may be eBay Partner Network affiliate links: if you buy, Kastr may earn a commission at no extra cost to you, and eBay may use cookies or similar technology to attribute the purchase.",
       ],
     },
     {
@@ -141,7 +150,7 @@ const en: LegalDoc = {
             "Supabase, Inc. (USA), with data hosted in the European Union (Paris, France): account, database, file storage and server functions.",
             "RevenueCat, Inc. (USA): subscription status.",
             "TelemetryDeck GmbH (Germany): anonymous analytics.",
-            "A third-party AI provider, via our server, to identify scanned cars (coming soon, named here before release).",
+            "OpenAI, L.L.C. (USA): identification of scanned cars, only when you use AI identification.",
             "Cloudflare, Inc. (USA): website hosting and domain.",
             "Fandom, Inc. (USA): delivery of some catalog photos.",
           ],
@@ -277,9 +286,9 @@ const fr: LegalDoc = {
       id: "scan",
       heading: "Le scan",
       blocks: [
-        "Le scan lit le code-barres et le texte du blister sur votre iPhone, avec les outils embarqués d'Apple (VisionKit). L'image de l'appareil photo est traitée sur votre appareil et n'est envoyée ni à nous ni à personne d'autre.",
-        "Bientôt : quand la lecture sur l'iPhone ne suffira pas, ou quand vous photographierez une voiture hors blister, la photo sera envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmettra à un fournisseur d'IA tiers dans le seul but d'identifier la voiture. Ce recours n'est pas encore actif. Nous nommerons ce fournisseur ici avant la sortie de la fonction. Nous ne travaillerons qu'avec un fournisseur dont les conditions nous permettent de l'empêcher d'utiliser vos photos pour entraîner ses propres modèles.",
-        "Nous ne conservons pas les photos de scan après avoir renvoyé le résultat, sauf si vous acceptez de partager une identification confirmée (la photo et la voiture confirmée) pour nous aider à améliorer la reconnaissance. Ce choix est désactivé par défaut et vous pouvez le retirer à tout moment.",
+        "Le scan lit d'abord le code-barres et le numéro de jouet du blister sur votre iPhone, avec les outils embarqués d'Apple (VisionKit). Cette image reste sur votre appareil.",
+        "Quand la lecture sur l'iPhone ne suffit pas, ou quand vous photographiez une voiture hors blister, Kastr peut l'identifier avec l'IA. L'app vous demande votre accord la première fois, et vous pouvez désactiver cette option à tout moment dans Réglages > Scanner. La photo est alors envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmet à OpenAI dans le seul but d'identifier la voiture. Notre serveur de scan ne stocke ni ne journalise la photo. OpenAI ne l'utilise pas pour entraîner ses modèles et peut la conserver jusqu'à 30 jours pour détecter les abus, puis la supprime.",
+        "Aider à entraîner la reconnaissance de Kastr : quand vous ajoutez une voiture à votre garage depuis un scan, la photo et la voiture confirmée peuvent être conservées pour construire le propre modèle de reconnaissance de Kastr. Ce réglage s'active quand vous autorisez l'identification par IA, comme l'explique la demande d'accord, et vous pouvez le désactiver à tout moment dans Réglages > Scanner. Ces photos sont gardées dans un stockage privé avec la voiture et un identifiant d'appareil haché, sans votre compte ni votre nom. Leur durée de conservation n'est pas encore fixée et sera indiquée ici ; en attendant, vous pouvez nous demander de les supprimer à support@kastr.app.",
         "Pour compter les crédits de scan, nous conservons un compteur lié à votre compte, ou stocké sur votre appareil si vous n'en avez pas.",
       ],
     },
@@ -304,6 +313,15 @@ const fr: LegalDoc = {
       heading: "Les photos du catalogue",
       blocks: [
         "Les photos de voitures du catalogue sont téléchargées depuis des serveurs d'images quand vous les affichez. Aujourd'hui, certaines sont servies par Fandom, Inc., qui héberge les wikis dont vient notre catalogue. Comme pour toute requête web, télécharger une photo révèle votre adresse IP au serveur qui l'envoie. Aucune donnée de compte ne lui est transmise.",
+      ],
+    },
+    {
+      id: "prices",
+      heading: "Valeurs, devises et liens eBay",
+      blocks: [
+        "Les valeurs viennent des ventes eBay récentes, que notre serveur collecte par les interfaces de programmation d'eBay et par un fournisseur de données de ventes (Trawl), et des prix partagés par les collectionneurs dans Kastr. Notre serveur n'envoie à ces services que ses propres recherches sur des voitures, jamais de données vous concernant.",
+        "Les prix sont convertis dans votre devise avec les taux de référence quotidiens publiés par la Banque centrale européenne. Le prix d'origine est affiché à côté.",
+        "« Où la trouver » affiche les annonces eBay ouvertes en ce moment. En ouvrir une vous emmène sur eBay, dont la propre politique de confidentialité s'applique alors. Ces liens peuvent être des liens affiliés eBay Partner Network : si vous achetez, Kastr peut toucher une commission sans surcoût pour vous, et eBay peut utiliser des cookies ou une technologie similaire pour attribuer l'achat.",
       ],
     },
     {
@@ -346,7 +364,7 @@ const fr: LegalDoc = {
             "Supabase, Inc. (États-Unis), données hébergées dans l'Union européenne (Paris, France) : compte, base de données, stockage de fichiers et fonctions serveur.",
             "RevenueCat, Inc. (États-Unis) : statut des abonnements.",
             "TelemetryDeck GmbH (Allemagne) : statistiques anonymes.",
-            "Un fournisseur d'IA tiers, via notre serveur, pour identifier les voitures scannées (bientôt, nommé ici avant la sortie).",
+            "OpenAI, L.L.C. (États-Unis) : identification des voitures scannées, seulement quand vous utilisez l'identification par IA.",
             "Cloudflare, Inc. (États-Unis) : hébergement du site et nom de domaine.",
             "Fandom, Inc. (États-Unis) : diffusion de certaines photos du catalogue.",
           ],

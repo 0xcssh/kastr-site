@@ -4,10 +4,17 @@ import { getDict } from "@/lib/dictionaries";
 import { localeName, locales, type Locale } from "@/lib/i18n";
 import { AppStoreBadge } from "./app-store-badge";
 
+// The app's wordmark (Diecast/Views/SplashView.swift, KastrWordmark): three red speed stripes of
+// shrinking length, then KASTR in wide Saira, slanted for the racing lean (Saira has no italic).
 function Wordmark() {
   return (
-    <span className="font-display text-[1.65rem] font-black uppercase italic leading-none tracking-tight text-ink">
-      Kastr<span className="text-accent">.</span>
+    <span className="inline-flex -skew-x-[10deg] items-center gap-[0.18em] text-[1.6rem] leading-none text-ink">
+      <span aria-hidden="true" className="flex flex-col items-end gap-[0.08em]">
+        <span className="h-[0.14em] w-[0.9em] rounded-full bg-accent" />
+        <span className="h-[0.14em] w-[0.6em] rounded-full bg-accent" />
+        <span className="h-[0.14em] w-[0.35em] rounded-full bg-accent" />
+      </span>
+      <span className="font-display font-black uppercase tracking-[0.06em]">Kastr</span>
     </span>
   );
 }
@@ -22,7 +29,7 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
     <>
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-carbon"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
       >
         {d.nav.skip}
       </a>

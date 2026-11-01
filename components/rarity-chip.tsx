@@ -1,14 +1,14 @@
 import { CheckCircle, Copy, Flame } from "@phosphor-icons/react/dist/ssr";
 
 // Styled after the badges the app shows on a search result (Diecast/Views/RarityBadge.swift,
-// OwnershipBar.swift): green owned, orange duplicate, silver TH, Spectraflame gold STH.
+// OwnershipBar.swift): chrono green owned, titanium duplicate, silver TH, Spectraflame gold STH.
 type Kind = "owned" | "duplicate" | "th" | "sth";
 
 const styles: Record<Kind, string> = {
-  owned: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
-  duplicate: "border-accent/40 bg-accent/10 text-accent",
-  th: "border-white/25 bg-[linear-gradient(135deg,#ffffff,#d9d9d9_45%,#8c8c8c)] text-carbon",
-  sth: "spectraflame border-gold/50 text-carbon",
+  owned: "border-chrono/40 bg-chrono/10 text-chrono",
+  duplicate: "border-titanium/40 bg-titanium/10 text-titanium",
+  th: "border-white/25 bg-[linear-gradient(135deg,#ffffff,#d9d9d9_45%,#8c8c8c)] text-[#0b0b0e]",
+  sth: "spectraflame border-gold/50 text-[#0b0b0e]",
 };
 
 export function RarityChip({ kind, label }: { kind: Kind; label: string }) {

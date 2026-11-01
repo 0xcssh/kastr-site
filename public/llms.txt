@@ -1,21 +1,20 @@
 # Kastr
 
-> Kastr is an iPhone app for diecast car collectors. It tells you, in the store aisle, in about two seconds, whether you already own a car, whether it is a Treasure Hunt, and (soon) what it is worth. Free to download, iOS 17 or later. Independent, not affiliated with Mattel, Inc.
+> Kastr is an iPhone app for diecast car collectors. It tells you, in the store aisle, in about two seconds, whether you already own a car, whether it is a Treasure Hunt, and what it sold for recently. Free to download, iOS 17 or later. Independent, not affiliated with Mattel, Inc.
 
 ## What it does today
 
-- Offline catalog of about 78,000 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.
+- Offline catalog of 78,256 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.
 - Search by name, year, series or toy number, free and unlimited, with no signal needed.
-- "Already in my garage?" badge on every search result, and a duplicate warning.
-- Treasure Hunt (TH) and Super Treasure Hunt (STH) reveal with a gold animation and haptic feedback.
-- Garage with price paid, place found, condition and notes; a wishlist; CSV import and export.
-- Yearly TH and STH hunt guide as a photo grid, with owned cars ticked.
-- Completion tracking with medals.
+- Hunt: scan cards in a row (barcode and toy number read on the iPhone, AI identification as a fallback with the user's permission), then review. Each result shows "already in my garage", duplicate, Treasure Hunt (TH) or Super Treasure Hunt (STH).
+- The year's TH and STH list as a photo grid, with found cars ticked; a gold reveal with haptic feedback.
+- Garage like a portfolio: price paid, value, makers, decades, rarities and series in progress; a wishlist; CSV import and export.
+- Values from recent eBay sales and prices shared by collectors, converted to the local currency with European Central Bank rates, with the number of sales behind each value.
+- "Where to find it": eBay listings open right now for a car (may be eBay Partner Network affiliate links).
+- Completion tracking with medals. Dark and light themes, share card.
 
 ## Coming soon (not available yet)
 
-- Scanning: barcode, card text, and photo recognition for loose cars.
-- Values in local currency, with the number of sales behind each value and the sales themselves.
 - Community feed with reporting and blocking.
 
 ## Business model
@@ -27,6 +26,7 @@
 
 - The collection is stored on the iPhone; an account (Sign in with Apple) is optional.
 - Anonymous analytics (TelemetryDeck). Purchases via Apple and RevenueCat.
+- AI identification of scans goes through our EU server to OpenAI, only with the user's permission.
 - Catalog text data comes from Fandom wikis under CC BY-SA.
 
 ## Pages

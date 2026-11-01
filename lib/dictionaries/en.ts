@@ -6,7 +6,7 @@ export const en = {
   meta: {
     title: "Kastr: the diecast collector app for the aisle",
     description:
-      "Know in two seconds if you already own a diecast car, if it's a Treasure Hunt, and what it's worth. Offline catalog of about 78,000 cars, iPhone.",
+      "Know in two seconds if you already own a diecast car, if it's a Treasure Hunt, and what it's worth. 78,256 cars offline, recent sales in your currency. For iPhone.",
   },
   nav: {
     features: "Features",
@@ -26,90 +26,68 @@ export const en = {
     title: "Know in two seconds.",
     subtitle:
       "If you already own it, if it's a Treasure Hunt, and what it's worth. Right in front of the pegs.",
-    imageAlt: "Kastr search screen for F40: six results, one Super Treasure Hunt, two cars already in the garage",
-  },
-  // Text inside the phone mockups: the app's own strings (Diecast/Localizable.xcstrings).
-  mockup: {
-    search: "Search",
-    garage: "Garage",
-    hunt: "Hunt",
-    inGarage: "In garage",
-    toGarage: "To garage",
-    wishlist: "Wishlist",
-    results: "6 results",
-    th: "Treasure Hunt",
-    sth: "Super Treasure Hunt",
-    added: "Added to your garage",
-    guide: "2026 Super Treasure Hunts",
-    year: "Year",
-    series: "Series",
-    colour: "Color",
-    toyNumber: "Toy #",
+    imageAlt: "Kastr car page for the 2026 '23 Ram 1500 Super Treasure Hunt in Spectraflame Plum Crazy, already in the garage",
   },
   answer: {
     question: "What is Kastr?",
-    text: "Kastr is an iPhone app for diecast car collectors. It carries an offline catalog of about 78,000 cars from 1968 to today: Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions. In the store aisle it tells you whether a car is already in your garage and whether it is a Treasure Hunt.",
+    text: "Kastr is an iPhone app for diecast car collectors. It carries an offline catalog of 78,256 cars from 1968 to today: Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions. In the store aisle it reads the card, tells you whether the car is already in your garage and whether it is a Treasure Hunt, and shows recent sales in your own currency.",
   },
   stats: [
-    { value: "78,000+", label: "cars in the catalog" },
+    { value: "78,256", label: "cars in the catalog" },
     { value: "1968", label: "to this year's releases" },
     { value: "7", label: "brands, Hot Wheels first" },
-    { value: "Offline", label: "search, garage and hunt guide" },
+    { value: "Offline", label: "search, garage and hunt list" },
   ],
-  aisle: {
-    title: "Already in your garage?",
-    body: "Type a name, a year or the toy number on the card. Kastr checks your garage on the spot, with no signal, and flags a double before you pay for it.",
+  hunt: {
+    title: "Scan the peg. Know before you pay.",
+    body: "Shoot card after card without stopping and review them after. Each result says if the car is already in your garage, if it would be a double, and if it's a Treasure Hunt. The year's TH and STH list sits on top, with a tick on the ones you found.",
     chips: {
       owned: "In your garage",
       duplicate: "Duplicate",
       th: "Treasure Hunt",
       sth: "Super Treasure Hunt",
     },
-    chipsLabel: "What Kastr shows on a search result",
-    imageAlt: "Kastr car page for a 2026 Honda Civic Custom, marked as in the garage",
+    chipsLabel: "What Kastr shows on a scanned car",
+    imageAlt: "Kastr Hunt screen: 2 of the 15 Super Treasure Hunts of 2026 found, with the year's list as a photo grid",
+  },
+  garage: {
+    title: "Your garage, like a portfolio.",
+    body: "What you paid, what it's worth today and the gap between the two. Your makers, your decades, your rarities, and the series you are close to finishing. CSV import and export, so your spreadsheet comes with you.",
+    imageAlt: "Kastr garage: total paid, 39 cars, Super Treasure Hunt progress and the cars as photo cards",
   },
   features: {
-    title: "Everything a hunter needs, offline.",
+    title: "Everything a collector needs.",
     items: {
       catalog: {
         title: "Every car since 1968",
-        body: "About 78,000 cars stored in the app. Search by name, year, series or toy number, even in a store basement.",
+        body: "78,256 cars stored in the app. Search by name, year, series or toy number, even in a store basement with no signal.",
       },
       brands: {
         title: "Seven brands, one garage",
         body: "Hot Wheels first, then Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.",
       },
-      garage: {
-        title: "Your garage, your notes",
-        body: "What you paid, where you found it, its condition. A wishlist for the ones you're after. CSV import and export, so your spreadsheet comes with you.",
+      prices: {
+        title: "Values with the sales behind them",
+        body: "Recent eBay sales and what collectors paid, in your own currency with the original price next to it. You see how many sales a value comes from.",
       },
-      hunt: {
-        title: "This year's Treasure Hunts",
-        body: "The year's TH and STH as a photo grid, with a tick on the ones you already have.",
+      where: {
+        title: "Where to find it",
+        body: "Missing one? Kastr shows the eBay listings open right now for that exact car, so you can complete the set.",
       },
       completion: {
         title: "Medals you earn",
         body: "See how much of this year's hunt you hold, and of every Treasure Hunt ever made. Finish a set and its medal lights up.",
       },
+      looks: {
+        title: "Dark or light",
+        body: "Paddock black by default, a light look if you prefer, and a share card for your best finds.",
+      },
     },
-  },
-  reveal: {
-    title: "Find a Super Treasure Hunt. Feel it.",
-    body: "When the car is a Treasure Hunt or a Super Treasure Hunt, Kastr doesn't hide it in a small label. The screen lights up in Spectraflame gold and your iPhone answers with a firm tap.",
-    imageAlt: "Kastr reveal screen for a Super Treasure Hunt, next to the 2026 hunt guide",
   },
   soon: {
     title: "On the way",
     tag: "Coming soon",
     items: {
-      scan: {
-        title: "Scan it",
-        body: "Point at the barcode or the card, or snap a loose car. Shoot a whole peg in a row and review later.",
-      },
-      values: {
-        title: "Values, with the sales behind them",
-        body: "A value in your own currency, the number of sales it comes from, and the sales themselves. Carded, loose and lots kept apart.",
-      },
       community: {
         title: "A feed for collectors",
         body: "Show a find, attach a car from your garage, flag a catalog mistake. Reporting and blocking built in from day one.",
@@ -125,7 +103,7 @@ export const en = {
       },
       {
         title: "Values you can check",
-        body: "When values arrive, the value of a car will be free to see, next to the number of sales it comes from.",
+        body: "The value of a car is free to see, next to the number of sales it comes from.",
       },
       {
         title: "No ads",
@@ -133,7 +111,7 @@ export const en = {
       },
       {
         title: "Your garage stays on your phone",
-        body: "No account needed to build your collection. An account is only for community features, and you can delete it from the app.",
+        body: "No account needed to build your collection. An account is only for the community and feedback, and you can delete it from the app.",
       },
     ],
   },
@@ -142,35 +120,39 @@ export const en = {
     items: [
       {
         q: "What is Kastr?",
-        a: "Kastr is an iPhone app for diecast collectors. It holds an offline catalog of about 78,000 cars from 1968 to today and tells you, in the aisle, whether a car is already in your garage and whether it is a Treasure Hunt.",
+        a: "Kastr is an iPhone app for diecast collectors. It holds an offline catalog of 78,256 cars from 1968 to today and tells you, in the aisle, whether a car is already in your garage, whether it is a Treasure Hunt, and what it sold for recently.",
       },
       {
         q: "Does Kastr work without a signal?",
-        a: "Yes. The whole catalog is stored on your iPhone, so search, your garage and the hunt guide work in a store with no signal at all.",
+        a: "Yes. The whole catalog is stored on your iPhone, so search, your garage and the hunt list work in a store with no signal at all. Values and listings refresh when you are back online.",
       },
       {
         q: "Which brands are in the catalog?",
         a: "Hot Wheels first, then Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions. Hot Wheels has the deepest coverage, including Treasure Hunts and Super Treasure Hunts.",
       },
       {
+        q: "How does scanning work?",
+        a: "Kastr reads the toy number and the barcode on the card right on your iPhone. If it cannot, and you agree, the photo goes through our server to an AI service that identifies the car. Each scan uses a credit, and a scan that finds nothing gives it back. Searching by name stays free and unlimited.",
+      },
+      {
+        q: "Where do the values come from?",
+        a: "From recent eBay sales and from the prices collectors share in Kastr. Each value says how many sales it comes from, and it is converted to your currency with European Central Bank rates, with the original price shown next to it.",
+      },
+      {
         q: "Is Kastr free?",
-        a: "Kastr is free to download, and searching the catalog is free and unlimited. Kastr Pro is an optional subscription with extras such as several garages. The price is shown in the app before you subscribe, and you can cancel any time in your Apple ID settings.",
+        a: "Kastr is free to download, and searching the catalog is free and unlimited. Kastr Pro is an optional subscription with extras such as unlimited scans, several garages and your garage's total value. The price is shown in the app before you subscribe, and you can cancel any time in your Apple ID settings.",
       },
       {
         q: "How does Kastr know a car is a Treasure Hunt?",
-        a: "Treasure Hunts and Super Treasure Hunts are marked in the catalog for each year. When you look a car up, Kastr shows its rarity, and the hunt guide lists the year's TH and STH with photos so you can spot them on the pegs.",
+        a: "Treasure Hunts and Super Treasure Hunts are marked in the catalog for each year. When you look a car up or scan it, Kastr shows its rarity, and the hunt list shows the year's TH and STH with photos so you can spot them on the pegs.",
       },
       {
         q: "Do I need an account?",
-        a: "No. You can build your garage without one. An account with Sign in with Apple will only be needed for the community and in-app feedback.",
+        a: "No. You can build your garage without one. An account with Sign in with Apple is only needed for the community and in-app feedback.",
       },
       {
         q: "Can I bring my existing collection?",
         a: "Yes. Save your spreadsheet as CSV and import it into your garage. You can export your garage to CSV at any time too.",
-      },
-      {
-        q: "When does scanning arrive?",
-        a: "Scanning, values and the community are being built now. They will come in an app update, and this page will say so when they do.",
       },
       {
         q: "Is Kastr on Android?",

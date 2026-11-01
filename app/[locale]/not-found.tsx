@@ -11,7 +11,7 @@ export default function NotFound() {
         {d.notFound.title}
       </h1>
       <p className="mt-5 text-lg text-muted">{d.notFound.body}</p>
-      <Link href="/en" className="mt-8 w-fit rounded-xl bg-accent px-5 py-3 font-semibold text-carbon">
+      <Link href="/en" className="mt-8 w-fit rounded-xl bg-accent px-5 py-3 font-semibold text-white">
         {d.notFound.home}
       </Link>
     </main>

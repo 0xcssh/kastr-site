@@ -30,7 +30,7 @@ export const config = {
   },
 
   // Dates shown on the legal pages. Update when the text changes.
-  legalUpdated: "2026-10-31",
+  legalUpdated: "2026-11-01",
 
   // Platform requirements, shown in the FAQ and structured data.
   platform: { os: "iOS", minVersion: "17", device: "iPhone" },

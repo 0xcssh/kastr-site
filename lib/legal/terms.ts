@@ -22,7 +22,7 @@ const en: LegalDoc = {
       id: "service",
       heading: "The service",
       blocks: [
-        "Kastr helps diecast car collectors look up cars in a catalog, keep track of their collection and wishlist, and recognize rare cars such as Treasure Hunts. Some features (scanning, values, community) are marked \"coming soon\" and are not available yet.",
+        "Kastr helps diecast car collectors look up cars in a catalog, keep track of their collection and wishlist, and recognize rare cars such as Treasure Hunts. Some features, such as the community, are marked \"coming soon\" and are not available yet.",
         "We work to keep Kastr available and accurate, but we may change, add or remove features, and the app may sometimes be unavailable.",
       ],
     },
@@ -54,7 +54,7 @@ const en: LegalDoc = {
     },
     {
       id: "credits",
-      heading: "Scan credits (coming soon)",
+      heading: "Scan credits",
       blocks: [
         "Scans use credits. Credits have no cash value, cannot be sold or transferred, and are only usable in Kastr. If a scan fails on our side, its credit is returned. Creating several accounts or devices to collect free credits or referral rewards is not allowed.",
       ],
@@ -99,7 +99,8 @@ const en: LegalDoc = {
       blocks: [
         "The catalog is built from community wikis shared under the CC BY-SA license (see Credits) and from user contributions. It may contain errors or gaps.",
         "Rarities and values shown in Kastr are estimates, for information only. They are not an appraisal, an offer to buy or sell, or financial advice, and a car may sell for more or less than shown. Kastr is a collector's app: it does not buy, sell or broker cars.",
-        "Some links may take you to third-party sites, such as marketplaces. Some of those links may be affiliate links, which means we may earn a commission if you buy, at no extra cost to you. We are not a party to any transaction you make on another site.",
+        "Values are built from recent eBay sales and from prices shared by collectors, and converted to your currency with European Central Bank reference rates. They can be wrong or out of date.",
+        "\"Where to find it\" and other links may take you to third-party sites such as eBay. Links to eBay may be eBay Partner Network affiliate links, which means Kastr may earn a commission if you buy, at no extra cost to you. We are not a party to any transaction you make on another site.",
       ],
     },
     {
@@ -186,7 +187,7 @@ const fr: LegalDoc = {
       id: "service",
       heading: "Le service",
       blocks: [
-        "Kastr aide les collectionneurs de voitures miniatures à chercher des voitures dans un catalogue, à suivre leur collection et leur liste d'envies, et à reconnaître les voitures rares comme les Treasure Hunts. Certaines fonctions (scan, valeurs, communauté) sont marquées « bientôt » et ne sont pas encore disponibles.",
+        "Kastr aide les collectionneurs de voitures miniatures à chercher des voitures dans un catalogue, à suivre leur collection et leur liste d'envies, et à reconnaître les voitures rares comme les Treasure Hunts. Certaines fonctions, comme la communauté, sont marquées « bientôt » et ne sont pas encore disponibles.",
         "Nous faisons notre possible pour que Kastr reste disponible et exacte, mais nous pouvons modifier, ajouter ou retirer des fonctions, et l'app peut parfois être indisponible.",
       ],
     },
@@ -218,7 +219,7 @@ const fr: LegalDoc = {
     },
     {
       id: "credits",
-      heading: "Crédits de scan (bientôt)",
+      heading: "Crédits de scan",
       blocks: [
         "Les scans utilisent des crédits. Les crédits n'ont aucune valeur monétaire, ne peuvent être ni vendus ni transférés, et ne servent que dans Kastr. Si un scan échoue de notre fait, le crédit est rendu. Créer plusieurs comptes ou appareils pour cumuler des crédits gratuits ou des récompenses de parrainage est interdit.",
       ],
@@ -263,7 +264,8 @@ const fr: LegalDoc = {
       blocks: [
         "Le catalogue est construit à partir de wikis communautaires publiés sous licence CC BY-SA (voir Crédits) et des contributions des utilisateurs. Il peut contenir des erreurs ou des manques.",
         "Les raretés et valeurs affichées dans Kastr sont des estimations, à titre d'information. Ce ne sont ni une expertise, ni une offre d'achat ou de vente, ni un conseil financier, et une voiture peut se vendre plus ou moins cher qu'indiqué. Kastr est une app de collectionneur : elle n'achète, ne vend et ne négocie aucune voiture.",
-        "Certains liens mènent à des sites tiers, comme des places de marché. Certains peuvent être des liens affiliés : nous pouvons toucher une commission si vous achetez, sans surcoût pour vous. Nous ne sommes pas partie aux transactions faites sur un autre site.",
+        "Les valeurs sont construites à partir des ventes eBay récentes et des prix partagés par les collectionneurs, puis converties dans votre devise avec les taux de référence de la Banque centrale européenne. Elles peuvent être fausses ou dépassées.",
+        "« Où la trouver » et d'autres liens peuvent mener à des sites tiers comme eBay. Les liens vers eBay peuvent être des liens affiliés eBay Partner Network : Kastr peut toucher une commission si vous achetez, sans surcoût pour vous. Nous ne sommes pas partie aux transactions faites sur un autre site.",
       ],
     },
     {

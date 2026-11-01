@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-/* Kastr look, matched to the app (Diecast/Design/Theme.swift): carbon black, track orange accent,
-   Spectraflame gold reserved for rarities. Dark only, like the app (forced dark theme). */
+/* Kastr "Paddock" look, matched to the app (Diecast/Design/Theme.swift, CLAUDE.md §18 bis): carbon black,
+   race red for the main action, titanium silver as second colour, chrono green for "in your garage",
+   chrono violet for a completed set. Gold and silver are reserved for Treasure Hunts. Light mode follows
+   the system, like the app's "System" appearance. */
 @theme {
-  --color-carbon: #0d0d0f;
-  --color-surface: #16161a;
-  --color-surface-2: #1e1e24;
-  --color-line: #2a2a31;
+  --color-carbon: #0b0b0e;
+  --color-surface: #16161b;
+  --color-surface-2: #202027;
+  --color-line: #2a2a33;
   --color-ink: #f4f4f5;
   --color-muted: #a1a1aa;
   --color-faint: #8a8a93;
-  --color-accent: #ff6b00;
+  --color-accent: #e10a1e;
+  --color-titanium: #c9ced6;
+  --color-chrono: #2bd46a;
+  --color-violet: #a25bff;
   --color-gold: #fac740;
+  --color-studio: #eeedea;
+  --color-checker: #ffffff;
 }
 
 @theme inline {
-  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-barlow), "Arial Narrow", ui-sans-serif, sans-serif;
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-saira), "Arial Narrow", ui-sans-serif, sans-serif;
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-carbon: #f3f3f5;
+    --color-surface: #ffffff;
+    --color-surface-2: #ececf0;
+    --color-line: #dcdce2;
+    --color-ink: #111114;
+    --color-muted: #4e5562;
+    --color-faint: #6b7280;
+    --color-titanium: #4e5562;
+    --color-chrono: #14a34b;
+    --color-checker: #111114;
+  }
+}
+
+/* Saira pushed to its widest cut, like the app's titles, figures and labels. */
+.font-display {
+  font-stretch: 125%;
 }
 
 html {
@@ -37,7 +64,7 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: var(--color-carbon);
+  color: #ffffff;
 }
 
 :focus-visible {
@@ -47,7 +74,7 @@ body {
 
 /* Checkered flag pattern, used as a racing texture. */
 .checker {
-  background-image: conic-gradient(#fff 25%, transparent 0 50%, #fff 0 75%, transparent 0);
+  background-image: conic-gradient(var(--color-checker) 25%, transparent 0 50%, var(--color-checker) 0 75%, transparent 0);
   background-size: 24px 24px;
 }
 

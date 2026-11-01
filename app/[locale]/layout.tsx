@@ -1,20 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Barlow_Condensed, Geist } from "next/font/google";
+import { Saira } from "next/font/google";
 import { config } from "@/lib/config";
 import { getDict } from "@/lib/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
 import "../globals.css";
 
-const barlow = Barlow_Condensed({
-  subsets: ["latin", "latin-ext"],
-  weight: ["700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-barlow",
-  display: "swap",
-});
-
-const geist = Geist({ subsets: ["latin", "latin-ext"], variable: "--font-geist", display: "swap" });
+// Saira (SIL OFL) is the app's display face; its width axis is pushed to 125 for titles (CLAUDE.md §18 bis).
+// Body text uses the system font, like the app's SF Pro.
+const saira = Saira({ subsets: ["latin", "latin-ext"], axes: ["wdth"], variable: "--font-saira", display: "swap" });
 
 export const dynamicParams = false;
 
@@ -23,8 +17,11 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0d0d0f",
-  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0b0b0e" },
+    { media: "(prefers-color-scheme: light)", color: "#f3f3f5" },
+  ],
+  colorScheme: "dark light",
 };
 
 export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
@@ -45,7 +42,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   if (!isLocale(locale)) notFound();
 
   return (
-    <html lang={locale} className={`${barlow.variable} ${geist.variable}`}>
+    <html lang={locale} className={saira.variable}>
       <body className="min-h-dvh">{children}</body>
     </html>
   );
