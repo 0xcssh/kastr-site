@@ -104,12 +104,12 @@ export const fr: Dictionary = {
     },
   },
   soon: {
-    title: "En route",
-    tag: "Bientôt",
+    title: "Déjà dans l'app",
+    tag: "Nouveau",
     items: {
       community: {
         title: "Un fil pour les collectionneurs",
-        body: "Montre une trouvaille, joins une voiture de ton garage, signale une erreur du catalogue. Signalement et blocage intégrés dès le premier jour.",
+        body: "Partage une trouvaille en photo, joins une voiture de ton garage, suis des collectionneurs et parcours leurs garages. Signalement, blocage et modération intégrés dès le premier jour.",
       },
     },
   },
@@ -168,7 +168,7 @@ export const fr: Dictionary = {
       },
       {
         q: "Faut-il un compte ?",
-        a: "Non. Tu peux construire ton garage sans compte. Un compte avec Se connecter avec Apple n'est nécessaire que pour la communauté et les retours dans l'app.",
+        a: "Non. Tu peux construire ton garage sans compte. Un compte, avec Se connecter avec Apple ou ton e-mail, sauvegarde et synchronise ton garage et ouvre la communauté.",
       },
       {
         q: "Puis-je importer ma collection ?",

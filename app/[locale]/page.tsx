@@ -280,7 +280,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      {/* Coming soon: clearly labelled. */}
+      {/* Recently shipped: labelled "New". */}
       <section className="mx-auto mt-32 max-w-7xl px-5 sm:px-8">
         <SectionLabel className="reveal">{d.soon.tag}</SectionLabel>
         <h2 className={`reveal ${H2}`}>{d.soon.title}</h2>

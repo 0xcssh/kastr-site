@@ -105,12 +105,12 @@ export const en = {
     },
   },
   soon: {
-    title: "On the way",
-    tag: "Coming soon",
+    title: "Now in the app",
+    tag: "New",
     items: {
       community: {
         title: "A feed for collectors",
-        body: "Show a find, attach a car from your garage, flag a catalog mistake. Reporting and blocking built in from day one.",
+        body: "Share a find with a photo, attach a car from your garage, follow collectors and browse their garages. Reporting, blocking and moderation built in from day one.",
       },
     },
   },
@@ -169,7 +169,7 @@ export const en = {
       },
       {
         q: "Do I need an account?",
-        a: "No. You can build your garage without one. An account with Sign in with Apple is only needed for the community and in-app feedback.",
+        a: "No. You can build your garage without one. An account, with Sign in with Apple or your email, backs up and syncs your garage and opens the community.",
       },
       {
         q: "Can I bring my existing collection?",

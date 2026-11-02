@@ -2,8 +2,9 @@ import { config } from "@/lib/config";
 import type { Locale } from "@/lib/i18n";
 import type { LegalDoc } from "./types";
 
-// Privacy policy. Sources of truth: CLAUDE.md §9 (GDPR, account deletion, AI photos), §12 (stack),
-// §16 (Supabase, RevenueCat, TelemetryDeck). Draft written by an engineer, not a lawyer: have it reviewed.
+// Privacy policy, checked against the app's code at build 71 (2 Nov 2026): Supabase tables and
+// Edge Functions in the diecast repo (data/migrations, supabase/functions), the Swift client.
+// Rule: describe only what the code does today. Draft written by an engineer, not a lawyer.
 
 const mail = `[${config.supportEmail}](mailto:${config.supportEmail})`;
 const L = config.legal;
@@ -11,10 +12,10 @@ const L = config.legal;
 const en: LegalDoc = {
   title: "Privacy policy",
   description:
-    "What Kastr collects, why, who processes it and how to delete it. No ads, no ad tracking, and your garage stays on your iPhone unless you choose otherwise.",
+    "What Kastr collects, why, who processes it, what is public in the community and how to delete it. No ads, no ad tracking, no data sold.",
   dated: true,
   intro: [
-    "This policy explains what data the Kastr iPhone app and the kastr.app website collect, why, who helps us process it, and the rights you have. Features marked \"coming soon\" are not in the app yet; this policy already covers them so nothing changes silently when they ship.",
+    "This policy explains what data the Kastr iPhone app and the kastr.app website collect, why, who helps us process it, what other collectors can see, and the rights you have.",
   ],
   sections: [
     {
@@ -32,10 +33,12 @@ const en: LegalDoc = {
         {
           list: [
             "There are no ads in Kastr, no ad tracking, and we do not sell your data.",
-            "Your garage (cars, wishlist, prices paid, notes, photos) is stored on your iPhone. You do not need an account to use it.",
-            "An account is optional. It is only needed for community features, feedback and contributions, and you can delete it from the app.",
-            "Usage analytics are anonymous.",
+            "Your garage works without an account and then stays on your iPhone.",
+            "An account is optional. With one, your garage is backed up and synced privately, and you can join the community.",
+            "In the community, your username, bio, avatar car, posts and, unless you turn it off, the list of cars in your garage are visible to other collectors. What you paid, where you found a car, your notes and your own photos of your cars are never shown to anyone.",
+            "Kastr does not use any analytics or tracking tool today.",
             "Payments go through Apple. We never see your card details.",
+            "You can delete your account from the app at any time.",
           ],
         },
       ],
@@ -44,38 +47,88 @@ const en: LegalDoc = {
       id: "device",
       heading: "Data stored on your iPhone",
       blocks: [
-        "Your garage and wishlist, the price you paid, where and when you found a car, its condition, your notes, the photos you add, your hunt journal and your app settings are stored locally on your device. We do not receive them unless you create an account and sync your collection.",
+        "Your garages and wishlist, the price you paid and its currency, where and when you found a car, its condition, your notes, the photos you add, the cars you add yourself, your hunt journal (store names and dates you type) and your app settings are stored on your device.",
         "This data is included in your device backups according to your own iCloud or computer backup settings. Deleting the app deletes it from the device. You can export your garage to CSV at any time.",
-        "The catalog itself (car names, years, series, toy numbers) is shipped inside the app and contains no personal data.",
+        "The Kastr widget reads a small summary (your hunt progress, number of cars, and your garage value if you have Kastr Pro) that the app shares with it through the iPhone's keychain. It never leaves your device.",
+        "The catalog itself (car names, years, series, toy numbers, case letters) is shipped inside the app and contains no personal data. Kastr does not access your location.",
       ],
     },
     {
       id: "account",
       heading: "Your account (optional)",
       blocks: [
-        "If you create an account, you sign in with Sign in with Apple. We receive a stable Apple user identifier and, if you choose to share it, your email address (which may be an Apple private relay address). You may also choose a username and a profile picture, which are public in community features.",
-        "When syncing is available, your garage is copied to our servers so you can get it back on a new iPhone. It stays private to you.",
+        "You can create an account in two ways:",
+        {
+          list: [
+            "Sign in with Apple: we receive a stable Apple user identifier and the email address Apple shares with us, which can be an Apple private relay address if you choose to hide yours.",
+            "Email: you enter your address and we email you a 6-digit code. Typing the code confirms the address and signs you in. There is no password. The code expires after 10 minutes.",
+          ],
+        },
+        "You then choose a username. You can add a short bio and pick a car from the catalog as your avatar (Kastr does not use profile photos). We also keep the date your account was created and, for security, the sign-in records kept by our authentication provider (including IP addresses).",
         "Accounts are managed with Supabase (authentication, database, file storage and server functions). Our Supabase project is hosted in the European Union (Paris, France).",
       ],
     },
     {
-      id: "community",
-      heading: "Community, feedback and contributions (coming soon)",
+      id: "sync",
+      heading: "Garage backup and sync",
       blocks: [
-        "If you post in the community, we store what you publish (text, photos, cars you attach from your garage) with your username. Posts are public to other Kastr users.",
-        "If you submit a car missing from the catalog, a correction or a price, we store it with your account. Submitted cars stay private to you until they are reviewed; once approved, the car data becomes part of the public catalog without your name attached to it, and prices are only shown in aggregate.",
-        "To keep the community safe, posts may be checked by automated filters before they appear. When you report content or block a user, we record the report or the block. Moderators review reports and may remove content or suspend accounts that break the Terms of use.",
-        "Feedback you send from the app is stored with your account, your app version, your iOS version and your device model, so we can answer and fix the problem.",
+        "When you are signed in, the app copies your collection to our servers so you can get it back on a new iPhone and keep several devices in sync: your garages, cars and their details (price paid, currency, place, condition, notes, dates), the details of cars you added yourself, your wishlist, your hunt journal and the photos you added to your cars. Photos go to private storage that only your account can read.",
+        "This copy is private. Other users never see your prices, places, notes, hunt journal or photos. Signing out leaves the garage on your iPhone; deleting your account deletes the copy on our servers.",
+      ],
+    },
+    {
+      id: "community",
+      heading: "Community: what others can see",
+      blocks: [
+        "The community is only available with an account. Other signed-in Kastr users can see:",
+        {
+          list: [
+            "your username, your bio and your avatar car;",
+            "how many cars and posts you have, and how many collectors you follow and follow you;",
+            "your posts (text, photo and the car you attach) and your comments;",
+            "which posts you like and which collectors you follow (the app shows them as counts, but they are readable by other signed-in users);",
+            "the list of cars in your garage (name, brand, year, rarity and number of copies), unless you turn off \"Show my garage on my profile\" in your profile settings. This option is on by default. The value of your garage is never shown to others.",
+          ],
+        },
+        "Post photos are resized and re-encoded on your iPhone before they are sent, which removes their hidden metadata such as location. They are stored on a server that delivers them by long, unguessable links, so anyone who gets such a link can open the photo.",
+        "Kastr Pro members can compare their own garage with a collector's public garage. This uses only what is already public.",
+        "To keep the community safe, posts and comments are checked against a list of forbidden words when they are published. When you report content (with the reason you choose) or block a user, we record it. Content reported by several people is hidden until a moderator reviews it. Moderators see the reported content, its author and the reasons given, and can remove content or ban an account that breaks the Terms of use. A banned account can no longer publish.",
+        "When someone likes or comments on your post or follows you, an entry is added to your activity list in the app.",
+      ],
+    },
+    {
+      id: "notifications",
+      heading: "Notifications",
+      blocks: [
+        "If you allow notifications, your iPhone gives the app a push token. We store it with your account, whether it is a test or App Store build, your language and your notification choices (activity from other collectors, and new release alerts if you have Kastr Pro). Notifications are delivered by Apple Push Notification service. The token is removed when you sign out, when Apple tells us it is no longer valid, or when you delete your account. You can turn notifications off at any time in the iPhone Settings app.",
+      ],
+    },
+    {
+      id: "newsletter",
+      heading: "Newsletter",
+      blocks: [
+        "When you create an account by email, you can choose to receive the Kastr newsletter (finds of the week, new releases, posts from the community). In the European Economic Area, the United Kingdom, Switzerland, Canada and Brazil, this box is unticked and you are only subscribed if you tick it. Elsewhere, it may be ticked by default and you can untick it before continuing. You can change your choice at any time in your account settings, and every newsletter will include an unsubscribe link.",
+        "We keep your email address, your choice, where you made it and the date you agreed, as proof of your consent. Newsletters will be sent with Resend.",
+      ],
+    },
+    {
+      id: "contributions",
+      heading: "Cars you add, prices you share, feedback",
+      blocks: [
+        "A car missing from the catalog that you add yourself stays private in your garage. If you choose to propose it to the catalog, we store the proposal (brand, name, year, series, colour, toy number, notes and photo) with your account; the photo is in private storage that only moderators can see. Once approved, the car data joins the public catalog without your name. Prices are never published individually.",
+        "When you share the price you paid for a car, it is sent without your account, with only a hashed identifier of your app installation, and is shown only as part of an aggregate (for example a median of several collectors).",
+        "Feedback you send from the app is stored with your account and the app version, so we can answer and fix the problem.",
+        "If you enter a friend's referral code, we record who invited whom, to give the reward. This stays private.",
       ],
     },
     {
       id: "scan",
       heading: "Scanning",
       blocks: [
-        "Scanning first reads the barcode and the toy number on the card on your iPhone, with Apple's on-device frameworks (VisionKit). That image stays on your device.",
-        "When on-device reading cannot identify the car, or when you photograph a loose car, Kastr can identify it with AI. The app asks for your permission the first time, and you can turn this off at any time in Settings > Scanner. The photo is then sent over an encrypted connection to our server in the European Union, which forwards it to OpenAI for the sole purpose of identifying the car. Our scan server does not store or log the photo. OpenAI does not use it to train its models and may keep it for up to 30 days to detect abuse, then deletes it.",
-        "Helping train Kastr's recognition: when you add a car to your garage from a scan, the photo and the car you confirmed can be kept to build Kastr's own recognition model. This setting turns on when you allow AI identification, as the permission prompt explains, and you can turn it off at any time in Settings > Scanner. These photos are kept in private storage with the car and a hashed device identifier, without your account or your name. Their retention period has not been set yet and will be stated here; until then, you can ask us to delete them at support@kastr.app.",
-        "To count scan credits, we keep a scan counter linked to your account, or stored on your device if you do not have one.",
+        "Scanning first reads the barcode and the toy number on the card on your iPhone, with Apple's on-device frameworks. That image stays on your device.",
+        "When on-device reading cannot identify the car, or when you photograph a loose car, Kastr can identify it with AI. The app asks for your permission the first time, and you can turn this off at any time in Settings > Scanner. The photo is then sent over an encrypted connection to our server in the European Union, which forwards it to OpenAI for the sole purpose of identifying the car. Our scan server does not store the photo, and asks OpenAI not to store the request. OpenAI does not use API data to train its models and may keep it for up to 30 days to detect abuse, then deletes it.",
+        "Helping train Kastr's recognition: when you add a car to your garage from a scan, the photo and the car you confirmed can be kept to build Kastr's own recognition model. The permission prompt explains this when you allow AI identification, and you can turn it off at any time in Settings > Scanner. These photos are kept in private storage with the car and a hashed identifier of your app installation, without your account or your name. Their retention period has not been set yet and will be stated here; until then, you can ask us to delete them.",
+        "To count scan credits, we keep a scan counter linked to your account, or to a hashed identifier of your app installation if you have no account.",
       ],
     },
     {
@@ -83,46 +136,45 @@ const en: LegalDoc = {
       heading: "Purchases and Kastr Pro",
       blocks: [
         "Kastr Pro is sold through the App Store. Apple handles payment, and we never receive your card number or billing address.",
-        "We use RevenueCat to know whether you have an active subscription and to let you restore it. RevenueCat receives an anonymous app user identifier (linked to your account if you have one), your purchase and subscription history in Kastr, transaction identifiers, your store country and currency, your device type and your app version.",
+        "We use RevenueCat to know whether you have an active subscription and to let you restore it. RevenueCat receives an app user identifier (your account identifier if you are signed in), your purchase and subscription history in Kastr, transaction identifiers, your store country and currency, your device type and your app version. Our server keeps whether your account has Kastr Pro, its end date and any referral bonus.",
       ],
     },
     {
       id: "analytics",
-      heading: "Anonymous analytics",
+      heading: "Analytics",
       blocks: [
-        "We use TelemetryDeck to understand which features are used and to find bugs. It receives anonymous usage signals (for example, that a search was made or a screen was opened), your app version, iOS version, device model and language. The user identifier is hashed on your device before it is sent, so it cannot be traced back to you.",
-        "We do not use the advertising identifier (IDFA), we do not track you across other companies' apps or websites, and the app does not ask for tracking permission because it does not track.",
+        "Kastr does not use any analytics, crash reporting or tracking tool today. We do not use the advertising identifier (IDFA), we do not track you across other companies' apps or websites, and the app does not ask for tracking permission because it does not track. If we add anonymous usage analytics later, we will update this policy before the update that adds them.",
       ],
     },
     {
       id: "photos",
       heading: "Catalog photos",
       blocks: [
-        "Car photos in the catalog are downloaded from image servers when you view them. Today, some are served by Fandom, Inc., which hosts the wikis our catalog comes from. Like any web request, downloading a photo reveals your IP address to the server that sends it. No account data is shared with it.",
+        "Car photos in the catalog are downloaded from image servers when you view them. Today, most are served by Fandom, Inc., which hosts the wikis our catalog comes from. Like any web request, downloading a photo reveals your IP address to the server that sends it. No account data is shared with it.",
       ],
     },
     {
       id: "prices",
-      heading: "Values, currencies and eBay links",
+      heading: "Values, releases, currencies and eBay links",
       blocks: [
-        "Values come from recent eBay sales, which our server collects through eBay's programming interfaces and through a sales data provider (Trawl), and from the prices collectors share in Kastr. Our server only sends these services its own searches about cars, never data about you.",
+        "Values come from recent eBay sales, which our server collects through eBay's programming interfaces and through a sales data provider (Trawl), and from the prices collectors share in Kastr. New releases and case letters come from public collector wikis. Our server only sends these services its own searches about cars, never data about you.",
         "Prices are converted to your currency with the daily reference rates published by the European Central Bank. The original price is shown next to it.",
         "\"Where to find it\" shows eBay listings open right now. Opening one takes you to eBay, whose own privacy policy then applies. These links may be eBay Partner Network affiliate links: if you buy, Kastr may earn a commission at no extra cost to you, and eBay may use cookies or similar technology to attribute the purchase.",
       ],
     },
     {
       id: "website",
-      heading: "This website",
+      heading: "This website and email",
       blocks: [
         "kastr.app is hosted by Cloudflare. Like any web host, Cloudflare processes your IP address and basic request data in server logs to deliver pages and protect the site. The website sets no cookies and runs no analytics or advertising scripts.",
-        "If you email us, we use your message and email address only to answer you.",
+        "Emails sent to support@kastr.app are forwarded by Cloudflare to our mailbox hosted by Google. We use your message and email address only to answer you.",
       ],
     },
     {
       id: "permissions",
       heading: "iPhone permissions",
       blocks: [
-        "Kastr asks for camera access only when you scan or take a photo of a car, and for photo library access only when you add a picture from it. You can change these permissions at any time in the iPhone Settings app. Kastr works without them.",
+        "Kastr asks for camera access only when you scan or take a photo of a car, for photo library access only when you pick a picture, and for notifications only after an action where they are useful (for example your first post). You can change these permissions at any time in the iPhone Settings app. Kastr works without them.",
       ],
     },
     {
@@ -131,9 +183,9 @@ const en: LegalDoc = {
       blocks: [
         {
           list: [
-            "To provide the service you ask for (account, sync, scanning, community, Kastr Pro): performance of our contract with you.",
-            "To keep Kastr secure, moderate content, prevent abuse of free credits and improve the app with anonymous analytics: our legitimate interests, balanced against your rights.",
-            "To keep scan photos for improving recognition: your consent, which you can withdraw at any time.",
+            "To provide the service you ask for (account, sign-in emails, sync, scanning, community, notifications you allowed, Kastr Pro): performance of our contract with you.",
+            "To keep Kastr secure, moderate content, prevent abuse of free credits and referral rewards, and compute aggregate prices: our legitimate interests, balanced against your rights.",
+            "To keep scan photos for improving recognition, and to send you the newsletter: your consent, which you can withdraw at any time.",
             "To keep records we are required to keep, or to answer lawful requests: legal obligation.",
           ],
         },
@@ -146,13 +198,14 @@ const en: LegalDoc = {
         "We share data only with the service providers below, who process it on our behalf and under contract, and never for their own advertising.",
         {
           list: [
-            "Apple Inc. (USA): Sign in with Apple and App Store payments.",
-            "Supabase, Inc. (USA), with data hosted in the European Union (Paris, France): account, database, file storage and server functions.",
+            "Apple Inc. and its affiliates (USA, Ireland): Sign in with Apple, App Store payments and push notifications.",
+            "Supabase, Inc. (USA), with data hosted in the European Union (Paris, France): accounts, database, file storage and server functions.",
+            "Resend, Inc. (USA): sending sign-in codes and, later, the newsletter.",
             "RevenueCat, Inc. (USA): subscription status.",
-            "TelemetryDeck GmbH (Germany): anonymous analytics.",
             "OpenAI, L.L.C. (USA): identification of scanned cars, only when you use AI identification.",
-            "Cloudflare, Inc. (USA): website hosting and domain.",
-            "Fandom, Inc. (USA): delivery of some catalog photos.",
+            "Cloudflare, Inc. (USA): website hosting, domain and forwarding of emails to support@kastr.app.",
+            "Google LLC (USA): the mailbox where support emails arrive.",
+            "Fandom, Inc. (USA): delivery of most catalog photos.",
           ],
         },
         "We may also disclose data if the law requires it, or to protect the safety of users.",
@@ -162,7 +215,7 @@ const en: LegalDoc = {
       id: "transfers",
       heading: "International transfers",
       blocks: [
-        "Some of these providers are based in the United States. When personal data leaves the European Economic Area, it is protected by the European Commission's Standard Contractual Clauses or by the provider's certification under the EU-U.S. Data Privacy Framework.",
+        "Several of these providers are based in the United States. When personal data leaves the European Economic Area, it is protected by the provider's certification under the EU-U.S. Data Privacy Framework or by the European Commission's Standard Contractual Clauses.",
       ],
     },
     {
@@ -172,9 +225,10 @@ const en: LegalDoc = {
         {
           list: [
             "Data on your iPhone: until you delete it or delete the app.",
-            "Account data, synced garage, posts and contributions: until you delete your account. It is then removed from our active systems within 30 days, and from backups when they rotate.",
-            "Approved catalog data you contributed stays in the catalog without your name.",
-            "Reports and moderation records: up to 12 months, longer only if needed for a legal claim.",
+            "Account, profile, synced garage, posts, comments, likes, follows, activity, push tokens and proposals: until you delete your account (push tokens earlier, see above). They are then removed from our active systems right away, and from our provider's backups when they rotate.",
+            "Approved catalog data you contributed stays in the catalog without your name. Aggregated prices stay without any link to you.",
+            "Newsletter: until you unsubscribe or delete your account. We keep the record of your consent for up to 3 years after you unsubscribe, to be able to prove it.",
+            "Reports and moderation decisions: up to 12 months, longer only if needed for a legal claim.",
             "Support emails: up to 3 years after our last exchange.",
             "Subscription records at RevenueCat and Apple: as long as they need them to manage purchases and meet their legal obligations.",
           ],
@@ -185,7 +239,8 @@ const en: LegalDoc = {
       id: "deletion",
       heading: "Deleting your account",
       blocks: [
-        "You can delete your account from the account settings in the app. This deletes your profile, your synced garage, your posts, comments and photos, and your private submissions; it revokes the Sign in with Apple link and deletes your customer record at RevenueCat.",
+        "You can delete your account from your profile in the app (account settings, Delete my account). This deletes your profile, your synced garage and its photos, your posts, comments, likes, follows and activity, your proposals and their photos, your push tokens, your newsletter subscription and your scan credits. If your account uses Sign in with Apple, the app asks you to confirm with Apple so that Kastr's access to your Apple ID is revoked too.",
+        `Your subscription history at RevenueCat is linked to an identifier, not to your name; we delete it on request. Scan photos kept for training are not linked to your account; ask us if you want them deleted. Write to ${mail} for either.`,
         "Deleting your account does not cancel an App Store subscription. Cancel it in the Settings app (your name, then Subscriptions) to avoid being charged again.",
         `You can also ask us to delete your account by writing to ${mail} from the email address linked to it.`,
       ],
@@ -209,7 +264,7 @@ const en: LegalDoc = {
       id: "security",
       heading: "Security",
       blocks: [
-        "Data travels over encrypted connections. Account data is protected by access rules so each user can only read their own private data, and secret keys stay on our servers, never in the app.",
+        "Data travels over encrypted connections. Account data is protected by access rules so each user can only read their own private data, secret keys stay on our servers and never in the app, and your sign-in session is kept in the iPhone keychain.",
       ],
     },
     {
@@ -225,10 +280,10 @@ const en: LegalDoc = {
 const fr: LegalDoc = {
   title: "Politique de confidentialité",
   description:
-    "Ce que Kastr collecte, pourquoi, qui le traite et comment le supprimer. Pas de publicité, pas de pistage publicitaire, et ton garage reste sur ton iPhone sauf si tu en décides autrement.",
+    "Ce que Kastr collecte, pourquoi, qui le traite, ce qui est public dans la communauté et comment le supprimer. Pas de publicité, pas de pistage publicitaire, aucune donnée vendue.",
   dated: true,
   intro: [
-    "Cette politique explique quelles données l'app iPhone Kastr et le site kastr.app collectent, pourquoi, qui nous aide à les traiter et quels sont vos droits. Les fonctions marquées « bientôt » ne sont pas encore dans l'app ; cette politique les couvre déjà, pour que rien ne change en silence à leur sortie.",
+    "Cette politique explique quelles données l'app iPhone Kastr et le site kastr.app collectent, pourquoi, qui nous aide à les traiter, ce que les autres collectionneurs peuvent voir et quels sont vos droits.",
   ],
   sections: [
     {
@@ -246,10 +301,12 @@ const fr: LegalDoc = {
         {
           list: [
             "Pas de publicité dans Kastr, pas de pistage publicitaire, et nous ne vendons pas vos données.",
-            "Votre garage (voitures, liste d'envies, prix payés, notes, photos) est stocké sur votre iPhone. Aucun compte n'est nécessaire pour l'utiliser.",
-            "Le compte est facultatif. Il ne sert qu'aux fonctions communautaires, aux retours et aux contributions, et vous pouvez le supprimer depuis l'app.",
-            "Les statistiques d'usage sont anonymes.",
+            "Votre garage fonctionne sans compte et reste alors sur votre iPhone.",
+            "Le compte est facultatif. Avec un compte, votre garage est sauvegardé et synchronisé en privé, et vous pouvez rejoindre la communauté.",
+            "Dans la communauté, votre pseudo, votre bio, votre voiture-avatar, vos publications et, sauf si vous la masquez, la liste des voitures de votre garage sont visibles par les autres collectionneurs. Le prix payé, le lieu de la trouvaille, vos notes et vos propres photos de vos voitures ne sont jamais montrés à personne.",
+            "Kastr n'utilise aujourd'hui aucun outil de statistiques ni de pistage.",
             "Les paiements passent par Apple. Nous ne voyons jamais vos données bancaires.",
+            "Vous pouvez supprimer votre compte depuis l'app à tout moment.",
           ],
         },
       ],
@@ -258,38 +315,88 @@ const fr: LegalDoc = {
       id: "device",
       heading: "Les données stockées sur votre iPhone",
       blocks: [
-        "Votre garage et votre liste d'envies, le prix payé, le lieu et la date d'une trouvaille, l'état, vos notes, les photos que vous ajoutez, votre journal de chasse et vos réglages sont stockés localement sur votre appareil. Nous ne les recevons pas, sauf si vous créez un compte et synchronisez votre collection.",
+        "Vos garages et votre liste d'envies, le prix payé et sa devise, le lieu et la date d'une trouvaille, l'état, vos notes, les photos que vous ajoutez, les voitures que vous ajoutez vous-même, votre journal de chasse (noms de magasins et dates que vous saisissez) et vos réglages sont stockés sur votre appareil.",
         "Ces données sont incluses dans les sauvegardes de votre appareil selon vos propres réglages iCloud ou ordinateur. Supprimer l'app les supprime de l'appareil. Vous pouvez exporter votre garage en CSV à tout moment.",
-        "Le catalogue (noms, années, séries, numéros de jouet) est livré dans l'app et ne contient aucune donnée personnelle.",
+        "Le widget Kastr lit un petit résumé (votre progression de chasse, le nombre de voitures et, avec Kastr Pro, la valeur du garage) que l'app lui transmet par le trousseau de l'iPhone. Ce résumé ne quitte jamais votre appareil.",
+        "Le catalogue (noms, années, séries, numéros de jouet, lettres de caisse) est livré dans l'app et ne contient aucune donnée personnelle. Kastr n'accède pas à votre position.",
       ],
     },
     {
       id: "account",
       heading: "Votre compte (facultatif)",
       blocks: [
-        "Si vous créez un compte, vous vous connectez avec Se connecter avec Apple. Nous recevons un identifiant Apple stable et, si vous choisissez de la partager, votre adresse email (qui peut être une adresse relais privée d'Apple). Vous pouvez aussi choisir un pseudo et une photo de profil, publics dans les fonctions communautaires.",
-        "Quand la synchronisation sera disponible, votre garage sera copié sur nos serveurs pour que vous le retrouviez sur un nouvel iPhone. Il reste privé.",
+        "Vous pouvez créer un compte de deux façons :",
+        {
+          list: [
+            "Se connecter avec Apple : nous recevons un identifiant Apple stable et l'adresse email qu'Apple nous transmet, qui peut être une adresse relais privée d'Apple si vous choisissez de masquer la vôtre.",
+            "Email : vous saisissez votre adresse et nous vous envoyons un code à 6 chiffres. Le taper confirme l'adresse et vous connecte. Il n'y a pas de mot de passe. Le code expire au bout de 10 minutes.",
+          ],
+        },
+        "Vous choisissez ensuite un pseudo. Vous pouvez ajouter une courte bio et choisir une voiture du catalogue comme avatar (Kastr n'utilise pas de photos de profil). Nous conservons aussi la date de création du compte et, pour la sécurité, les traces de connexion tenues par notre prestataire d'authentification (dont les adresses IP).",
         "Les comptes sont gérés avec Supabase (authentification, base de données, stockage de fichiers et fonctions serveur). Notre projet Supabase est hébergé dans l'Union européenne (Paris, France).",
       ],
     },
     {
-      id: "community",
-      heading: "Communauté, retours et contributions (bientôt)",
+      id: "sync",
+      heading: "Sauvegarde et synchronisation du garage",
       blocks: [
-        "Si vous publiez dans la communauté, nous conservons ce que vous publiez (texte, photos, voitures jointes depuis votre garage) avec votre pseudo. Les publications sont visibles par les autres utilisateurs de Kastr.",
-        "Si vous proposez une voiture absente du catalogue, une correction ou un prix, nous les conservons avec votre compte. Une voiture proposée reste privée jusqu'à sa validation ; une fois validée, ses données rejoignent le catalogue public sans votre nom, et les prix ne sont affichés que sous forme agrégée.",
-        "Pour protéger la communauté, les publications peuvent être vérifiées par des filtres automatiques avant d'apparaître. Quand vous signalez un contenu ou bloquez un utilisateur, nous enregistrons le signalement ou le blocage. Les modérateurs examinent les signalements et peuvent retirer un contenu ou suspendre un compte qui enfreint les Conditions d'utilisation.",
-        "Les retours envoyés depuis l'app sont conservés avec votre compte, la version de l'app, la version d'iOS et le modèle d'appareil, pour vous répondre et corriger le problème.",
+        "Quand vous êtes connecté, l'app copie votre collection sur nos serveurs pour que vous la retrouviez sur un nouvel iPhone et que vos appareils restent synchronisés : vos garages, vos voitures et leurs détails (prix payé, devise, lieu, état, notes, dates), les détails des voitures que vous avez ajoutées vous-même, votre liste d'envies, votre journal de chasse et les photos ajoutées à vos voitures. Les photos vont dans un stockage privé que seul votre compte peut lire.",
+        "Cette copie est privée. Les autres utilisateurs ne voient jamais vos prix, lieux, notes, journal de chasse ni photos. Vous déconnecter laisse le garage sur votre iPhone ; supprimer votre compte supprime la copie sur nos serveurs.",
+      ],
+    },
+    {
+      id: "community",
+      heading: "Communauté : ce que les autres voient",
+      blocks: [
+        "La communauté n'est accessible qu'avec un compte. Les autres utilisateurs connectés de Kastr peuvent voir :",
+        {
+          list: [
+            "votre pseudo, votre bio et votre voiture-avatar ;",
+            "votre nombre de voitures et de publications, le nombre de collectionneurs que vous suivez et qui vous suivent ;",
+            "vos publications (texte, photo et voiture jointe) et vos commentaires ;",
+            "les publications que vous aimez et les collectionneurs que vous suivez (l'app les affiche sous forme de totaux, mais ils sont lisibles par les autres utilisateurs connectés) ;",
+            "la liste des voitures de votre garage (nom, marque, année, rareté et nombre d'exemplaires), sauf si vous désactivez « Afficher mon garage sur mon profil » dans les réglages de votre profil. Cette option est activée par défaut. La valeur de votre garage n'est jamais montrée aux autres.",
+          ],
+        },
+        "Les photos de publications sont redimensionnées et réencodées sur votre iPhone avant l'envoi, ce qui retire leurs métadonnées cachées comme la position. Elles sont stockées sur un serveur qui les diffuse par des liens longs et impossibles à deviner : toute personne qui obtient un tel lien peut ouvrir la photo.",
+        "Les membres Kastr Pro peuvent comparer leur garage avec le garage public d'un collectionneur. Seules des informations déjà publiques sont utilisées.",
+        "Pour protéger la communauté, les publications et commentaires sont comparés à une liste de mots interdits au moment de leur publication. Quand vous signalez un contenu (avec le motif choisi) ou bloquez un utilisateur, nous l'enregistrons. Un contenu signalé par plusieurs personnes est masqué jusqu'à l'examen d'un modérateur. Les modérateurs voient le contenu signalé, son auteur et les motifs, et peuvent retirer un contenu ou bannir un compte qui enfreint les Conditions d'utilisation. Un compte banni ne peut plus publier.",
+        "Quand quelqu'un aime ou commente votre publication, ou vous suit, une ligne s'ajoute à votre liste d'activité dans l'app.",
+      ],
+    },
+    {
+      id: "notifications",
+      heading: "Notifications",
+      blocks: [
+        "Si vous autorisez les notifications, votre iPhone donne à l'app un jeton de notification. Nous le conservons avec votre compte, le type de version (test ou App Store), votre langue et vos choix de notifications (activité des autres collectionneurs, et alertes de sorties si vous avez Kastr Pro). Les notifications sont acheminées par le service de notifications push d'Apple. Le jeton est supprimé quand vous vous déconnectez, quand Apple nous indique qu'il n'est plus valable, ou quand vous supprimez votre compte. Vous pouvez couper les notifications à tout moment dans les Réglages de l'iPhone.",
+      ],
+    },
+    {
+      id: "newsletter",
+      heading: "Newsletter",
+      blocks: [
+        "Quand vous créez un compte par email, vous pouvez choisir de recevoir la newsletter Kastr (trouvailles de la semaine, nouvelles sorties, publications de la communauté). Dans l'Espace économique européen, au Royaume-Uni, en Suisse, au Canada et au Brésil, la case est décochée : vous n'êtes inscrit que si vous la cochez. Ailleurs, elle peut être cochée par défaut et vous pouvez la décocher avant de continuer. Vous pouvez changer d'avis à tout moment dans les réglages du compte, et chaque newsletter contiendra un lien de désinscription.",
+        "Nous conservons votre adresse, votre choix, l'endroit où vous l'avez fait et la date de votre accord, pour prouver votre consentement. Les newsletters seront envoyées avec Resend.",
+      ],
+    },
+    {
+      id: "contributions",
+      heading: "Voitures ajoutées, prix partagés, retours",
+      blocks: [
+        "Une voiture absente du catalogue que vous ajoutez vous-même reste privée dans votre garage. Si vous choisissez de la proposer au catalogue, nous conservons la proposition (marque, nom, année, série, couleur, numéro de jouet, notes et photo) avec votre compte ; la photo est dans un stockage privé visible seulement par les modérateurs. Une fois validée, la voiture rejoint le catalogue public sans votre nom. Les prix ne sont jamais publiés un par un.",
+        "Quand vous partagez le prix payé pour une voiture, il est envoyé sans votre compte, avec seulement un identifiant haché de votre installation de l'app, et n'est affiché que dans un agrégat (par exemple la médiane de plusieurs collectionneurs).",
+        "Les retours envoyés depuis l'app sont conservés avec votre compte et la version de l'app, pour vous répondre et corriger le problème.",
+        "Si vous saisissez le code de parrainage d'un ami, nous enregistrons qui a invité qui, pour attribuer la récompense. Cela reste privé.",
       ],
     },
     {
       id: "scan",
       heading: "Le scan",
       blocks: [
-        "Le scan lit d'abord le code-barres et le numéro de jouet du blister sur votre iPhone, avec les outils embarqués d'Apple (VisionKit). Cette image reste sur votre appareil.",
-        "Quand la lecture sur l'iPhone ne suffit pas, ou quand vous photographiez une voiture hors blister, Kastr peut l'identifier avec l'IA. L'app vous demande votre accord la première fois, et vous pouvez désactiver cette option à tout moment dans Réglages > Scanner. La photo est alors envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmet à OpenAI dans le seul but d'identifier la voiture. Notre serveur de scan ne stocke ni ne journalise la photo. OpenAI ne l'utilise pas pour entraîner ses modèles et peut la conserver jusqu'à 30 jours pour détecter les abus, puis la supprime.",
-        "Aider à entraîner la reconnaissance de Kastr : quand vous ajoutez une voiture à votre garage depuis un scan, la photo et la voiture confirmée peuvent être conservées pour construire le propre modèle de reconnaissance de Kastr. Ce réglage s'active quand vous autorisez l'identification par IA, comme l'explique la demande d'accord, et vous pouvez le désactiver à tout moment dans Réglages > Scanner. Ces photos sont gardées dans un stockage privé avec la voiture et un identifiant d'appareil haché, sans votre compte ni votre nom. Leur durée de conservation n'est pas encore fixée et sera indiquée ici ; en attendant, vous pouvez nous demander de les supprimer à support@kastr.app.",
-        "Pour compter les crédits de scan, nous conservons un compteur lié à votre compte, ou stocké sur votre appareil si vous n'en avez pas.",
+        "Le scan lit d'abord le code-barres et le numéro de jouet du blister sur votre iPhone, avec les outils embarqués d'Apple. Cette image reste sur votre appareil.",
+        "Quand la lecture sur l'iPhone ne suffit pas, ou quand vous photographiez une voiture hors blister, Kastr peut l'identifier avec l'IA. L'app vous demande votre accord la première fois, et vous pouvez désactiver cette option à tout moment dans Réglages > Scanner. La photo est alors envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmet à OpenAI dans le seul but d'identifier la voiture. Notre serveur de scan ne stocke pas la photo et demande à OpenAI de ne pas conserver la requête. OpenAI n'utilise pas les données de son API pour entraîner ses modèles et peut les conserver jusqu'à 30 jours pour détecter les abus, puis les supprime.",
+        "Aider à entraîner la reconnaissance de Kastr : quand vous ajoutez une voiture à votre garage depuis un scan, la photo et la voiture confirmée peuvent être conservées pour construire le propre modèle de reconnaissance de Kastr. La demande d'accord l'explique quand vous autorisez l'identification par IA, et vous pouvez désactiver ce réglage à tout moment dans Réglages > Scanner. Ces photos sont gardées dans un stockage privé avec la voiture et un identifiant haché de votre installation de l'app, sans votre compte ni votre nom. Leur durée de conservation n'est pas encore fixée et sera indiquée ici ; en attendant, vous pouvez nous demander de les supprimer.",
+        "Pour compter les crédits de scan, nous conservons un compteur lié à votre compte, ou à un identifiant haché de votre installation de l'app si vous n'avez pas de compte.",
       ],
     },
     {
@@ -297,46 +404,45 @@ const fr: LegalDoc = {
       heading: "Achats et Kastr Pro",
       blocks: [
         "Kastr Pro est vendu via l'App Store. Apple gère le paiement : nous ne recevons jamais votre numéro de carte ni votre adresse de facturation.",
-        "Nous utilisons RevenueCat pour savoir si votre abonnement est actif et vous permettre de le restaurer. RevenueCat reçoit un identifiant utilisateur anonyme (lié à votre compte si vous en avez un), l'historique de vos achats et abonnements dans Kastr, les identifiants de transaction, le pays et la devise de votre store, le type d'appareil et la version de l'app.",
+        "Nous utilisons RevenueCat pour savoir si votre abonnement est actif et vous permettre de le restaurer. RevenueCat reçoit un identifiant utilisateur (l'identifiant de votre compte si vous êtes connecté), l'historique de vos achats et abonnements dans Kastr, les identifiants de transaction, le pays et la devise de votre store, le type d'appareil et la version de l'app. Notre serveur conserve si votre compte a Kastr Pro, sa date de fin et un éventuel bonus de parrainage.",
       ],
     },
     {
       id: "analytics",
-      heading: "Statistiques anonymes",
+      heading: "Statistiques",
       blocks: [
-        "Nous utilisons TelemetryDeck pour savoir quelles fonctions sont utilisées et repérer les bugs. Il reçoit des signaux d'usage anonymes (par exemple, qu'une recherche a été faite ou qu'un écran a été ouvert), la version de l'app, la version d'iOS, le modèle d'appareil et la langue. L'identifiant utilisateur est haché sur votre appareil avant l'envoi : il ne permet pas de remonter jusqu'à vous.",
-        "Nous n'utilisons pas l'identifiant publicitaire (IDFA), nous ne vous suivons pas dans les apps ou sites d'autres sociétés, et l'app ne demande pas l'autorisation de suivi parce qu'elle ne suit pas.",
+        "Kastr n'utilise aujourd'hui aucun outil de statistiques, de rapport de plantage ni de pistage. Nous n'utilisons pas l'identifiant publicitaire (IDFA), nous ne vous suivons pas dans les apps ou sites d'autres sociétés, et l'app ne demande pas l'autorisation de suivi parce qu'elle ne suit pas. Si nous ajoutons plus tard des statistiques d'usage anonymes, nous mettrons cette politique à jour avant la version qui les ajoute.",
       ],
     },
     {
       id: "photos",
       heading: "Les photos du catalogue",
       blocks: [
-        "Les photos de voitures du catalogue sont téléchargées depuis des serveurs d'images quand vous les affichez. Aujourd'hui, certaines sont servies par Fandom, Inc., qui héberge les wikis dont vient notre catalogue. Comme pour toute requête web, télécharger une photo révèle votre adresse IP au serveur qui l'envoie. Aucune donnée de compte ne lui est transmise.",
+        "Les photos de voitures du catalogue sont téléchargées depuis des serveurs d'images quand vous les affichez. Aujourd'hui, la plupart sont servies par Fandom, Inc., qui héberge les wikis dont vient notre catalogue. Comme pour toute requête web, télécharger une photo révèle votre adresse IP au serveur qui l'envoie. Aucune donnée de compte ne lui est transmise.",
       ],
     },
     {
       id: "prices",
-      heading: "Valeurs, devises et liens eBay",
+      heading: "Valeurs, sorties, devises et liens eBay",
       blocks: [
-        "Les valeurs viennent des ventes eBay récentes, que notre serveur collecte par les interfaces de programmation d'eBay et par un fournisseur de données de ventes (Trawl), et des prix partagés par les collectionneurs dans Kastr. Notre serveur n'envoie à ces services que ses propres recherches sur des voitures, jamais de données vous concernant.",
+        "Les valeurs viennent des ventes eBay récentes, que notre serveur collecte par les interfaces de programmation d'eBay et par un fournisseur de données de ventes (Trawl), et des prix partagés par les collectionneurs dans Kastr. Les nouvelles sorties et les lettres de caisse viennent de wikis publics de collectionneurs. Notre serveur n'envoie à ces services que ses propres recherches sur des voitures, jamais de données vous concernant.",
         "Les prix sont convertis dans votre devise avec les taux de référence quotidiens publiés par la Banque centrale européenne. Le prix d'origine est affiché à côté.",
         "« Où la trouver » affiche les annonces eBay ouvertes en ce moment. En ouvrir une vous emmène sur eBay, dont la propre politique de confidentialité s'applique alors. Ces liens peuvent être des liens affiliés eBay Partner Network : si vous achetez, Kastr peut toucher une commission sans surcoût pour vous, et eBay peut utiliser des cookies ou une technologie similaire pour attribuer l'achat.",
       ],
     },
     {
       id: "website",
-      heading: "Ce site",
+      heading: "Ce site et les emails",
       blocks: [
         "kastr.app est hébergé par Cloudflare. Comme tout hébergeur, Cloudflare traite votre adresse IP et des données de requête de base dans des journaux serveur, pour afficher les pages et protéger le site. Le site ne dépose aucun cookie et n'utilise aucun script de statistiques ou de publicité.",
-        "Si vous nous écrivez, votre message et votre adresse servent uniquement à vous répondre.",
+        "Les emails envoyés à support@kastr.app sont transférés par Cloudflare vers notre boîte hébergée par Google. Votre message et votre adresse servent uniquement à vous répondre.",
       ],
     },
     {
       id: "permissions",
       heading: "Autorisations de l'iPhone",
       blocks: [
-        "Kastr demande l'accès à l'appareil photo seulement quand vous scannez ou photographiez une voiture, et l'accès à la photothèque seulement quand vous y choisissez une image. Vous pouvez modifier ces autorisations à tout moment dans les Réglages de l'iPhone. Kastr fonctionne sans elles.",
+        "Kastr demande l'accès à l'appareil photo seulement quand vous scannez ou photographiez une voiture, l'accès à la photothèque seulement quand vous y choisissez une image, et les notifications seulement après une action où elles sont utiles (par exemple votre première publication). Vous pouvez modifier ces autorisations à tout moment dans les Réglages de l'iPhone. Kastr fonctionne sans elles.",
       ],
     },
     {
@@ -345,9 +451,9 @@ const fr: LegalDoc = {
       blocks: [
         {
           list: [
-            "Fournir le service demandé (compte, synchronisation, scan, communauté, Kastr Pro) : exécution du contrat qui nous lie.",
-            "Sécuriser Kastr, modérer les contenus, empêcher les abus de crédits gratuits et améliorer l'app grâce à des statistiques anonymes : notre intérêt légitime, mis en balance avec vos droits.",
-            "Conserver des photos de scan pour améliorer la reconnaissance : votre consentement, que vous pouvez retirer à tout moment.",
+            "Fournir le service demandé (compte, emails de connexion, synchronisation, scan, communauté, notifications autorisées, Kastr Pro) : exécution du contrat qui nous lie.",
+            "Sécuriser Kastr, modérer les contenus, empêcher les abus de crédits gratuits et de parrainage, et calculer des prix agrégés : notre intérêt légitime, mis en balance avec vos droits.",
+            "Conserver des photos de scan pour améliorer la reconnaissance, et vous envoyer la newsletter : votre consentement, que vous pouvez retirer à tout moment.",
             "Conserver les données exigées par la loi ou répondre à une demande légale : obligation légale.",
           ],
         },
@@ -360,13 +466,14 @@ const fr: LegalDoc = {
         "Nous ne partageons des données qu'avec les prestataires ci-dessous, qui les traitent pour notre compte et sous contrat, jamais pour leur propre publicité.",
         {
           list: [
-            "Apple Inc. (États-Unis) : Se connecter avec Apple et paiements App Store.",
-            "Supabase, Inc. (États-Unis), données hébergées dans l'Union européenne (Paris, France) : compte, base de données, stockage de fichiers et fonctions serveur.",
+            "Apple Inc. et ses filiales (États-Unis, Irlande) : Se connecter avec Apple, paiements App Store et notifications push.",
+            "Supabase, Inc. (États-Unis), données hébergées dans l'Union européenne (Paris, France) : comptes, base de données, stockage de fichiers et fonctions serveur.",
+            "Resend, Inc. (États-Unis) : envoi des codes de connexion et, plus tard, de la newsletter.",
             "RevenueCat, Inc. (États-Unis) : statut des abonnements.",
-            "TelemetryDeck GmbH (Allemagne) : statistiques anonymes.",
             "OpenAI, L.L.C. (États-Unis) : identification des voitures scannées, seulement quand vous utilisez l'identification par IA.",
-            "Cloudflare, Inc. (États-Unis) : hébergement du site et nom de domaine.",
-            "Fandom, Inc. (États-Unis) : diffusion de certaines photos du catalogue.",
+            "Cloudflare, Inc. (États-Unis) : hébergement du site, nom de domaine et transfert des emails adressés à support@kastr.app.",
+            "Google LLC (États-Unis) : la boîte où arrivent les emails d'assistance.",
+            "Fandom, Inc. (États-Unis) : diffusion de la plupart des photos du catalogue.",
           ],
         },
         "Nous pouvons aussi communiquer des données si la loi l'exige, ou pour protéger la sécurité des utilisateurs.",
@@ -376,7 +483,7 @@ const fr: LegalDoc = {
       id: "transfers",
       heading: "Transferts hors de l'Union européenne",
       blocks: [
-        "Certains de ces prestataires sont établis aux États-Unis. Quand des données personnelles quittent l'Espace économique européen, elles sont protégées par les clauses contractuelles types de la Commission européenne ou par la certification du prestataire au Data Privacy Framework UE-États-Unis.",
+        "Plusieurs de ces prestataires sont établis aux États-Unis. Quand des données personnelles quittent l'Espace économique européen, elles sont protégées par la certification du prestataire au Data Privacy Framework UE-États-Unis ou par les clauses contractuelles types de la Commission européenne.",
       ],
     },
     {
@@ -386,8 +493,9 @@ const fr: LegalDoc = {
         {
           list: [
             "Données sur votre iPhone : jusqu'à ce que vous les supprimiez ou supprimiez l'app.",
-            "Données de compte, garage synchronisé, publications et contributions : jusqu'à la suppression du compte. Elles sont alors effacées de nos systèmes actifs sous 30 jours, puis des sauvegardes lors de leur rotation.",
-            "Les données de catalogue validées que vous avez apportées restent au catalogue, sans votre nom.",
+            "Compte, profil, garage synchronisé, publications, commentaires, mentions j'aime, abonnements, activité, jetons de notification et propositions : jusqu'à la suppression du compte (les jetons plus tôt, voir plus haut). Ils sont alors effacés aussitôt de nos systèmes actifs, puis des sauvegardes de notre prestataire lors de leur rotation.",
+            "Les données de catalogue validées que vous avez apportées restent au catalogue, sans votre nom. Les prix agrégés restent sans lien avec vous.",
+            "Newsletter : jusqu'à votre désinscription ou la suppression du compte. Nous gardons la trace de votre consentement jusqu'à 3 ans après la désinscription, pour pouvoir la prouver.",
             "Signalements et décisions de modération : jusqu'à 12 mois, plus longtemps seulement si un litige l'exige.",
             "Emails d'assistance : jusqu'à 3 ans après notre dernier échange.",
             "Données d'abonnement chez RevenueCat et Apple : le temps nécessaire à la gestion des achats et à leurs obligations légales.",
@@ -399,7 +507,8 @@ const fr: LegalDoc = {
       id: "deletion",
       heading: "Supprimer votre compte",
       blocks: [
-        "Vous pouvez supprimer votre compte depuis les réglages du compte dans l'app. Cela supprime votre profil, votre garage synchronisé, vos publications, commentaires et photos, et vos propositions privées ; le lien avec Se connecter avec Apple est révoqué et votre fiche client chez RevenueCat est supprimée.",
+        "Vous pouvez supprimer votre compte depuis votre profil dans l'app (réglages du compte, Supprimer mon compte). Cela supprime votre profil, votre garage synchronisé et ses photos, vos publications, commentaires, mentions j'aime, abonnements et activité, vos propositions et leurs photos, vos jetons de notification, votre inscription à la newsletter et vos crédits de scan. Si votre compte utilise Se connecter avec Apple, l'app vous demande de confirmer avec Apple pour que l'accès de Kastr à votre identifiant Apple soit aussi révoqué.",
+        `Votre historique d'abonnement chez RevenueCat est lié à un identifiant, pas à votre nom ; nous le supprimons sur demande. Les photos de scan gardées pour l'entraînement ne sont pas liées à votre compte ; demandez-nous si vous voulez qu'elles soient supprimées. Écrivez à ${mail} dans les deux cas.`,
         "Supprimer votre compte ne résilie pas un abonnement App Store. Résiliez-le dans l'app Réglages (votre nom, puis Abonnements) pour ne plus être prélevé.",
         `Vous pouvez aussi nous demander la suppression en écrivant à ${mail} depuis l'adresse liée au compte.`,
       ],
@@ -423,7 +532,7 @@ const fr: LegalDoc = {
       id: "security",
       heading: "Sécurité",
       blocks: [
-        "Les données circulent par des connexions chiffrées. Les données de compte sont protégées par des règles d'accès qui ne laissent chaque utilisateur lire que ses propres données privées, et les clés secrètes restent sur nos serveurs, jamais dans l'app.",
+        "Les données circulent par des connexions chiffrées. Les données de compte sont protégées par des règles d'accès qui ne laissent chaque utilisateur lire que ses propres données privées, les clés secrètes restent sur nos serveurs et jamais dans l'app, et votre session de connexion est gardée dans le trousseau de l'iPhone.",
       ],
     },
     {
