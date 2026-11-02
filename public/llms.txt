@@ -1,6 +1,6 @@
 # Kastr
 
-> Kastr is an iPhone app for diecast car collectors. It tells you, in the store aisle, in about two seconds, whether you already own a car, whether it is a Treasure Hunt, and what it sold for recently. Free to download, iOS 17 or later. Independent, not affiliated with Mattel, Inc.
+> Kastr is an iPhone app for diecast car collectors. It tells you, in the store aisle, whether you already own a car, whether it is a Treasure Hunt, and what it sold for recently. Free to download, iOS 17 or later. Independent, not affiliated with Mattel, Inc.
 
 ## What it does today
 

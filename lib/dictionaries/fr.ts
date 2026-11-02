@@ -4,9 +4,9 @@ import type { Dictionary } from "./en";
 
 export const fr: Dictionary = {
   meta: {
-    title: "Kastr : l'app des collectionneurs de miniatures, au rayon",
+    title: "Kastr : appli collection Hot Wheels, scanner et cote",
     description:
-      "Sache en deux secondes si tu as déjà une voiture miniature, si c'est une Treasure Hunt et combien elle vaut. 78 256 voitures hors ligne, ventes récentes dans ta devise. Pour iPhone.",
+      "Scanne un blister Hot Wheels et sache si tu l'as déjà, si c'est une Treasure Hunt et sa cote. 78 256 voitures hors ligne, recherche gratuite. iPhone.",
   },
   nav: {
     features: "Fonctions",
@@ -18,15 +18,25 @@ export const fr: Dictionary = {
   },
   badge: {
     line1: "Télécharger dans",
+    soon: "Bientôt dans",
     line2: "l'App Store",
     aria: "Télécharger Kastr dans l'App Store",
   },
   hero: {
-    eyebrow: "L'app des collectionneurs de miniatures",
-    title: "Sache-le en deux secondes.",
+    eyebrow: "L'appli de collection Hot Wheels et miniatures",
+    title: "Scanne une Hot Wheels. Sache si tu l'as déjà.",
     subtitle:
-      "Si tu l'as déjà, si c'est une Treasure Hunt, et combien elle vaut. Directement devant le rayon.",
-    imageAlt: "Fiche Kastr de la '23 Ram 1500 Super Treasure Hunt 2026 en Spectraflame Plum Crazy, déjà au garage",
+      "L'appli de collection des chasseurs de miniatures. Kastr repère les doublons, les Treasure Hunt et les Super Treasure Hunt, et te donne la cote de chaque voiture. 78 256 voitures, hors ligne.",
+    note: "Téléchargement gratuit · Sans pub · Hors ligne",
+    imageAlt: "Fiche Kastr de la '23 Ram 1500 Super Treasure Hunt 2026 : médiane de 24 ventes sous blister avec le graphique des ventes, déjà au garage",
+  },
+  reveal: {
+    title: "Super Treasure Hunt",
+    added: "Ajoutée à ton garage",
+    alt: "La '23 Ram 1500 Super Treasure Hunt 2026 en Spectraflame Plum Crazy",
+  },
+  wall: {
+    label: "Le catalogue",
   },
   answer: {
     question: "Qu'est-ce que Kastr ?",
@@ -39,6 +49,7 @@ export const fr: Dictionary = {
     { value: "Hors ligne", label: "recherche, garage et liste de chasse" },
   ],
   hunt: {
+    label: "Chasse",
     title: "Scanne le rayon. Sache-le avant de payer.",
     body: "Enchaîne les blisters sans t'arrêter et fais le tri après. Chaque résultat te dit si la voiture est déjà dans ton garage, si ce serait un doublon et si c'est une Treasure Hunt. La liste TH et STH de l'année reste en haut, avec une coche sur celles que tu as trouvées.",
     chips: {
@@ -51,11 +62,13 @@ export const fr: Dictionary = {
     imageAlt: "Écran Chasse de Kastr : 2 des 15 Super Treasure Hunt 2026 trouvées, avec la liste de l'année en grille de photos",
   },
   garage: {
+    label: "Garage",
     title: "Ton garage, comme un portefeuille.",
     body: "Ce que tu as payé, ce que ça vaut aujourd'hui et l'écart entre les deux. Tes constructeurs, tes décennies, tes raretés, et les séries que tu es près de finir. Import et export CSV, pour que ton tableur te suive.",
-    imageAlt: "Garage Kastr : total payé, 39 voitures, progression des Super Treasure Hunt et les voitures en cartes photo",
+    imageAlt: "Garage Kastr : valeur du garage face au prix payé, 39 voitures, progression des Super Treasure Hunt et les voitures en cartes photo",
   },
   features: {
+    label: "Fonctions",
     title: "Tout ce qu'il faut à un collectionneur.",
     items: {
       catalog: {
@@ -67,18 +80,23 @@ export const fr: Dictionary = {
         body: "Hot Wheels d'abord, puis Matchbox, Mini GT, Tomica, M2 Machines, Maisto et Racing Champions.",
       },
       prices: {
+        label: "Ventes récentes",
         title: "Des valeurs avec les ventes derrière",
         body: "Les ventes eBay récentes et ce que les collectionneurs ont payé, dans ta devise avec le prix d'origine à côté. Tu vois de combien de ventes vient chaque valeur.",
       },
       where: {
         title: "Où la trouver",
+        row: "En direct sur eBay",
         body: "Il t'en manque une ? Kastr affiche les annonces eBay ouvertes en ce moment pour cette voiture précise, pour compléter ta série.",
       },
       completion: {
+        ringLabel: "Super Treasure Hunt 2026",
         title: "Des médailles à gagner",
         body: "Vois quelle part de la chasse de l'année tu possèdes, et de toutes les Treasure Hunt jamais sorties. Finis une série et sa médaille s'allume.",
       },
       looks: {
+        dark: "Sombre",
+        light: "Clair",
         title: "Sombre ou clair",
         body: "Noir paddock par défaut, un thème clair si tu préfères, et une carte à partager pour tes plus belles trouvailles.",
       },
@@ -95,6 +113,7 @@ export const fr: Dictionary = {
     },
   },
   principles: {
+    label: "Nos règles",
     title: "Pensée comme les collectionneurs l'ont demandé.",
     items: [
       {

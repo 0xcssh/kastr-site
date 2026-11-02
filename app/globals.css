@@ -16,7 +16,7 @@
   --color-titanium: #c9ced6;
   --color-chrono: #2bd46a;
   --color-violet: #a25bff;
-  --color-gold: #fac740;
+  --color-gold: #f8c541;
   --color-studio: #eeedea;
   --color-checker: #ffffff;
 }
@@ -116,6 +116,25 @@ body {
       animation-timeline: view();
       animation-range: entry 0% entry 40%;
     }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Garage wall: the cards drift by, slowly enough to read a name. Paused under the pointer. */
+  .marquee-track {
+    animation: marquee 70s linear infinite;
+  }
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
 

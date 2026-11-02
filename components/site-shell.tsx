@@ -64,7 +64,7 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
         </div>
       </header>
 
-      <main id="main">{children}</main>
+      <main id="main" className="overflow-x-clip">{children}</main>
 
       <footer className="mt-24 border-t border-line">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1fr_auto]">

@@ -4,9 +4,9 @@
 
 export const en = {
   meta: {
-    title: "Kastr: the diecast collector app for the aisle",
+    title: "Kastr: Hot Wheels Collection App, Scanner & Value Guide",
     description:
-      "Know in two seconds if you already own a diecast car, if it's a Treasure Hunt, and what it's worth. 78,256 cars offline, recent sales in your currency. For iPhone.",
+      "Scan a Hot Wheels card and know if you own it, if it's a Treasure Hunt and what it's worth. 78,256 diecast cars offline, free search, no ads. iPhone.",
   },
   nav: {
     features: "Features",
@@ -18,15 +18,25 @@ export const en = {
   },
   badge: {
     line1: "Download on the",
+    soon: "Coming soon to the",
     line2: "App Store",
     aria: "Download Kastr on the App Store",
   },
   hero: {
-    eyebrow: "The diecast collector app",
-    title: "Know in two seconds.",
+    eyebrow: "Hot Wheels & diecast collection app",
+    title: "Scan a Hot Wheels. Know if you have it.",
     subtitle:
-      "If you already own it, if it's a Treasure Hunt, and what it's worth. Right in front of the pegs.",
-    imageAlt: "Kastr car page for the 2026 '23 Ram 1500 Super Treasure Hunt in Spectraflame Plum Crazy, already in the garage",
+      "The collection app for diecast hunters. Kastr spots doubles, Treasure Hunts and Super Treasure Hunts, and shows what each car is worth. 78,256 cars, offline.",
+    note: "Free to download · No ads · Works offline",
+    imageAlt: "Kastr car page for the 2026 '23 Ram 1500 Super Treasure Hunt: median of 24 carded sales with the sales chart, already in the garage",
+  },
+  reveal: {
+    title: "Super Treasure Hunt",
+    added: "Added to your garage",
+    alt: "The 2026 '23 Ram 1500 Super Treasure Hunt in Spectraflame Plum Crazy",
+  },
+  wall: {
+    label: "The catalog",
   },
   answer: {
     question: "What is Kastr?",
@@ -39,6 +49,7 @@ export const en = {
     { value: "Offline", label: "search, garage and hunt list" },
   ],
   hunt: {
+    label: "Hunt",
     title: "Scan the peg. Know before you pay.",
     body: "Shoot card after card without stopping and review them after. Each result says if the car is already in your garage, if it would be a double, and if it's a Treasure Hunt. The year's TH and STH list sits on top, with a tick on the ones you found.",
     chips: {
@@ -51,11 +62,13 @@ export const en = {
     imageAlt: "Kastr Hunt screen: 2 of the 15 Super Treasure Hunts of 2026 found, with the year's list as a photo grid",
   },
   garage: {
+    label: "Garage",
     title: "Your garage, like a portfolio.",
     body: "What you paid, what it's worth today and the gap between the two. Your makers, your decades, your rarities, and the series you are close to finishing. CSV import and export, so your spreadsheet comes with you.",
-    imageAlt: "Kastr garage: total paid, 39 cars, Super Treasure Hunt progress and the cars as photo cards",
+    imageAlt: "Kastr garage: garage value against what was paid, 39 cars, Super Treasure Hunt progress and the cars as photo cards",
   },
   features: {
+    label: "Features",
     title: "Everything a collector needs.",
     items: {
       catalog: {
@@ -67,18 +80,23 @@ export const en = {
         body: "Hot Wheels first, then Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.",
       },
       prices: {
+        label: "Recent sales",
         title: "Values with the sales behind them",
         body: "Recent eBay sales and what collectors paid, in your own currency with the original price next to it. You see how many sales a value comes from.",
       },
       where: {
         title: "Where to find it",
+        row: "Live on eBay",
         body: "Missing one? Kastr shows the eBay listings open right now for that exact car, so you can complete the set.",
       },
       completion: {
+        ringLabel: "Super Treasure Hunt 2026",
         title: "Medals you earn",
         body: "See how much of this year's hunt you hold, and of every Treasure Hunt ever made. Finish a set and its medal lights up.",
       },
       looks: {
+        dark: "Dark",
+        light: "Light",
         title: "Dark or light",
         body: "Paddock black by default, a light look if you prefer, and a share card for your best finds.",
       },
@@ -95,6 +113,7 @@ export const en = {
     },
   },
   principles: {
+    label: "Our rules",
     title: "Built the way collectors asked for it.",
     items: [
       {
