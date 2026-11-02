@@ -32,7 +32,7 @@ export function GarageWall({ label }: { label: string }) {
   );
 }
 
-/** The reward screen when a scan finds a Super Treasure Hunt (Diecast/Views/RevealView.swift). */
+/** The reward screen shown for the first copy of a TH or STH added to the garage, by search or scan (Diecast/Views/RevealView.swift). */
 export function RevealCard({ title, added, alt }: { title: string; added: string; alt: string }) {
   return (
     <div className="relative w-full max-w-[19rem] rounded-[28px] border border-gold/35 bg-[#0b0b0e] p-5 pb-6 text-center shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)]">
