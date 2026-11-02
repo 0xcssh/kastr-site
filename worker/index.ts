@@ -4,6 +4,7 @@
 // www to apex, security headers, and a PNG content type for the extensionless image routes.
 
 import { config, isAppLive } from "../lib/config";
+import { APPLE_APP_SITE_ASSOCIATION, parseCreatorPath, renderCreatorPage } from "./creator";
 import { fetchProfile, fetchProfileIndex, parseProfilePath, profileSitemap, renderNotFound, renderProfile } from "./profile";
 
 interface Env {
@@ -76,6 +77,30 @@ const worker = {
     if (url.hostname === `www.${APEX}`) {
       url.hostname = APEX;
       return Response.redirect(url.toString(), 301);
+    }
+
+    // Universal links for creator codes: the app opens /c/<code> directly.
+    if (url.pathname === "/.well-known/apple-app-site-association") {
+      return new Response(APPLE_APP_SITE_ASSOCIATION, {
+        headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=3600" },
+      });
+    }
+
+    // Creator links (https://kastr.app/c/PANDACARS) when the app is not installed.
+    const creatorCode = parseCreatorPath(url.pathname);
+    if (creatorCode) {
+      const locale = preferredLocale(request.headers.get("Accept-Language"));
+      const appUrl = isAppLive ? config.appStoreUrl : `${config.siteUrl}/${locale}`;
+      return new Response(renderCreatorPage(creatorCode, locale, appUrl), {
+        headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300",
+                   Vary: "Accept-Language", ...SECURITY_HEADERS },
+      });
+    }
+    if (url.pathname.startsWith("/c/")) {
+      const locale = preferredLocale(request.headers.get("Accept-Language"));
+      return new Response(renderNotFound(locale), {
+        status: 404, headers: { "Content-Type": "text/html; charset=utf-8", ...SECURITY_HEADERS },
+      });
     }
 
     const profile = await profileResponse(url, request, env);

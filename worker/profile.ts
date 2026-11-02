@@ -355,7 +355,7 @@ export function renderNotFound(locale: Locale): string {
 <main><section class="card profile"><h1 class="display">${text.title}</h1><p class="bio">${text.body}</p><a class="cta" href="/${locale}">${text.back}</a></section></main></body></html>`;
 }
 
-const STYLE = `
+export const STYLE = `
 @font-face{font-family:Saira;src:url(/fonts/saira-latin.woff2) format("woff2");font-weight:100 900;font-stretch:50% 125%;font-display:swap}
 :root{--carbon:#0b0b0e;--surface:#16161b;--surface2:#202027;--line:#2a2a33;--ink:#f4f4f5;--muted:#a1a1aa;--accent:#e10a1e;--titanium:#c9ced6;--gold:#f8c541;--studio:#eeedea;color-scheme:dark}
 *{box-sizing:border-box}
