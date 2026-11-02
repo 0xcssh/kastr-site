@@ -50,12 +50,12 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
           <div style={{ display: "flex", fontSize: 44, fontWeight: 900, letterSpacing: 2 }}>KASTR</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 92, fontWeight: 900, lineHeight: 1, letterSpacing: -3, textTransform: "uppercase" }}>
-            {d.hero.title}
-          </div>
-          <div style={{ marginTop: 28, fontSize: 34, color: "#a1a1aa", maxWidth: 960, lineHeight: 1.3 }}>
-            {d.hero.subtitle}
-          </div>
+          {d.hero.title.map((line) => (
+            <div key={line} style={{ display: "flex", fontSize: 64, fontWeight: 900, lineHeight: 1.05, letterSpacing: -2, textTransform: "uppercase" }}>
+              {line}
+            </div>
+          ))}
+          <div style={{ display: "flex", marginTop: 24, fontSize: 40, fontWeight: 700, color: "#e10a1e" }}>{d.hero.cta}</div>
         </div>
         <div style={{ display: "flex", height: 10, width: 220, background: "#e10a1e" }} />
       </div>

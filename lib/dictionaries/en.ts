@@ -24,7 +24,9 @@ export const en = {
   },
   hero: {
     eyebrow: "Hot Wheels & diecast collection app",
-    title: "What's this Hot Wheels worth? Got it already? Scan it to find out.",
+    // Two questions, one per line, then the call to action in red (the punchline).
+    title: ["What's this Hot Wheels worth?", "Got it already?"],
+    cta: "Scan it to find out.",
     subtitle:
       "The collection app for diecast hunters. Recent sales in your currency, doubles flagged before you buy, and the year's Treasure Hunts in one list. 78,256 cars, offline.",
     note: "Free to download · No ads · Works offline",

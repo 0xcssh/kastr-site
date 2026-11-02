@@ -76,12 +76,23 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       />
 
       {/* Hero: what Kastr is on the left; the car page and the Super Treasure Hunt reveal on the right. */}
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-8 sm:px-8 md:pt-14 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[minmax(0,7fr)_minmax(0,6fr)] lg:gap-12 lg:pt-8">
+      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-8 sm:px-8 md:pt-14 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,25rem)] lg:gap-12 lg:pt-8">
         <div>
           <SectionLabel className="enter">{d.hero.eyebrow}</SectionLabel>
-          <h1 className="enter enter-delay mt-6 flex items-start gap-[0.25em] pb-2 font-display text-[2rem] font-black uppercase italic leading-[0.98] tracking-tight text-ink sm:text-[2.9rem] lg:text-[3.05rem]">
-            <SpeedStripes className="mt-[0.2em] shrink-0" />
-            <span>{d.hero.title}</span>
+          <h1 className="enter enter-delay mt-6 flex items-start gap-[0.3em] pb-2">
+            <SpeedStripes className="mt-[0.3em] shrink-0 text-[1.6rem] sm:text-[2.1rem] lg:text-[1.95rem]" />
+            <span className="flex flex-col">
+              {d.hero.title.map((line) => (
+                <span
+                  key={line}
+                  className="font-display text-[1.6rem] font-black uppercase italic leading-[1.02] tracking-tight text-ink sm:text-[2.1rem] lg:text-[1.95rem] xl:whitespace-nowrap"
+                >
+                  {line}{" "}
+                </span>
+              ))}
+              {/* The punchline, which is the call to action: never broken inside "pour le savoir". */}
+              <span className="mt-3 whitespace-nowrap font-display text-lg font-bold italic text-accent sm:text-2xl">{d.hero.cta}</span>
+            </span>
           </h1>
           <p className="enter enter-delay mt-6 max-w-[40ch] text-lg leading-relaxed text-muted sm:text-xl">{d.hero.subtitle}</p>
           <div className="enter enter-delay-2 mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">

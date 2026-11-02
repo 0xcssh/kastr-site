@@ -24,7 +24,8 @@ export const fr: Dictionary = {
   },
   hero: {
     eyebrow: "L'appli de collection Hot Wheels et miniatures",
-    title: "Cette Hot Wheels, elle vaut combien ? Tu l'as déjà ? Scanne-la pour le savoir.",
+    title: ["Cette Hot Wheels, elle vaut combien ?", "Tu l'as déjà ?"],
+    cta: "Scanne-la pour le savoir.",
     subtitle:
       "L'appli de collection des chasseurs de miniatures. Les ventes récentes dans ta devise, les doublons signalés avant d'acheter, et les Treasure Hunt de l'année dans une liste. 78 256 voitures, hors ligne.",
     note: "Téléchargement gratuit · Sans pub · Hors ligne",
