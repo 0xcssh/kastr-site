@@ -6,7 +6,7 @@ export const fr: Dictionary = {
   meta: {
     title: "Kastr : appli collection Hot Wheels, scanner et cote",
     description:
-      "Scanne un blister Hot Wheels et sache si tu l'as déjà, si c'est une Treasure Hunt et sa cote. 78 256 voitures hors ligne, recherche gratuite. iPhone.",
+      "Combien vaut ta Hot Wheels ? Scanne le blister pour voir ses ventes récentes et si tu l'as déjà. 78 256 voitures hors ligne, recherche gratuite, sans pub.",
   },
   nav: {
     features: "Fonctions",
@@ -24,9 +24,9 @@ export const fr: Dictionary = {
   },
   hero: {
     eyebrow: "L'appli de collection Hot Wheels et miniatures",
-    title: "Scanne une Hot Wheels. Sache si tu l'as déjà.",
+    title: "Cette Hot Wheels, elle vaut combien ? Tu l'as déjà ? Scanne-la pour le savoir.",
     subtitle:
-      "L'appli de collection des chasseurs de miniatures. Kastr repère les doublons, les Treasure Hunt et les Super Treasure Hunt, et te donne la cote de chaque voiture. 78 256 voitures, hors ligne.",
+      "L'appli de collection des chasseurs de miniatures. Les ventes récentes dans ta devise, les doublons signalés avant d'acheter, et les Treasure Hunt de l'année dans une liste. 78 256 voitures, hors ligne.",
     note: "Téléchargement gratuit · Sans pub · Hors ligne",
     imageAlt: "Fiche Kastr de la '23 Ram 1500 Super Treasure Hunt 2026 : médiane de 24 ventes sous blister avec le graphique des ventes, déjà au garage",
   },

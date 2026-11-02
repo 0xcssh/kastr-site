@@ -79,7 +79,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-8 sm:px-8 md:pt-14 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[minmax(0,7fr)_minmax(0,6fr)] lg:gap-12 lg:pt-8">
         <div>
           <SectionLabel className="enter">{d.hero.eyebrow}</SectionLabel>
-          <h1 className="enter enter-delay mt-6 flex items-start gap-[0.25em] pb-2 font-display text-[2.35rem] font-black uppercase italic leading-[0.98] tracking-tight text-ink sm:text-[3.4rem] lg:text-[3.6rem]">
+          <h1 className="enter enter-delay mt-6 flex items-start gap-[0.25em] pb-2 font-display text-[2rem] font-black uppercase italic leading-[0.98] tracking-tight text-ink sm:text-[2.9rem] lg:text-[3.05rem]">
             <SpeedStripes className="mt-[0.2em] shrink-0" />
             <span>{d.hero.title}</span>
           </h1>

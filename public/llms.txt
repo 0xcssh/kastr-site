@@ -6,7 +6,7 @@
 
 - Offline catalog of 78,256 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.
 - Search by name, year, series or toy number, free and unlimited, with no signal needed.
-- Hunt: scan cards in a row (barcode and toy number read on the iPhone, AI identification as a fallback with the user's permission), then review. Each result shows "already in my garage", duplicate, Treasure Hunt (TH) or Super Treasure Hunt (STH).
+- Hunt: scan cards in a row (barcode and toy number read on the iPhone, AI identification as a fallback with the user's permission), then review. Each result shows "already in my garage", duplicate, and the car's rarity as listed in the catalog.
 - The year's TH and STH list as a photo grid, with found cars ticked; a gold reveal with haptic feedback.
 - Garage like a portfolio: price paid, value, makers, decades, rarities and series in progress; a wishlist; CSV import and export.
 - Values from recent eBay sales and prices shared by collectors, converted to the local currency with European Central Bank rates, with the number of sales behind each value.

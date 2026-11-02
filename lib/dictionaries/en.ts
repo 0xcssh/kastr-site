@@ -6,7 +6,7 @@ export const en = {
   meta: {
     title: "Kastr: Hot Wheels Collection App, Scanner & Value Guide",
     description:
-      "Scan a Hot Wheels card and know if you own it, if it's a Treasure Hunt and what it's worth. 78,256 diecast cars offline, free search, no ads. iPhone.",
+      "What's your Hot Wheels worth? Scan the card to see its recent sales and whether it's already in your collection. 78,256 diecast cars offline, free search, no ads.",
   },
   nav: {
     features: "Features",
@@ -24,9 +24,9 @@ export const en = {
   },
   hero: {
     eyebrow: "Hot Wheels & diecast collection app",
-    title: "Scan a Hot Wheels. Know if you have it.",
+    title: "What's this Hot Wheels worth? Got it already? Scan it to find out.",
     subtitle:
-      "The collection app for diecast hunters. Kastr spots doubles, Treasure Hunts and Super Treasure Hunts, and shows what each car is worth. 78,256 cars, offline.",
+      "The collection app for diecast hunters. Recent sales in your currency, doubles flagged before you buy, and the year's Treasure Hunts in one list. 78,256 cars, offline.",
     note: "Free to download · No ads · Works offline",
     imageAlt: "Kastr car page for the 2026 '23 Ram 1500 Super Treasure Hunt: median of 24 carded sales with the sales chart, already in the garage",
   },
