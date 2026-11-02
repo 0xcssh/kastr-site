@@ -35,7 +35,8 @@ const en: LegalDoc = {
             "There are no ads in Kastr, no ad tracking, and we do not sell your data.",
             "Your garage works without an account and then stays on your iPhone.",
             "An account is optional. With one, your garage is backed up and synced privately, and you can join the community.",
-            "In the community, your username, bio, avatar car, posts and, unless you turn it off, the list of cars in your garage are visible to other collectors. What you paid, where you found a car, your notes and your own photos of your cars are never shown to anyone.",
+            "In the community, your username, bio, avatar car, posts and, unless you turn it off, the list of cars in your garage are visible to other collectors, and on your public page at kastr.app/@username unless you turn that page off. What you paid, where you found a car, your notes and your own photos of your cars are never shown to anyone.",
+            "The community is for collectors aged 13 and over. We store only your age band, never your date or year of birth.",
             "Kastr does not use any analytics or tracking tool today.",
             "Payments go through Apple. We never see your card details.",
             "You can delete your account from the app at any time.",
@@ -64,7 +65,7 @@ const en: LegalDoc = {
             "Email: you enter your address and we email you a 6-digit code. Typing the code confirms the address and signs you in. There is no password. The code expires after 10 minutes.",
           ],
         },
-        "You then choose a username. You can add a short bio and pick a car from the catalog as your avatar (Kastr does not use profile photos). We also keep the date your account was created and, for security, the sign-in records kept by our authentication provider (including IP addresses).",
+        "You then choose a username and give your year of birth. Only your age band (under 13, 13 to 15, or 16 and over) is stored, never the year; under 13, no profile can be created. You can add a short bio and pick a car from the catalog as your avatar (Kastr does not use profile photos). We also keep the date your account was created and, for security, the sign-in records kept by our authentication provider (including IP addresses).",
         "Accounts are managed with Supabase (authentication, database, file storage and server functions). Our Supabase project is hosted in the European Union (Paris, France).",
       ],
     },
@@ -97,6 +98,24 @@ const en: LegalDoc = {
       ],
     },
     {
+      id: "web-profile",
+      heading: "Your public page on kastr.app",
+      blocks: [
+        "Each community profile also has a public web page at kastr.app/@username. It is on by default for collectors aged 16 and over: the app tells you when you choose your username, and you can turn it off there or at any time in your profile settings (\"Show my profile on kastr.app\"). Anyone with the link can open it, without an account. It shows:",
+        {
+          list: [
+            "your username, bio, avatar car, counts (cars, posts, followers, following) and badges;",
+            "the cars in your garage, if your garage is shown on your profile (name, brand, year, rarity, number of copies, and the series and case letter from the catalog);",
+            "your latest posts that have a photo.",
+          ],
+        },
+        "It never shows what you paid, where you found a car, your notes, your own photos of your cars or the value of your garage.",
+        "Search engines may list your page only once it has content: at least 10 cars in your public garage, or a published find. Until then the page asks search engines not to index it. A page that is turned off, or the page of a banned account, shows nothing.",
+        "For collectors aged 13 to 15, the page is off by default and, if they turn it on, it is never indexed by search engines.",
+        "Your wishlist is private. If you choose \"Share my wishlist\", it gets its own page at kastr.app/@username/wishlist, with a link to search each car on eBay (these links may carry an eBay Partner Network affiliate code). That page is never indexed by search engines, and you can stop sharing it at any time.",
+      ],
+    },
+    {
       id: "notifications",
       heading: "Notifications",
       blocks: [
@@ -109,6 +128,7 @@ const en: LegalDoc = {
       blocks: [
         "When you create an account by email, you can choose to receive the Kastr newsletter (finds of the week, new releases, posts from the community). In the European Economic Area, the United Kingdom, Switzerland, Canada and Brazil, this box is unticked and you are only subscribed if you tick it. Elsewhere, it may be ticked by default and you can untick it before continuing. You can change your choice at any time in your account settings, and every newsletter will include an unsubscribe link.",
         "We keep your email address, your choice, where you made it and the date you agreed, as proof of your consent. Newsletters will be sent with Resend.",
+        "Collectors aged 13 to 15 are never subscribed: if the box was ticked when they signed in by email, the subscription is cancelled as soon as they give their age.",
       ],
     },
     {
@@ -257,7 +277,7 @@ const en: LegalDoc = {
       id: "children",
       heading: "Children",
       blocks: [
-        "Kastr can be used by collectors of any age, but creating an account and using community features requires being at least 13, or the minimum age set by the law of your country. If you believe a child has created an account without the consent required in their country, contact us and we will delete it.",
+        "Kastr can be used by collectors of any age without an account: the garage, the scanner, the catalog and the hunt list. Joining the community requires being at least 13, or the minimum age set by the law of your country. When you choose a username, you give your year of birth; we keep only your age band and refuse the profile under 13. For collectors aged 13 to 15, the public web page is off by default and never indexed, and they are not subscribed to the newsletter. If you believe a child has created an account without the consent required in their country, contact us and we will delete it.",
       ],
     },
     {
@@ -303,7 +323,8 @@ const fr: LegalDoc = {
             "Pas de publicité dans Kastr, pas de pistage publicitaire, et nous ne vendons pas vos données.",
             "Votre garage fonctionne sans compte et reste alors sur votre iPhone.",
             "Le compte est facultatif. Avec un compte, votre garage est sauvegardé et synchronisé en privé, et vous pouvez rejoindre la communauté.",
-            "Dans la communauté, votre pseudo, votre bio, votre voiture-avatar, vos publications et, sauf si vous la masquez, la liste des voitures de votre garage sont visibles par les autres collectionneurs. Le prix payé, le lieu de la trouvaille, vos notes et vos propres photos de vos voitures ne sont jamais montrés à personne.",
+            "Dans la communauté, votre pseudo, votre bio, votre voiture-avatar, vos publications et, sauf si vous la masquez, la liste des voitures de votre garage sont visibles par les autres collectionneurs, ainsi que sur votre page publique kastr.app/@pseudo, sauf si vous la désactivez. Le prix payé, le lieu de la trouvaille, vos notes et vos propres photos de vos voitures ne sont jamais montrés à personne.",
+            "La communauté est réservée aux collectionneurs de 13 ans et plus. Nous ne conservons que votre tranche d'âge, jamais votre date ni votre année de naissance.",
             "Kastr n'utilise aujourd'hui aucun outil de statistiques ni de pistage.",
             "Les paiements passent par Apple. Nous ne voyons jamais vos données bancaires.",
             "Vous pouvez supprimer votre compte depuis l'app à tout moment.",
@@ -332,7 +353,7 @@ const fr: LegalDoc = {
             "Email : vous saisissez votre adresse et nous vous envoyons un code à 6 chiffres. Le taper confirme l'adresse et vous connecte. Il n'y a pas de mot de passe. Le code expire au bout de 10 minutes.",
           ],
         },
-        "Vous choisissez ensuite un pseudo. Vous pouvez ajouter une courte bio et choisir une voiture du catalogue comme avatar (Kastr n'utilise pas de photos de profil). Nous conservons aussi la date de création du compte et, pour la sécurité, les traces de connexion tenues par notre prestataire d'authentification (dont les adresses IP).",
+        "Vous choisissez ensuite un pseudo et indiquez votre année de naissance. Seule votre tranche d'âge (moins de 13 ans, 13 à 15 ans, 16 ans et plus) est conservée, jamais l'année ; sous 13 ans, aucun profil ne peut être créé. Vous pouvez ajouter une courte bio et choisir une voiture du catalogue comme avatar (Kastr n'utilise pas de photos de profil). Nous conservons aussi la date de création du compte et, pour la sécurité, les traces de connexion tenues par notre prestataire d'authentification (dont les adresses IP).",
         "Les comptes sont gérés avec Supabase (authentification, base de données, stockage de fichiers et fonctions serveur). Notre projet Supabase est hébergé dans l'Union européenne (Paris, France).",
       ],
     },
@@ -365,6 +386,24 @@ const fr: LegalDoc = {
       ],
     },
     {
+      id: "web-profile",
+      heading: "Votre page publique sur kastr.app",
+      blocks: [
+        "Chaque profil de la communauté a aussi une page web publique à l'adresse kastr.app/@pseudo. Elle est activée par défaut pour les collectionneurs de 16 ans et plus : l'app vous le dit quand vous choisissez votre pseudo, et vous pouvez la désactiver à ce moment-là ou à tout moment dans les réglages de votre profil (« Afficher mon profil sur kastr.app »). Toute personne qui a le lien peut l'ouvrir, sans compte. Elle montre :",
+        {
+          list: [
+            "votre pseudo, votre bio, votre voiture-avatar, vos totaux (voitures, publications, abonnés, abonnements) et vos badges ;",
+            "les voitures de votre garage, si votre garage est affiché sur votre profil (nom, marque, année, rareté, nombre d'exemplaires, ainsi que la série et la lettre de caisse issues du catalogue) ;",
+            "vos dernières publications qui ont une photo.",
+          ],
+        },
+        "Elle ne montre jamais le prix payé, le lieu d'une trouvaille, vos notes, vos propres photos de vos voitures ni la valeur de votre garage.",
+        "Les moteurs de recherche ne peuvent référencer votre page qu'une fois qu'elle a du contenu : au moins 10 voitures dans votre garage public, ou une trouvaille publiée. D'ici là, la page demande aux moteurs de ne pas l'indexer. Une page désactivée, ou celle d'un compte banni, n'affiche rien.",
+        "Pour les collectionneurs de 13 à 15 ans, la page est désactivée par défaut et, s'ils l'activent, elle n'est jamais indexée par les moteurs de recherche.",
+        "Votre liste d'envies est privée. Si vous choisissez « Partager ma liste d'envies », elle a sa propre page à l'adresse kastr.app/@pseudo/wishlist, avec pour chaque voiture un lien de recherche sur eBay (ces liens peuvent porter un code d'affiliation eBay Partner Network). Cette page n'est jamais indexée par les moteurs de recherche, et vous pouvez arrêter de la partager à tout moment.",
+      ],
+    },
+    {
       id: "notifications",
       heading: "Notifications",
       blocks: [
@@ -377,6 +416,7 @@ const fr: LegalDoc = {
       blocks: [
         "Quand vous créez un compte par email, vous pouvez choisir de recevoir la newsletter Kastr (trouvailles de la semaine, nouvelles sorties, publications de la communauté). Dans l'Espace économique européen, au Royaume-Uni, en Suisse, au Canada et au Brésil, la case est décochée : vous n'êtes inscrit que si vous la cochez. Ailleurs, elle peut être cochée par défaut et vous pouvez la décocher avant de continuer. Vous pouvez changer d'avis à tout moment dans les réglages du compte, et chaque newsletter contiendra un lien de désinscription.",
         "Nous conservons votre adresse, votre choix, l'endroit où vous l'avez fait et la date de votre accord, pour prouver votre consentement. Les newsletters seront envoyées avec Resend.",
+        "Les collectionneurs de 13 à 15 ans ne sont jamais inscrits : si la case était cochée lors de l'inscription par email, l'abonnement est annulé dès qu'ils indiquent leur âge.",
       ],
     },
     {
@@ -525,7 +565,7 @@ const fr: LegalDoc = {
       id: "children",
       heading: "Enfants",
       blocks: [
-        "Kastr peut être utilisée par des collectionneurs de tout âge, mais créer un compte et utiliser les fonctions communautaires demande d'avoir au moins 13 ans, ou l'âge minimum fixé par la loi de votre pays. Si vous pensez qu'un enfant a créé un compte sans le consentement requis, contactez-nous et nous le supprimerons.",
+        "Kastr peut être utilisée par des collectionneurs de tout âge sans compte : le garage, le scanner, le catalogue et la liste de chasse. Rejoindre la communauté demande d'avoir au moins 13 ans, ou l'âge minimum fixé par la loi de votre pays. Quand vous choisissez un pseudo, vous indiquez votre année de naissance ; nous ne conservons que votre tranche d'âge et refusons le profil sous 13 ans. Pour les collectionneurs de 13 à 15 ans, la page web publique est désactivée par défaut et jamais indexée, et ils ne sont pas inscrits à la newsletter. Si vous pensez qu'un enfant a créé un compte sans le consentement requis, contactez-nous et nous le supprimerons.",
       ],
     },
     {

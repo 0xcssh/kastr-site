@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     // Search and AI crawlers are welcome: being cited by answer engines is part of the plan (GEO).
     rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: `${config.siteUrl}/sitemap.xml`,
+    // Collector pages (kastr.app/@username) are listed by the Worker, only once they have content.
+    sitemap: [`${config.siteUrl}/sitemap.xml`, `${config.siteUrl}/sitemap-profiles.xml`],
     host: config.siteUrl,
   };
 }
