@@ -39,6 +39,8 @@ export interface WebProfile {
   bio?: string | null;
   member_since?: string | null;
   avatar?: WebCar | null;
+  /** The collector's own photo (post-photos bucket); it replaces the car. */
+  avatar_path?: string | null;
   badges?: { badge: string; earned_at?: string }[];
   counts: { cars: number | null; posts: number; followers: number; following: number };
   garage_public: boolean;
@@ -269,7 +271,9 @@ export function renderProfile(profile: WebProfile, options: RenderOptions): stri
   const header = `
     <section class="card profile">
       <div class="avatar${profile.avatar && (profile.avatar.rarity === "superTreasureHunt" || profile.avatar.rarity === "treasureHunt") ? " hunted" : ""}">
-        <span>${escapeHtml(profile.avatar ? initials(profile.avatar.name) : profile.username.slice(0, 1).toUpperCase())}</span>
+        ${profile.avatar_path
+          ? `<img src="${escapeHtml(findPhotoUrl(profile.avatar_path))}" alt="">`
+          : `<span>${escapeHtml(profile.avatar ? initials(profile.avatar.name) : profile.username.slice(0, 1).toUpperCase())}</span>`}
       </div>
       <h1 class="display">@${user}</h1>
       ${profile.avatar ? `<p class="eyebrow">${escapeHtml(profile.avatar.name)}${profile.avatar.year ? ` · ${profile.avatar.year}` : ""}</p>` : ""}
@@ -368,7 +372,8 @@ a{color:inherit}
 main{max-width:960px;margin:0 auto;padding:0 16px 48px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px}
 .profile{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
-.avatar{width:112px;height:112px;border-radius:50%;background:var(--studio);color:#111;display:grid;place-items:center;font:900 italic 38px/1 Saira,sans-serif;font-stretch:125%;border:3px solid var(--line)}
+.avatar{width:112px;height:112px;border-radius:50%;background:var(--studio);color:#111;display:grid;place-items:center;font:900 italic 38px/1 Saira,sans-serif;font-stretch:125%;border:3px solid var(--line);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
 .avatar.hunted{border-color:var(--gold);box-shadow:0 0 28px rgba(248,197,65,.35)}
 h1{font-size:30px;margin:8px 0 0;word-break:break-all}
 .eyebrow{margin:0;color:var(--gold);font:800 12px/1.2 Saira,sans-serif;font-stretch:125%;letter-spacing:.14em;text-transform:uppercase}
