@@ -107,7 +107,7 @@ const en: LegalDoc = {
       blocks: [
         "The catalog is built from community wikis shared under the CC BY-SA license (see Credits) and from user contributions. It may contain errors or gaps.",
         "Rarities and values shown in Kastr are estimates, for information only. They are not an appraisal, an offer to buy or sell, or financial advice, and a car may sell for more or less than shown. Kastr is a collector's app: it does not buy, sell or broker cars.",
-        "Values are built from recent eBay sales and from prices shared by collectors, and converted to your currency with European Central Bank reference rates. They can be wrong or out of date.",
+        "Values are built from the cheapest current eBay listing sealed on card, from recent eBay sales and from prices shared by collectors, and converted to your currency with European Central Bank reference rates. They can be wrong or out of date.",
         "New releases, case letters and Treasure Hunt lists come from public collector wikis and may be incomplete, early or wrong. Kastr never promises that collecting will make you money.",
         "\"Where to find it\" and other links may take you to third-party sites such as eBay. Links to eBay may be eBay Partner Network affiliate links, which means Kastr may earn a commission if you buy, at no extra cost to you. We are not a party to any transaction you make on another site.",
       ],
@@ -281,7 +281,7 @@ const fr: LegalDoc = {
       blocks: [
         "Le catalogue est construit à partir de wikis communautaires publiés sous licence CC BY-SA (voir Crédits) et des contributions des utilisateurs. Il peut contenir des erreurs ou des manques.",
         "Les raretés et valeurs affichées dans Kastr sont des estimations, à titre d'information. Ce ne sont ni une expertise, ni une offre d'achat ou de vente, ni un conseil financier, et une voiture peut se vendre plus ou moins cher qu'indiqué. Kastr est une app de collectionneur : elle n'achète, ne vend et ne négocie aucune voiture.",
-        "Les valeurs sont construites à partir des ventes eBay récentes et des prix partagés par les collectionneurs, puis converties dans votre devise avec les taux de référence de la Banque centrale européenne. Elles peuvent être fausses ou dépassées.",
+        "Les valeurs sont construites à partir de l'annonce eBay en cours la moins chère sous blister, des ventes eBay récentes et des prix partagés par les collectionneurs, puis converties dans votre devise avec les taux de référence de la Banque centrale européenne. Elles peuvent être fausses ou dépassées.",
         "Les nouvelles sorties, lettres de caisse et listes de Treasure Hunts viennent de wikis publics de collectionneurs et peuvent être incomplètes, en avance ou fausses. Kastr ne promet jamais que collectionner rapporte de l'argent.",
         "« Où la trouver » et d'autres liens peuvent mener à des sites tiers comme eBay. Les liens vers eBay peuvent être des liens affiliés eBay Partner Network : Kastr peut toucher une commission si vous achetez, sans surcoût pour vous. Nous ne sommes pas partie aux transactions faites sur un autre site.",
       ],
