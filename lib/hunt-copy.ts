@@ -52,7 +52,7 @@ type Copy = {
   source: string;
   sourceLink: string;
   noPhoto: string;
-  photoCaption: string;
+  value: { label: string; note: string };
   cta: { title: string; body: string };
   live: {
     title: string;
@@ -65,6 +65,7 @@ type Copy = {
   breadcrumbHome: string;
   backToYear: (rarity: HuntRarity, year: number) => string;
   navLabel: string;
+  home: { title: (year: number) => string; body: string; all: (year: number) => string; guide: string };
   cases: {
     hubTitle: string;
     hubDescription: string;
@@ -259,7 +260,7 @@ const en: Copy = {
   source: "Source",
   sourceLink: "Hot Wheels Wiki page (CC BY-SA)",
   noPhoto: "Photos of this car on the Hot Wheels Wiki",
-  photoCaption: "Photo from a live eBay listing (affiliate link)",
+  value: { label: "Value", note: "lowest carded price among {n} listings" },
   cta: {
     title: "Found one on the pegs?",
     body: "Scan the card with Kastr: it tells you if the car is already in your garage, if it is a hunt, and what it sold for recently.",
@@ -275,6 +276,12 @@ const en: Copy = {
   breadcrumbHome: "Kastr",
   backToYear: (r, y) => `All ${y} ${r === "sth" ? "Super Treasure Hunts" : "Treasure Hunts"}`,
   navLabel: "Hunt lists",
+  home: {
+    title: (y) => `Every ${y} Super Treasure Hunt, case by case`,
+    body: "The yearly lists of every Treasure Hunt and Super Treasure Hunt since 1995, with the case, the toy number and how to tell each one from the regular car.",
+    all: (y) => `All ${y} Supers`,
+    guide: "How to spot a Super",
+  },
   cases: {
     hubTitle: "Hot Wheels case letters by year",
     hubDescription: "The Treasure Hunt and Super Treasure Hunt of every Hot Wheels mainline case, A to Q, year by year since 2012.",
@@ -398,7 +405,7 @@ const fr: Copy = {
   source: "Source",
   sourceLink: "Page du wiki Hot Wheels (CC BY-SA)",
   noPhoto: "Photos de cette voiture sur le wiki Hot Wheels",
-  photoCaption: "Photo d'une annonce eBay en cours (lien affilié)",
+  value: { label: "Valeur", note: "prix le plus bas sous blister parmi {n} annonces" },
   cta: {
     title: "Tu l'as trouvée en rayon ?",
     body: "Scanne le carton avec Kastr : l'appli te dit si la voiture est déjà dans ton garage, si c'est une pièce de chasse et à combien elle s'est vendue récemment.",
@@ -414,6 +421,12 @@ const fr: Copy = {
   breadcrumbHome: "Kastr",
   backToYear: (r, y) => `Toutes les ${r === "sth" ? "Super Treasure Hunt" : "Treasure Hunt"} ${y}`,
   navLabel: "Listes de chasse",
+  home: {
+    title: (y) => `Toutes les Super Treasure Hunt ${y}, caisse par caisse`,
+    body: "Les listes annuelles de toutes les Treasure Hunt et Super Treasure Hunt depuis 1995, avec la caisse, le numéro de jouet et comment distinguer chacune de la voiture ordinaire.",
+    all: (y) => `Toutes les Super ${y}`,
+    guide: "Reconnaître une Super",
+  },
   cases: {
     hubTitle: "Les caisses Hot Wheels par année",
     hubDescription: "La Treasure Hunt et la Super Treasure Hunt de chaque caisse Hot Wheels de la gamme courante, de A à Q, année par année depuis 2012.",

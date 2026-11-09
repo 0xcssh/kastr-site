@@ -42,8 +42,10 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
             <Link href={`${home}#features`} className="hidden hover:text-ink sm:inline">
               {d.nav.features}
             </Link>
-            <Link href={`${home}/super-treasure-hunt`} className="hidden hover:text-ink md:inline">
-              {d.nav.hunts}
+            {/* Always shown: on a phone the hunt lists are the reason to come back. Short label under sm. */}
+            <Link href={`${home}/super-treasure-hunt`} className="font-semibold text-ink hover:text-accent-ink">
+              <span className="sm:hidden">{d.nav.huntsShort}</span>
+              <span className="hidden sm:inline">{d.nav.hunts}</span>
             </Link>
             <Link href={`${home}#faq`} className="hidden hover:text-ink sm:inline">
               {d.nav.faq}

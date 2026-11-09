@@ -31,6 +31,7 @@ import { LiveListings } from "./live-listings";
 
 const H1 = "font-display text-[2rem] font-black uppercase italic leading-[1.02] tracking-tight text-ink sm:text-5xl";
 const other = (r: HuntRarity): HuntRarity => (r === "sth" ? "th" : "sth");
+export const bcp47 = (locale: Locale) => (locale === "fr" ? "fr-FR" : "en-US");
 
 export function Crumbs({ items }: { items: { name: string; href?: string }[] }) {
   return (
@@ -225,7 +226,7 @@ export function HuntYear({ locale, rarity, year }: { locale: Locale; rarity: Hun
                   href={`${home}${meta.path}/${h.slug}`}
                   className="flex h-full flex-col rounded-[20px] border border-ink/10 bg-surface p-2 hover:border-ink/30"
                 >
-                  <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={rarity === "sth" ? "gold" : "silver"} />
+                  <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={rarity === "sth" ? "gold" : "silver"} locale={bcp47(locale)} />
                   <span className="flex items-start gap-3 px-3 pb-3 pt-4">
                   <span className="min-w-0 flex-1">
                     <span className="block font-display text-[10.5px] font-semibold uppercase tracking-[0.1em] text-muted">
@@ -367,7 +368,14 @@ export function HuntCar({ locale, hunt: h }: { locale: Locale; hunt: Hunt }) {
 
       <div className="mx-auto mt-14 grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <section>
-          <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={h.rarity === "sth" ? "gold" : "silver"} size="hero" caption={c.photoCaption} />
+          <ListingPhoto
+            variationId={h.id}
+            alt={c.carTitle(h)}
+            tone={h.rarity === "sth" ? "gold" : "silver"}
+            locale={bcp47(locale)}
+            size="hero"
+            valueCopy={c.value}
+          />
           <SectionLabel className="mt-10">{c.specs}</SectionLabel>
           <dl className="mt-5 divide-y divide-line rounded-[20px] border border-ink/10 bg-surface px-5">
             {rows
@@ -412,7 +420,7 @@ export function HuntCar({ locale, hunt: h }: { locale: Locale; hunt: Hunt }) {
         <LiveListings
           variationId={h.id}
           searchUrl={ebaySearchUrl(h)}
-          locale={locale === "fr" ? "fr-FR" : "en-US"}
+          locale={bcp47(locale)}
           copy={{
             title: c.live.title,
             disclosure: c.live.disclosure,

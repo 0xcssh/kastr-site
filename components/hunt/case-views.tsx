@@ -8,7 +8,7 @@ import { huntCopy } from "@/lib/hunt-copy";
 import { caseYears, casesOf, casesPath, huntPath, huntYears, lastUpdated, nextCase, type Hunt } from "@/lib/hunts";
 import { localeUrl, type Locale } from "@/lib/i18n";
 import { breadcrumbSchema, faqPageSchema, graph, webPageSchema } from "@/lib/schema";
-import { AppCta, Crumbs, Title } from "./hunt-views";
+import { AppCta, bcp47, Crumbs, Title } from "./hunt-views";
 import { ListingPhoto } from "./listing-photo";
 
 // Case tracker: each mainline case A to Q with its Treasure Hunt and Super Treasure Hunt. No store dates:
@@ -77,7 +77,7 @@ function HuntCard({ locale, hunt: h }: { locale: Locale; hunt: Hunt }) {
       href={`/${locale}${huntPath[h.rarity]}/${h.year}/${h.slug}`}
       className="flex h-full flex-col rounded-[20px] border border-ink/10 bg-surface p-2 hover:border-ink/30"
     >
-      <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={h.rarity === "sth" ? "gold" : "silver"} />
+      <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={h.rarity === "sth" ? "gold" : "silver"} locale={bcp47(locale)} />
       <span className="px-3 pb-3 pt-4">
         <span className="block font-display text-[10.5px] font-semibold uppercase tracking-[0.1em] text-muted">{c.label[h.rarity]}</span>
         <span className="mt-1 block font-semibold leading-tight text-ink">{h.name}</span>

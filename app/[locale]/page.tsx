@@ -13,6 +13,7 @@ import { AppScreen } from "@/components/app-screen";
 import { AppStoreBadge } from "@/components/app-store-badge";
 import { Faq } from "@/components/faq";
 import { GarageWall, RevealCard } from "@/components/garage-wall";
+import { HomeHunts } from "@/components/hunt/home-hunts";
 import { JsonLd } from "@/components/json-ld";
 import { HuntMedal, ProgressRing, SectionLabel, SpeedStripes, StudioPhoto } from "@/components/kit";
 import { RarityChip } from "@/components/rarity-chip";
@@ -125,6 +126,9 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         </div>
         <GarageWall label={d.wall.label} />
       </div>
+
+      {/* The hunt lists, with live photos: the way into the 1,700 hunt pages from the home page. */}
+      <HomeHunts locale={locale} />
 
       <div className="mt-20">
         <AnswerBlock question={d.answer.question}>{d.answer.text}</AnswerBlock>

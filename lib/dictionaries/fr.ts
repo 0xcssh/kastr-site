@@ -11,6 +11,7 @@ export const fr: Dictionary = {
   nav: {
     features: "Fonctions",
     hunts: "Listes de chasse",
+    huntsShort: "Chasse",
     faq: "FAQ",
     support: "Aide",
     language: "Langue",

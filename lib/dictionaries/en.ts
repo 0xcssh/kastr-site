@@ -11,6 +11,7 @@ export const en = {
   nav: {
     features: "Features",
     hunts: "Hunt lists",
+    huntsShort: "Hunts",
     faq: "FAQ",
     support: "Support",
     language: "Language",

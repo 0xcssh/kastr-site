@@ -82,8 +82,9 @@ export function listingsPath(pathname: string): string | null {
 }
 
 type RawListing = { title?: string; price?: number; currency?: string; image_url?: string | null; url?: string };
+type RawFloor = { price?: number; currency?: string; listings?: number } | null;
 
-export function freshListings(body: { listings?: RawListing[]; fetched_at?: string | null }, now: number) {
+export function freshListings(body: { listings?: RawListing[]; floor?: RawFloor; fetched_at?: string | null }, now: number) {
   const fetchedAt = body.fetched_at ? Date.parse(body.fetched_at) : NaN;
   if (!Number.isFinite(fetchedAt) || now - fetchedAt > LISTING_MAX_AGE_MS) return null;
   const listings = (body.listings ?? [])
@@ -98,14 +99,20 @@ export function freshListings(body: { listings?: RawListing[]; fetched_at?: stri
       image: l.image_url ? l.image_url.replace(/s-l\d+\./, "s-l500.") : null,
       url: l.url!,
     }));
-  return listings.length ? { fetchedAt: new Date(fetchedAt).toISOString(), listings } : null;
+  // The car's value, as in the app: the cheapest carded Buy It Now listing (supabase/functions/ebay-listings/floor.ts),
+  // shown only with listings fetched in the same window, so it obeys the same 6-hour rule.
+  const f = body.floor;
+  const value =
+    f && typeof f.price === "number" && f.currency ? { price: f.price, currency: f.currency, listings: f.listings ?? null } : null;
+  return listings.length ? { fetchedAt: new Date(fetchedAt).toISOString(), listings, value } : null;
 }
 
 const JSON_HEADERS = { "Content-Type": "application/json; charset=utf-8", "X-Robots-Tag": "noindex", ...SECURITY_HEADERS };
 
 /** One car's fresh listings, cached 15 minutes at the edge (204 when none are fresh). */
 function cachedListings(variationId: string): Promise<Response> {
-  return cached(`https://${APEX}/__listings/${variationId}`, async () => {
+  // v2: answers carry the value since 9 Nov; the version keeps older cached answers out.
+  return cached(`https://${APEX}/__listings/v2/${variationId}`, async () => {
     try {
       const res = await fetch(`${SUPABASE_URL}/functions/v1/ebay-listings`, {
         method: "POST",
@@ -137,16 +144,17 @@ async function photosResponse(ids: string[], request: Request): Promise<Response
   if (BOT.test(request.headers.get("User-Agent") ?? "") || !ids.length) {
     return new Response(JSON.stringify({ photos: {} }), { headers: JSON_HEADERS });
   }
-  const photos: Record<string, { image: string; url: string; fetchedAt: string }> = {};
+  type Value = { price: number; currency: string; listings: number | null } | null;
+  const photos: Record<string, { image: string | null; fetchedAt: string; value: Value }> = {};
   // Six cars at a time: the function refreshes within its own hourly budget and serves its cache otherwise.
   for (let i = 0; i < ids.length; i += 6) {
     await Promise.all(
       ids.slice(i, i + 6).map(async (id) => {
         const res = await cachedListings(id);
         if (res.status !== 200) return;
-        const fresh = (await res.json()) as { fetchedAt: string; listings: { image: string | null; url: string }[] };
-        const first = fresh.listings.find((l) => l.image);
-        if (first?.image) photos[id] = { image: first.image, url: first.url, fetchedAt: fresh.fetchedAt };
+        const fresh = (await res.json()) as { fetchedAt: string; listings: { image: string | null }[]; value?: Value };
+        const image = fresh.listings.find((l) => l.image)?.image ?? null;
+        if (image || fresh.value) photos[id] = { image, fetchedAt: fresh.fetchedAt, value: fresh.value ?? null };
       }),
     );
   }
