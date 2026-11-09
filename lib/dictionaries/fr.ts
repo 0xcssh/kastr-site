@@ -201,6 +201,7 @@ export const fr: Dictionary = {
       sth: "Listes des Super Treasure Hunt",
       th: "Listes des Treasure Hunt",
       cases: "Caisses de A à Q par année",
+      guides: "Guides",
     },
     publisher: "Éditeur",
   },

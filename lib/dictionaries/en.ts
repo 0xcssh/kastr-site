@@ -202,6 +202,7 @@ export const en = {
       sth: "Super Treasure Hunt lists",
       th: "Treasure Hunt lists",
       cases: "Cases A to Q by year",
+      guides: "Guides",
     },
     publisher: "Published by",
   },
