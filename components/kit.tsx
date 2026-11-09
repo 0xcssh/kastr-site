@@ -54,21 +54,26 @@ export function StudioPhoto({
   alt,
   className = "",
   priority = false,
+  sizes = "200px",
   children,
 }: {
   car: Car;
   alt: string;
   className?: string;
   priority?: boolean;
+  /** Rendered width of the car image, for picking the half-size copy (<file>-sm.webp). */
+  sizes?: string;
   children?: React.ReactNode;
 }) {
   return (
     <div className={`relative flex items-center justify-center overflow-hidden rounded-2xl bg-studio ${className}`}>
-      <div aria-hidden="true" className="absolute inset-x-[12%] bottom-[16%] h-[10%] rounded-[50%] bg-black/25 blur-md" />
+      <div aria-hidden="true" className="absolute inset-x-[8%] bottom-[13%] h-[16%] bg-[radial-gradient(closest-side,rgba(0,0,0,0.25),transparent)]" />
       {/* Static export: images are served as is (next.config images.unoptimized). */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={car.file}
+        srcSet={`${car.file.replace(/\.webp$/, "-sm.webp")} ${Math.floor(car.width / 2)}w, ${car.file} ${car.width}w`}
+        sizes={sizes}
         alt={alt}
         width={car.width}
         height={car.height}

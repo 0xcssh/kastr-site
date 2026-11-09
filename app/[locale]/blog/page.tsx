@@ -36,7 +36,7 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
           <ul className="mt-10 divide-y divide-line border-y border-line">
             {posts.map((p) => (
               <li key={p.slug} className="py-6">
-                <Link href={`/${locale}/blog/${p.slug}`} className="text-xl font-semibold text-ink hover:text-accent">
+                <Link href={`/${locale}/blog/${p.slug}`} className="text-xl font-semibold text-ink hover:text-accent-ink">
                   {p.title}
                 </Link>
                 <p className="mt-2 text-muted">{p.description}</p>

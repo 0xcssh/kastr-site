@@ -11,7 +11,7 @@ export function RichText({ text }: { text: string }) {
     const [whole, label, href] = match;
     const start = match.index ?? 0;
     if (start > last) parts.push(text.slice(last, start));
-    const className = "text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent";
+    const className = "text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent-ink";
     parts.push(
       href.startsWith("/") ? (
         <Link key={start} href={href} className={className}>

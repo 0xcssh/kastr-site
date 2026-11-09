@@ -60,7 +60,7 @@ export function DocPage({ locale, doc }: { locale: Locale; doc: LegalDoc }) {
               <ol className="space-y-2 text-sm">
                 {doc.sections.map((s) => (
                   <li key={s.id}>
-                    <a href={`#${s.id}`} className="text-muted hover:text-accent">
+                    <a href={`#${s.id}`} className="text-muted hover:text-accent-ink">
                       {s.heading}
                     </a>
                   </li>

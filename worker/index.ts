@@ -66,6 +66,14 @@ const SECURITY_HEADERS: Record<string, string> = {
   "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
 };
 
+export function rscPayloadPath(pathname: string): string | null {
+  const decoded = decodeURIComponent(pathname);
+  const match = /^(.*\/__next\.)([^/]+)\.txt$/.exec(decoded);
+  if (!match || !match[2].includes(".") || match[2].startsWith("_")) return null;
+  // Assets are keyed by the encoded path ("$" as %24); the raw "$" form answers with a redirect.
+  return `${match[1]}${match[2].split(".").join("/")}.txt`.replace(/\$/g, "%24");
+}
+
 export function preferredLocale(acceptLanguage: string | null): "en" | "fr" {
   return /^\s*fr\b/i.test(acceptLanguage ?? "") ? "fr" : "en";
 }
@@ -123,7 +131,10 @@ const worker = {
       });
     }
 
-    const asset = await env.ASSETS.fetch(request);
+    // Next prefetches route payloads as "__next.$d$locale.support.__PAGE__.txt", but the static export
+    // writes them as folders ("__next.$d$locale/support/__PAGE__.txt"): map one to the other.
+    const payload = rscPayloadPath(url.pathname);
+    const asset = await env.ASSETS.fetch(payload ? new Request(new URL(payload, url), request) : request);
     const response = new Response(asset.body, asset);
     for (const [key, value] of Object.entries(SECURITY_HEADERS)) response.headers.set(key, value);
     if (PNG_ROUTES.some((route) => route.test(url.pathname))) response.headers.set("Content-Type", "image/png");

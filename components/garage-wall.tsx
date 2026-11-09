@@ -25,7 +25,10 @@ function Row({ cars, reverse = false }: { cars: Car[]; reverse?: boolean }) {
 export function GarageWall({ label }: { label: string }) {
   const half = Math.ceil(garageWall.length / 2);
   return (
-    <section aria-label={label} className="relative space-y-4 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+    <section aria-label={label} className="relative space-y-4">
+      {/* Edge fades as overlays: a mask over moving content is repainted on every frame. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[6%] bg-gradient-to-r from-carbon to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[6%] bg-gradient-to-l from-carbon to-transparent" />
       <Row cars={garageWall.slice(0, half)} />
       <Row cars={[...garageWall.slice(half), ...garageWall.slice(0, 2)]} reverse />
     </section>
@@ -41,7 +44,7 @@ export function RevealCard({ title, added, alt }: { title: string; added: string
         className="absolute inset-0 rounded-[28px] bg-[radial-gradient(60%_55%_at_50%_38%,rgba(248,197,65,0.42),transparent_70%)]"
       />
       <div className="relative">
-        <StudioPhoto car={ram} alt={alt} priority className="aspect-[5/4] shadow-[0_0_40px_rgba(248,197,65,0.35)] ring-2 ring-gold/70">
+        <StudioPhoto car={ram} alt={alt} priority sizes="260px" className="aspect-[5/4] shadow-[0_0_40px_rgba(248,197,65,0.35)] ring-2 ring-gold/70">
           <span className="absolute right-2.5 top-2.5">
             <HuntMedal size="lg" />
           </span>

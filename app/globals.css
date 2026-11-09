@@ -13,6 +13,8 @@
   --color-muted: #a1a1aa;
   --color-faint: #8a8a93;
   --color-accent: #e10a1e;
+  /* Red for text on carbon: #e10a1e is under 4.5:1 there, so text uses a lighter red. */
+  --color-accent-ink: #ff4554;
   --color-titanium: #c9ced6;
   --color-chrono: #2bd46a;
   --color-violet: #a25bff;
@@ -40,6 +42,7 @@
     --color-muted: #4e5562;
     --color-faint: #6b7280;
     --color-titanium: #4e5562;
+    --color-accent-ink: #c8081a;
     --color-chrono: #14a34b;
     --color-checker: #111114;
   }
@@ -93,11 +96,6 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* The gold sweeps slowly, like light running across paint. Motivated: it is the reward the app shows. */
-  .spectraflame {
-    animation: shine 5s ease-in-out infinite alternate;
-  }
-
   /* Hero entrance: copy first, then the photo. */
   .enter {
     animation: enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -123,6 +121,7 @@ body {
   /* Garage wall: the cards drift by, slowly enough to read a name. Paused under the pointer. */
   .marquee-track {
     animation: marquee 70s linear infinite;
+    will-change: transform;
   }
   .marquee-reverse {
     animation-direction: reverse;
@@ -135,12 +134,6 @@ body {
 @keyframes marquee {
   to {
     transform: translateX(calc(-50% - 0.5rem));
-  }
-}
-
-@keyframes shine {
-  to {
-    background-position: 100% 50%;
   }
 }
 

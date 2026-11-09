@@ -91,7 +91,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                 </span>
               ))}
               {/* The punchline, which is the call to action: never broken inside "pour le savoir". */}
-              <span className="mt-3 whitespace-nowrap font-display text-lg font-bold italic text-accent sm:text-2xl">{d.hero.cta}</span>
+              <span className="mt-3 whitespace-nowrap font-display text-lg font-bold italic text-accent-ink sm:text-2xl">{d.hero.cta}</span>
             </span>
           </h1>
           <p className="enter enter-delay mt-6 max-w-[40ch] text-lg leading-relaxed text-muted sm:text-xl">{d.hero.subtitle}</p>
@@ -101,7 +101,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           </div>
         </div>
         <div className="enter enter-delay-2 relative mx-auto w-full max-w-[27rem]">
-          <div aria-hidden="true" className="absolute inset-[10%] rounded-full bg-gold/20 blur-3xl" />
+          <div aria-hidden="true" className="absolute -inset-[4%] bg-[radial-gradient(closest-side,rgba(248,197,65,0.2),transparent)]" />
           <div aria-hidden="true" className="checker absolute -right-6 top-4 h-32 w-32 rotate-12 opacity-[0.06]" />
           <AppScreen name="detail" alt={d.hero.imageAlt} priority className="relative ml-auto w-[70%]" />
           <div className="absolute left-[2%] top-[6%] w-[50%] -rotate-[4deg] sm:left-0 sm:w-[54%]">
@@ -133,7 +133,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       {/* Hunt: scanning in bursts, owned / double / TH / STH, the year's list. */}
       <section id="features" className="reveal mx-auto mt-28 grid max-w-7xl scroll-mt-20 items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <div className="relative order-2 mx-auto w-full max-w-[19rem] lg:order-1">
-          <div aria-hidden="true" className="absolute inset-[8%] rounded-full bg-accent/20 blur-3xl" />
+          <div aria-hidden="true" className="absolute -inset-[6%] bg-[radial-gradient(closest-side,rgba(225,10,30,0.2),transparent)]" />
           <AppScreen name="hunt" alt={d.hunt.imageAlt} className="relative" />
         </div>
         <div className="order-1 lg:order-2">
@@ -165,7 +165,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           <p className="mt-5 max-w-[48ch] text-lg leading-relaxed text-muted">{d.garage.body}</p>
         </div>
         <div className="relative mx-auto w-full max-w-[19rem]">
-          <div aria-hidden="true" className="absolute inset-[8%] rounded-full bg-chrono/15 blur-3xl" />
+          <div aria-hidden="true" className="absolute -inset-[6%] bg-[radial-gradient(closest-side,rgba(43,212,106,0.15),transparent)]" />
           <AppScreen name="garage" alt={d.garage.imageAlt} light={false} className="relative" />
         </div>
       </section>
@@ -222,7 +222,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                 <ShoppingBag weight="fill" aria-hidden="true" className="h-4 w-4" />
               </span>
               <span className="font-display text-[13px] font-extrabold uppercase tracking-[0.06em] text-ink">{f.where.title}</span>
-              <span className="ml-auto text-right text-sm font-semibold text-accent">{f.where.row}</span>
+              <span className="ml-auto text-right text-sm font-semibold text-accent-ink">{f.where.row}</span>
             </div>
             <h3 className="mt-8 text-xl font-semibold text-ink">{f.where.title}</h3>
             <p className="mt-2 leading-relaxed text-muted">{f.where.body}</p>
@@ -323,7 +323,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             </div>
           </div>
           <div aria-hidden="true" className="relative mx-auto w-full max-w-sm">
-            <div className="absolute inset-[10%] rounded-full bg-gold/25 blur-3xl" />
+            <div className="absolute -inset-[4%] bg-[radial-gradient(closest-side,rgba(248,197,65,0.25),transparent)]" />
             <StudioPhoto car={ram} alt="" className="relative aspect-[5/4] ring-2 ring-gold/60" />
           </div>
         </div>

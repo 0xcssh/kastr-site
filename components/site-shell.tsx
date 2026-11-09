@@ -52,7 +52,7 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
               href={`/${other}${path}`}
               hrefLang={other}
               lang={other}
-              aria-label={`${d.nav.language}: ${localeName[other]}`}
+              aria-label={`${other.toUpperCase()}, ${d.nav.language}: ${localeName[other]}`}
               className="rounded-md border border-line px-2 py-1 text-xs font-semibold uppercase tracking-wide hover:border-accent hover:text-ink"
             >
               {other}
