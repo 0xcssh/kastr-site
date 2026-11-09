@@ -27,12 +27,17 @@ export function SpeedStripes({ className = "" }: { className?: string }) {
 }
 
 /** RarityMark: the round gold medal with a flame, on the corner of a hunted car's photo. */
-export function HuntMedal({ size = "md" }: { size?: "md" | "lg" }) {
+export function HuntMedal({ size = "md", tone = "gold" }: { size?: "md" | "lg"; tone?: "gold" | "silver" }) {
   const box = size === "lg" ? "h-11 w-11" : "h-7 w-7";
   const icon = size === "lg" ? "h-6 w-6" : "h-4 w-4";
+  // Gold for a Super Treasure Hunt, silver for a Treasure Hunt, like the logos on the cards.
+  const finish =
+    tone === "gold"
+      ? "spectraflame shadow-[0_0_14px_rgba(248,197,65,0.45)]"
+      : "bg-[linear-gradient(115deg,#ffffff,#c9ced6_45%,#8a919c_70%,#e6e9ee)] shadow-[0_0_12px_rgba(201,206,214,0.35)]";
   return (
     <span
-      className={`spectraflame inline-flex ${box} items-center justify-center rounded-full text-[#16161b] shadow-[0_0_14px_rgba(248,197,65,0.45)] ring-[0.5px] ring-white/40`}
+      className={`${finish} inline-flex ${box} items-center justify-center rounded-full text-[#16161b] ring-[0.5px] ring-white/40`}
     >
       <Flame weight="fill" aria-hidden="true" className={icon} />
     </span>

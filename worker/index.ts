@@ -55,7 +55,7 @@ async function profileResponse(url: URL, request: Request, env: Env): Promise<Re
 }
 
 const APEX = "kastr.app";
-const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits"]);
+const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits", "super-treasure-hunt", "treasure-hunt"]);
 const PNG_ROUTES = [/^\/icon$/, /^\/apple-icon$/, /^\/(en|fr)\/opengraph-image$/];
 
 const SECURITY_HEADERS: Record<string, string> = {
@@ -65,6 +65,60 @@ const SECURITY_HEADERS: Record<string, string> = {
   "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
   "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
 };
+
+// "On eBay now" on the hunt pages (components/hunt/live-listings.tsx). Reads the app's ebay-listings function,
+// which serves its 30-minute cache and refreshes within its own hourly budget. eBay API License §8.1.3: listing
+// data shown must be at most 6 hours old, so older data is not returned at all. Crawlers get nothing: the
+// block is not part of the indexed page and must not spend the refresh budget the app's users need.
+const SUPABASE_URL = "https://vohlyekfqlcsvpidgetb.supabase.co";
+const SUPABASE_KEY = "sb_publishable_0YaYrsM-CW92hJRWPY0X1A_08nSthkt"; // publishable, same as the app's
+// 5 h 30 rather than 6 h: the answer itself is cached up to 15 minutes at the edge.
+const LISTING_MAX_AGE_MS = 5.5 * 60 * 60 * 1000;
+const BOT = /bot|crawl|spider|slurp|preview|facebookexternalhit|embedly|headless|lighthouse/i;
+
+export function listingsPath(pathname: string): string | null {
+  const match = /^\/api\/listings\/([0-9a-f-]{36})$/.exec(pathname);
+  return match ? match[1] : null;
+}
+
+type RawListing = { title?: string; price?: number; currency?: string; image_url?: string | null; url?: string };
+
+export function freshListings(body: { listings?: RawListing[]; fetched_at?: string | null }, now: number) {
+  const fetchedAt = body.fetched_at ? Date.parse(body.fetched_at) : NaN;
+  if (!Number.isFinite(fetchedAt) || now - fetchedAt > LISTING_MAX_AGE_MS) return null;
+  const listings = (body.listings ?? [])
+    .filter((l) => l.url && l.title && typeof l.price === "number" && l.currency)
+    .sort((a, b) => a.price! - b.price!)
+    .slice(0, 4)
+    .map((l) => ({
+      title: l.title!,
+      price: l.price!,
+      currency: l.currency!,
+      // Row thumbnails are 300 px; the page shows them bigger.
+      image: l.image_url ? l.image_url.replace(/s-l\d+\./, "s-l500.") : null,
+      url: l.url!,
+    }));
+  return listings.length ? { fetchedAt: new Date(fetchedAt).toISOString(), listings } : null;
+}
+
+async function listingsResponse(variationId: string, request: Request): Promise<Response> {
+  const json = { "Content-Type": "application/json; charset=utf-8", "X-Robots-Tag": "noindex", ...SECURITY_HEADERS };
+  if (BOT.test(request.headers.get("User-Agent") ?? "")) return new Response(null, { status: 204, headers: json });
+  return cached(`https://${APEX}/__listings/${variationId}`, async () => {
+    try {
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/ebay-listings`, {
+        method: "POST",
+        headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ variation_id: variationId }),
+      });
+      const fresh = res.ok ? freshListings(await res.json(), Date.now()) : null;
+      if (!fresh) return new Response(null, { status: 204, headers: { ...json, "Cache-Control": "public, max-age=600" } });
+      return new Response(JSON.stringify(fresh), { headers: { ...json, "Cache-Control": "public, max-age=900" } });
+    } catch {
+      return new Response(null, { status: 204, headers: { ...json, "Cache-Control": "no-store" } });
+    }
+  });
+}
 
 export function rscPayloadPath(pathname: string): string | null {
   const decoded = decodeURIComponent(pathname);
@@ -110,6 +164,9 @@ const worker = {
         status: 404, headers: { "Content-Type": "text/html; charset=utf-8", ...SECURITY_HEADERS },
       });
     }
+
+    const listings = listingsPath(url.pathname);
+    if (listings) return listingsResponse(listings, request);
 
     const profile = await profileResponse(url, request, env);
     if (profile) return profile;

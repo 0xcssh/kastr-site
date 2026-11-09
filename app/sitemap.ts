@@ -3,6 +3,7 @@ export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/blog";
 import { getCatalogPages } from "@/lib/catalog";
+import { huntPath, huntYears, huntsOf, huntsOfYear, lastUpdated, type HuntRarity } from "@/lib/hunts";
 import { config } from "@/lib/config";
 import { alternatesFor, localeUrl, locales } from "@/lib/i18n";
 
@@ -40,5 +41,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Programmatic catalog pages: empty until lib/catalog.ts is wired (see the comment there).
   const catalog = (await getCatalogPages()).flatMap((c) => entry(`/cars/${c.slug}`, new Date(c.updated), 0.5, "monthly"));
 
-  return [...pages, ...blog, ...catalog];
+  // Hunt lists (docs/SEO_STRATEGY.md, step 1): hub, one page per year, one per car.
+  const hunts = (["sth", "th"] as HuntRarity[]).flatMap((r) => [
+    ...entry(huntPath[r], new Date(lastUpdated(huntsOf(r))), 0.8, "weekly"),
+    ...huntYears(r).flatMap((y) =>
+      entry(`${huntPath[r]}/${y}`, new Date(lastUpdated(huntsOfYear(r, y))), y >= 2025 ? 0.9 : 0.6, y >= 2025 ? "weekly" : "monthly"),
+    ),
+    ...huntsOf(r).flatMap((h) => entry(`${huntPath[r]}/${h.year}/${h.slug}`, new Date(h.updated), 0.5, "monthly")),
+  ]);
+
+  return [...pages, ...hunts, ...blog, ...catalog];
 }

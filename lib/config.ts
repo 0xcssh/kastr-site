@@ -32,6 +32,9 @@ export const config = {
   // Dates shown on the legal pages. Update when the text changes.
   legalUpdated: "2026-11-03",
 
+  // eBay Partner Network campaign of the "On eBay now" links (the Worker's EBAY_EPN_CAMPAIGN_ID, public in every link).
+  ebayCampaignId: "5339238871",
+
   // Platform requirements, shown in the FAQ and structured data.
   platform: { os: "iOS", minVersion: "17", device: "iPhone" },
 } as const;

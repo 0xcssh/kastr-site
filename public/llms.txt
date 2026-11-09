@@ -43,3 +43,9 @@
 - Does Kastr work offline? Yes, the whole catalog is stored on the iPhone.
 - Is Kastr on Android? Not yet; iPhone only.
 - Is Kastr affiliated with Mattel? No. Hot Wheels and Matchbox are trademarks of Mattel, Inc.
+
+## Hunt lists
+
+- Super Treasure Hunts by year, case by case: https://kastr.app/en/super-treasure-hunt
+- Treasure Hunts by year since 1995: https://kastr.app/en/treasure-hunt
+- One page per car with its case, toy number, color, how to tell it from the regular version, and live eBay listings. Data from the Hot Wheels Wiki (CC BY-SA).

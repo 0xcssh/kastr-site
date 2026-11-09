@@ -65,7 +65,19 @@ C'est le cœur de la stratégie. Elles sont construites à partir du catalogue S
 | Caisse | `/en/case/2026-k`… | « hot wheels 2026 case k », « 2027 a case » | La TH et la STH de la caisse, la date de sortie connue, ce qu'on sait du reste de la caisse |
 | Calendrier des sorties | `/en/release-dates` | « hot wheels case release dates 2026 », « next case release date » | Une seule page tenue à jour (personne ne la fait bien) |
 
-On commence par 2027, 2026 et 2025 (TH et STH, environ 12 pages par langue), puis les archives. Ce sont les pages à publier en premier : la demande y est forte, la concurrence faible et nous avons les données.
+On commence par 2027, 2026 et 2025 (TH et STH, environ 12 pages par langue), puis les archives.
+
+**En ligne le 9 nov. :**
+- toutes les années (TH depuis 1995, STH depuis 2007) et une page par voiture (815 voitures), en anglais et en français : 1 730 pages ;
+- le bloc « Sur eBay maintenant » sur chaque voiture (`/api/listings/<id>` dans le Worker).
+
+Comment ça marche :
+- données : `node scripts/fetch-hunts.mjs` écrit `content/hunts.json`, puis `npm run deploy` et `npm run indexnow` ;
+- le bloc eBay lit la fonction `ebay-listings` de l'app : annonces de moins de 5 h 30, rien pour les robots.
+
+Restent à faire :
+- le calendrier des sorties ;
+- la reconstruction quotidienne automatique après `release-watch` (pour l'instant, à la main). Ce sont les pages à publier en premier : la demande y est forte, la concurrence faible et nous avons les données.
 
 ### Étape 2. Les guides et la page d'app (novembre et décembre)
 

@@ -10,6 +10,7 @@ export const en = {
   },
   nav: {
     features: "Features",
+    hunts: "Hunt lists",
     faq: "FAQ",
     support: "Support",
     language: "Language",
@@ -198,6 +199,8 @@ export const en = {
       terms: "Terms",
       support: "Support",
       credits: "Credits",
+      sth: "Super Treasure Hunt lists",
+      th: "Treasure Hunt lists",
     },
     publisher: "Published by",
   },

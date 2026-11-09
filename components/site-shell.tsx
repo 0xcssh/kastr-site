@@ -42,6 +42,9 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
             <Link href={`${home}#features`} className="hidden hover:text-ink sm:inline">
               {d.nav.features}
             </Link>
+            <Link href={`${home}/super-treasure-hunt`} className="hidden hover:text-ink md:inline">
+              {d.nav.hunts}
+            </Link>
             <Link href={`${home}#faq`} className="hidden hover:text-ink sm:inline">
               {d.nav.faq}
             </Link>
@@ -88,6 +91,12 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
             </Link>
             <Link href={`${home}/credits`} className="hover:text-ink">
               {d.footer.links.credits}
+            </Link>
+            <Link href={`${home}/super-treasure-hunt`} className="hover:text-ink">
+              {d.footer.links.sth}
+            </Link>
+            <Link href={`${home}/treasure-hunt`} className="hover:text-ink">
+              {d.footer.links.th}
             </Link>
           </nav>
         </div>

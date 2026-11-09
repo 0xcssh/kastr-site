@@ -16,10 +16,17 @@ async function sitemapUrls() {
 }
 
 const urlList = process.argv.length > 2 ? process.argv.slice(2) : await sitemapUrls();
-const res = await fetch("https://api.indexnow.org/indexnow", {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify({ host: HOST, key: KEY, keyLocation: `https://${HOST}/${KEY}.txt`, urlList }),
-});
-console.log(`IndexNow: ${res.status} for ${urlList.length} URL(s)`);
-if (res.status >= 300) process.exit(1);
+// Bing's endpoint: IndexNow engines share what one of them receives (api.indexnow.org was unreachable on 9 Nov).
+// Batches of 1,000 (the protocol allows 10,000, but large bodies were reset).
+let failed = false;
+for (let i = 0; i < urlList.length; i += 1000) {
+  const batch = urlList.slice(i, i + 1000);
+  const res = await fetch("https://www.bing.com/indexnow", {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify({ host: HOST, key: KEY, keyLocation: `https://${HOST}/${KEY}.txt`, urlList: batch }),
+  });
+  console.log(`IndexNow: ${res.status} for ${batch.length} URL(s)`);
+  if (res.status >= 300) failed = true;
+}
+if (failed) process.exit(1);

@@ -10,6 +10,7 @@ export const fr: Dictionary = {
   },
   nav: {
     features: "Fonctions",
+    hunts: "Listes de chasse",
     faq: "FAQ",
     support: "Aide",
     language: "Langue",
@@ -197,6 +198,8 @@ export const fr: Dictionary = {
       terms: "Conditions",
       support: "Aide",
       credits: "Crédits",
+      sth: "Listes des Super Treasure Hunt",
+      th: "Listes des Treasure Hunt",
     },
     publisher: "Éditeur",
   },
