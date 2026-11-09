@@ -52,6 +52,7 @@ type Copy = {
   source: string;
   sourceLink: string;
   noPhoto: string;
+  photoCaption: string;
   cta: { title: string; body: string };
   live: {
     title: string;
@@ -244,6 +245,7 @@ const en: Copy = {
   source: "Source",
   sourceLink: "Hot Wheels Wiki page (CC BY-SA)",
   noPhoto: "Photos of this car on the Hot Wheels Wiki",
+  photoCaption: "Photo from a live eBay listing (affiliate link)",
   cta: {
     title: "Found one on the pegs?",
     body: "Scan the card with Kastr: it tells you if the car is already in your garage, if it is a hunt, and what it sold for recently.",
@@ -365,6 +367,7 @@ const fr: Copy = {
   source: "Source",
   sourceLink: "Page du wiki Hot Wheels (CC BY-SA)",
   noPhoto: "Photos de cette voiture sur le wiki Hot Wheels",
+  photoCaption: "Photo d'une annonce eBay en cours (lien affilié)",
   cta: {
     title: "Tu l'as trouvée en rayon ?",
     body: "Scanne le carton avec Kastr : l'appli te dit si la voiture est déjà dans ton garage, si c'est une pièce de chasse et à combien elle s'est vendue récemment.",

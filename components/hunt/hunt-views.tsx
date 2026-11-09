@@ -22,6 +22,7 @@ import {
 } from "@/lib/hunts";
 import { localeUrl, type Locale } from "@/lib/i18n";
 import { breadcrumbSchema, faqPageSchema, graph, webPageSchema } from "@/lib/schema";
+import { ListingPhoto } from "./listing-photo";
 import { LiveListings } from "./live-listings";
 
 // The three hunt page types: the hub (years), a year's list grouped by case, and one car.
@@ -220,9 +221,10 @@ export function HuntYear({ locale, rarity, year }: { locale: Locale; rarity: Hun
               <li key={h.id}>
                 <Link
                   href={`${home}${meta.path}/${h.slug}`}
-                  className="flex h-full items-start gap-4 rounded-[20px] border border-ink/10 bg-surface p-5 hover:border-ink/30"
+                  className="flex h-full flex-col rounded-[20px] border border-ink/10 bg-surface p-2 hover:border-ink/30"
                 >
-                  <HuntMedal tone={rarity === "sth" ? "gold" : "silver"} />
+                  <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={rarity === "sth" ? "gold" : "silver"} />
+                  <span className="flex items-start gap-3 px-3 pb-3 pt-4">
                   <span className="min-w-0 flex-1">
                     <span className="block font-display text-[10.5px] font-semibold uppercase tracking-[0.1em] text-muted">
                       {c.caseHeading(h.caseCode)}
@@ -232,6 +234,7 @@ export function HuntYear({ locale, rarity, year }: { locale: Locale; rarity: Hun
                     <span className="mt-2 block text-sm text-muted">{[h.colour, h.toyNumber].filter(Boolean).join(" · ")}</span>
                   </span>
                   <ArrowRight aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-faint" />
+                  </span>
                 </Link>
               </li>
             );
@@ -347,7 +350,8 @@ export function HuntCar({ locale, hunt: h }: { locale: Locale; hunt: Hunt }) {
 
       <div className="mx-auto mt-14 grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <section>
-          <SectionLabel>{c.specs}</SectionLabel>
+          <ListingPhoto variationId={h.id} alt={c.carTitle(h)} tone={h.rarity === "sth" ? "gold" : "silver"} size="hero" caption={c.photoCaption} />
+          <SectionLabel className="mt-10">{c.specs}</SectionLabel>
           <dl className="mt-5 divide-y divide-line rounded-[20px] border border-ink/10 bg-surface px-5">
             {rows
               .filter((r): r is [string, string] => !!r[1])

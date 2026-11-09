@@ -101,9 +101,10 @@ export function freshListings(body: { listings?: RawListing[]; fetched_at?: stri
   return listings.length ? { fetchedAt: new Date(fetchedAt).toISOString(), listings } : null;
 }
 
-async function listingsResponse(variationId: string, request: Request): Promise<Response> {
-  const json = { "Content-Type": "application/json; charset=utf-8", "X-Robots-Tag": "noindex", ...SECURITY_HEADERS };
-  if (BOT.test(request.headers.get("User-Agent") ?? "")) return new Response(null, { status: 204, headers: json });
+const JSON_HEADERS = { "Content-Type": "application/json; charset=utf-8", "X-Robots-Tag": "noindex", ...SECURITY_HEADERS };
+
+/** One car's fresh listings, cached 15 minutes at the edge (204 when none are fresh). */
+function cachedListings(variationId: string): Promise<Response> {
   return cached(`https://${APEX}/__listings/${variationId}`, async () => {
     try {
       const res = await fetch(`${SUPABASE_URL}/functions/v1/ebay-listings`, {
@@ -112,12 +113,44 @@ async function listingsResponse(variationId: string, request: Request): Promise<
         body: JSON.stringify({ variation_id: variationId }),
       });
       const fresh = res.ok ? freshListings(await res.json(), Date.now()) : null;
-      if (!fresh) return new Response(null, { status: 204, headers: { ...json, "Cache-Control": "public, max-age=600" } });
-      return new Response(JSON.stringify(fresh), { headers: { ...json, "Cache-Control": "public, max-age=900" } });
+      if (!fresh) return new Response(null, { status: 204, headers: { ...JSON_HEADERS, "Cache-Control": "public, max-age=600" } });
+      return new Response(JSON.stringify(fresh), { headers: { ...JSON_HEADERS, "Cache-Control": "public, max-age=900" } });
     } catch {
-      return new Response(null, { status: 204, headers: { ...json, "Cache-Control": "no-store" } });
+      return new Response(null, { status: 204, headers: { ...JSON_HEADERS, "Cache-Control": "no-store" } });
     }
   });
+}
+
+async function listingsResponse(variationId: string, request: Request): Promise<Response> {
+  if (BOT.test(request.headers.get("User-Agent") ?? "")) return new Response(null, { status: 204, headers: JSON_HEADERS });
+  return cachedListings(variationId);
+}
+
+/** ?ids=a,b,c (at most 40): the photo of each car's cheapest fresh listing, for the cards of a year's list. */
+export function photoIds(url: URL): string[] | null {
+  if (url.pathname !== "/api/photos") return null;
+  const ids = (url.searchParams.get("ids") ?? "").split(",").filter((id) => /^[0-9a-f-]{36}$/.test(id));
+  return [...new Set(ids)].slice(0, 40);
+}
+
+async function photosResponse(ids: string[], request: Request): Promise<Response> {
+  if (BOT.test(request.headers.get("User-Agent") ?? "") || !ids.length) {
+    return new Response(JSON.stringify({ photos: {} }), { headers: JSON_HEADERS });
+  }
+  const photos: Record<string, { image: string; url: string; fetchedAt: string }> = {};
+  // Six cars at a time: the function refreshes within its own hourly budget and serves its cache otherwise.
+  for (let i = 0; i < ids.length; i += 6) {
+    await Promise.all(
+      ids.slice(i, i + 6).map(async (id) => {
+        const res = await cachedListings(id);
+        if (res.status !== 200) return;
+        const fresh = (await res.json()) as { fetchedAt: string; listings: { image: string | null; url: string }[] };
+        const first = fresh.listings.find((l) => l.image);
+        if (first?.image) photos[id] = { image: first.image, url: first.url, fetchedAt: fresh.fetchedAt };
+      }),
+    );
+  }
+  return new Response(JSON.stringify({ photos }), { headers: { ...JSON_HEADERS, "Cache-Control": "private, max-age=300" } });
 }
 
 export function rscPayloadPath(pathname: string): string | null {
@@ -167,6 +200,8 @@ const worker = {
 
     const listings = listingsPath(url.pathname);
     if (listings) return listingsResponse(listings, request);
+    const photos = photoIds(url);
+    if (photos) return photosResponse(photos, request);
 
     const profile = await profileResponse(url, request, env);
     if (profile) return profile;
