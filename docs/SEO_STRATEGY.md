@@ -117,12 +117,16 @@ On suit aussi les visites venant de ChatGPT et Perplexity : c'est le résultat d
 
 ## 4. Décisions à prendre (Cash)
 
-1. **Photos sur le web.** Les pages de chasse sans photos perdront contre « …list with pictures ». Le CDN de Fandom bloque l'affichage de ses photos sur d'autres sites (et on ne contourne pas ce blocage, CLAUDE.md §9). Trois options :
-   - attendre l'archive de Grunty89 ;
-   - prendre nos propres photos (la caisse achetée, les scans) ;
-   - les photos de la communauté avec accord.
+1. **Photos sur le web : décidé le 9 nov.** Le CDN de Fandom bloque l'affichage de ses photos sur d'autres sites, et on ne contourne pas ce blocage (CLAUDE.md §9). Les photos de Die Carz sont des images de boutiques et d'annonces reprises partout (Google Lens sur la Ram 2018 : Amazon, eBay, WheelCollectors…) : on ne les copie pas. À la place, des voies officielles :
+   - **Tout de suite : la photo de l'annonce eBay en cours**, affichée avec son lien affilié EPN, sans copie. Vérifié le 9 nov. : `i.ebayimg.com` autorise l'affichage sur un autre site, et `ebay-listings` renvoie déjà `image_url`.
 
-   **Recommandation :** lancer sans photos avec un lien vers la fiche du wiki, et ajouter nos photos au fil de l'eau.
+     Règles de la licence eBay à respecter :
+     - §8.1.3 : une annonce affichée a au plus 6 h de retard sur eBay, d'où un bloc rendu par le Worker depuis le cache de 30 min, jamais figé dans le build quotidien ;
+     - §8.1.2 : un bloc visuellement séparé, « Sur eBay maintenant », non mélangé à nos données ;
+     - §8.1.4.1 et §9.5 : pas de prix moyen de vente eBay.
+   - **Demandes d'autorisation :** WheelCollectors (photos de chaque caisse, en échange de liens vers leur boutique) et la relance de Grunty89 pour l'archive du wiki.
+   - **Amazon : à garder pour plus tard.** L'API produit (PA-API 5, remplacée en 2026 par la Creators API) donne les images avec un lien affilié. Mais l'accès demande un compte Associates avec au moins 10 ventes qualifiées sur les 30 derniers jours, et la mention « As an Amazon Associate I earn from qualifying purchases ». Elle est aussi peu utile pour les STH, qui ne se vendent presque pas sur Amazon.
+   - **Ensuite :** les photos de la communauté (avec une clause dans les conditions) et les nôtres.
 2. **Valeurs sur le web.** Afficher le prix plancher eBay sur des pages publiques expose un peu plus à la licence eBay (§9.5 : « modéliser des prix ») que dans l'app. L'annonce réelle la moins chère, avec son lien affilié EPN, est la forme la plus défendable, et elle rapporte des commissions. **Recommandation :** l'annonce la moins chère avec son lien sur les pages de chasse, pas de médiane des ventes eBay sur le web.
 3. **Feu vert pour l'étape 1** (pages STH/TH 2027, 2026, 2025 en anglais et en français, reconstruites chaque jour).
 
