@@ -11,6 +11,8 @@ import { getDict } from "@/lib/dictionaries";
 import { huntCopy } from "@/lib/hunt-copy";
 import {
   caseMates,
+  caseYears,
+  casesPath,
   huntPath,
   huntYears,
   huntsOfYear,
@@ -30,7 +32,7 @@ import { LiveListings } from "./live-listings";
 const H1 = "font-display text-[2rem] font-black uppercase italic leading-[1.02] tracking-tight text-ink sm:text-5xl";
 const other = (r: HuntRarity): HuntRarity => (r === "sth" ? "th" : "sth");
 
-function Crumbs({ items }: { items: { name: string; href?: string }[] }) {
+export function Crumbs({ items }: { items: { name: string; href?: string }[] }) {
   return (
     <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-muted">
       {items.map((it, i) => (
@@ -49,7 +51,7 @@ function Crumbs({ items }: { items: { name: string; href?: string }[] }) {
   );
 }
 
-function Title({ children }: { children: React.ReactNode }) {
+export function Title({ children }: { children: React.ReactNode }) {
   return (
     <h1 className={`mt-6 flex items-start gap-[0.3em] ${H1}`}>
       <SpeedStripes className="mt-[0.28em] shrink-0" />
@@ -58,7 +60,7 @@ function Title({ children }: { children: React.ReactNode }) {
   );
 }
 
-function AppCta({ locale }: { locale: Locale }) {
+export function AppCta({ locale }: { locale: Locale }) {
   const c = huntCopy(locale);
   return (
     <section className="mx-auto mt-20 max-w-7xl px-5 sm:px-8">
@@ -258,6 +260,11 @@ export function HuntYear({ locale, rarity, year }: { locale: Locale; rarity: Hun
         </section>
 
         <nav aria-label={c.yearsLabel} className="flex flex-wrap gap-2 text-sm">
+          {caseYears().includes(year) && (
+            <Link href={`${home}${casesPath}/${year}`} className="rounded-full border border-accent px-4 py-2 font-semibold text-ink">
+              {c.cases.link(year)}
+            </Link>
+          )}
           {otherYearExists && (
             <Link href={`${home}${huntPath[other(rarity)]}/${year}`} className="rounded-full border border-accent px-4 py-2 font-semibold text-ink">
               {c.otherList(other(rarity), year)}
@@ -338,7 +345,17 @@ export function HuntCar({ locale, hunt: h }: { locale: Locale; hunt: Hunt }) {
           <HuntMedal size="lg" tone={h.rarity === "sth" ? "gold" : "silver"} />
           <SectionLabel>
             {c.label[h.rarity]} {h.year}
-            {h.caseCode ? ` · ${c.caseHeading(h.caseCode)}` : ""}
+            {h.caseCode && (
+              <>
+                {" · "}
+                <Link
+                  href={`${home}${casesPath}/${h.year}#case-${h.caseCode.toLowerCase()}`}
+                  className="underline decoration-accent decoration-2 underline-offset-4"
+                >
+                  {c.caseHeading(h.caseCode)}
+                </Link>
+              </>
+            )}
           </SectionLabel>
         </div>
         <Title>{meta.title}</Title>

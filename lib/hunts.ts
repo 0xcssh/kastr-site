@@ -81,3 +81,30 @@ export function lastUpdated(list: Hunt[]): string {
 export function isOpenYear(year: number): boolean {
   return year >= new Date().getFullYear();
 }
+
+/** Mainline case letters in shipping order: A to Q without I and O. */
+export const CASE_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q"];
+
+/** Years whose hunts have case letters (the wiki's yearly Treasure Hunt pages give them since 2012). */
+export function caseYears(): number[] {
+  return [...new Set(all.filter((h) => h.caseCode).map((h) => h.year))].sort((a, b) => b - a);
+}
+
+/** The TH and STH of each known case of a year, in case order. */
+export function casesOf(year: number): { caseCode: string; th: Hunt[]; sth: Hunt[] }[] {
+  const inYear = all.filter((h) => h.year === year && h.caseCode);
+  return CASE_LETTERS.filter((code) => inYear.some((h) => h.caseCode === code)).map((code) => ({
+    caseCode: code,
+    th: inYear.filter((h) => h.caseCode === code && h.rarity === "th"),
+    sth: inYear.filter((h) => h.caseCode === code && h.rarity === "sth"),
+  }));
+}
+
+/** The first letter after the last known case, or null once Q is known. */
+export function nextCase(year: number): string | null {
+  const known = casesOf(year).map((c) => c.caseCode);
+  const last = known.length ? CASE_LETTERS.indexOf(known[known.length - 1]) : -1;
+  return CASE_LETTERS[last + 1] ?? null;
+}
+
+export const casesPath = "/cases";

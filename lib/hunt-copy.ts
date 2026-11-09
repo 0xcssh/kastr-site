@@ -65,6 +65,20 @@ type Copy = {
   breadcrumbHome: string;
   backToYear: (rarity: HuntRarity, year: number) => string;
   navLabel: string;
+  cases: {
+    hubTitle: string;
+    hubDescription: string;
+    hubQuestion: string;
+    hubAnswer: string;
+    yearTitle: (year: number) => string;
+    yearDescription: (year: number) => string;
+    yearQuestion: (year: number) => string;
+    yearAnswer: (year: number, known: string[], next: string | null) => string;
+    next: (letter: string) => string;
+    noDates: string;
+    link: (year: number) => string;
+    cases: (n: number) => string;
+  };
 };
 
 const sthCuesEn = (year: number): string[] => [
@@ -261,6 +275,23 @@ const en: Copy = {
   breadcrumbHome: "Kastr",
   backToYear: (r, y) => `All ${y} ${r === "sth" ? "Super Treasure Hunts" : "Treasure Hunts"}`,
   navLabel: "Hunt lists",
+  cases: {
+    hubTitle: "Hot Wheels case letters by year",
+    hubDescription: "The Treasure Hunt and Super Treasure Hunt of every Hot Wheels mainline case, A to Q, year by year since 2012.",
+    hubQuestion: "What is a Hot Wheels case letter?",
+    hubAnswer:
+      "Mattel ships each year's mainline cars in about fifteen cases lettered A to Q, without I and O. Each case letter has its own Treasure Hunt and Super Treasure Hunt. Collector guides say the code next to the toy number on the back of US cards ends with the case letter; international cards do not print it.",
+    yearTitle: (y) => `Hot Wheels ${y} cases: the TH and STH of each case`,
+    yearDescription: (y) => `Every Hot Wheels ${y} mainline case, A to Q, with its Treasure Hunt and Super Treasure Hunt, toy numbers and colors.`,
+    yearQuestion: (y) => `Which hunts are in each ${y} Hot Wheels case?`,
+    yearAnswer: (y, known, next) =>
+      `${known.length === 15 ? `All 15 Hot Wheels ${y} mainline cases are known` : `${known.length} Hot Wheels ${y} mainline cases are known so far`}, case ${known[0]} to case ${known[known.length - 1]}. Each case letter has its own Treasure Hunt and Super Treasure Hunt, listed below with toy numbers and colors from the Hot Wheels Wiki.${next ? ` The next case is ${next}.` : ""}`,
+    next: (l) => `Next case: ${l}`,
+    noDates:
+      "Mattel does not publish store dates, and cases reach stores at different times from one country to the next. We add a case as soon as its hunts are confirmed.",
+    link: (y) => `${y} cases A to Q`,
+    cases: (n) => (n === 1 ? "1 case" : `${n} cases`),
+  },
 };
 
 const fr: Copy = {
@@ -383,6 +414,23 @@ const fr: Copy = {
   breadcrumbHome: "Kastr",
   backToYear: (r, y) => `Toutes les ${r === "sth" ? "Super Treasure Hunt" : "Treasure Hunt"} ${y}`,
   navLabel: "Listes de chasse",
+  cases: {
+    hubTitle: "Les caisses Hot Wheels par année",
+    hubDescription: "La Treasure Hunt et la Super Treasure Hunt de chaque caisse Hot Wheels de la gamme courante, de A à Q, année par année depuis 2012.",
+    hubQuestion: "C'est quoi la lettre de caisse Hot Wheels ?",
+    hubAnswer:
+      "Mattel expédie les voitures de la gamme courante de chaque année dans une quinzaine de caisses notées de A à Q, sans I ni O. Chaque lettre de caisse a sa Treasure Hunt et sa Super Treasure Hunt. Selon les guides de collectionneurs, le code à côté du numéro de jouet au dos des cartons américains se termine par la lettre de caisse ; les cartons internationaux ne l'impriment pas.",
+    yearTitle: (y) => `Caisses Hot Wheels ${y} : la TH et la STH de chaque caisse`,
+    yearDescription: (y) => `Chaque caisse Hot Wheels ${y} de la gamme courante, de A à Q, avec sa Treasure Hunt et sa Super Treasure Hunt, numéros de jouet et couleurs.`,
+    yearQuestion: (y) => `Quelles pièces de chasse dans chaque caisse Hot Wheels ${y} ?`,
+    yearAnswer: (y, known, next) =>
+      `${known.length === 15 ? `Les 15 caisses Hot Wheels ${y} de la gamme courante sont connues` : `${known.length} caisses Hot Wheels ${y} de la gamme courante sont connues pour l'instant`}, de la caisse ${known[0]} à la caisse ${known[known.length - 1]}. Chaque lettre de caisse a sa Treasure Hunt et sa Super Treasure Hunt, listées ci-dessous avec numéros de jouet et couleurs d'après le wiki Hot Wheels.${next ? ` La prochaine caisse est la ${next}.` : ""}`,
+    next: (l) => `Prochaine caisse : ${l}`,
+    noDates:
+      "Mattel ne publie pas de dates de sortie en magasin, et les caisses arrivent à des moments différents selon les pays. Nous ajoutons une caisse dès que ses pièces de chasse sont confirmées.",
+    link: (y) => `Caisses ${y} de A à Q`,
+    cases: (n) => (n === 1 ? "1 caisse" : `${n} caisses`),
+  },
 };
 
 export function huntCopy(locale: Locale): Copy {

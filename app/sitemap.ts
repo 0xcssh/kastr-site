@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/blog";
 import { getCatalogPages } from "@/lib/catalog";
-import { huntPath, huntYears, huntsOf, huntsOfYear, lastUpdated, type HuntRarity } from "@/lib/hunts";
+import { caseYears, casesOf, casesPath, huntPath, huntYears, huntsOf, huntsOfYear, lastUpdated, type HuntRarity } from "@/lib/hunts";
 import { config } from "@/lib/config";
 import { alternatesFor, localeUrl, locales } from "@/lib/i18n";
 
@@ -50,5 +50,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...huntsOf(r).flatMap((h) => entry(`${huntPath[r]}/${h.year}/${h.slug}`, new Date(h.updated), 0.5, "monthly")),
   ]);
 
-  return [...pages, ...hunts, ...blog, ...catalog];
+  // Case tracker: one page per year, cases A to Q with their TH and STH.
+  const cases = [
+    ...entry(casesPath, new Date(lastUpdated(huntsOf("sth"))), 0.7, "weekly"),
+    ...caseYears().flatMap((y) => {
+      const hunts = casesOf(y).flatMap((k) => [...k.th, ...k.sth]);
+      return entry(`${casesPath}/${y}`, new Date(lastUpdated(hunts)), y >= 2025 ? 0.9 : 0.5, y >= 2025 ? "weekly" : "monthly");
+    }),
+  ];
+
+  return [...pages, ...hunts, ...cases, ...blog, ...catalog];
 }

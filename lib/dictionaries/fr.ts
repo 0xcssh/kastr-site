@@ -200,6 +200,7 @@ export const fr: Dictionary = {
       credits: "Crédits",
       sth: "Listes des Super Treasure Hunt",
       th: "Listes des Treasure Hunt",
+      cases: "Caisses de A à Q par année",
     },
     publisher: "Éditeur",
   },

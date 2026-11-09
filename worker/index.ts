@@ -55,7 +55,7 @@ async function profileResponse(url: URL, request: Request, env: Env): Promise<Re
 }
 
 const APEX = "kastr.app";
-const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits", "super-treasure-hunt", "treasure-hunt"]);
+const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits", "super-treasure-hunt", "treasure-hunt", "cases"]);
 const PNG_ROUTES = [/^\/icon$/, /^\/apple-icon$/, /^\/(en|fr)\/opengraph-image$/];
 
 const SECURITY_HEADERS: Record<string, string> = {

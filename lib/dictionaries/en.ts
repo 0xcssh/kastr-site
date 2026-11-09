@@ -201,6 +201,7 @@ export const en = {
       credits: "Credits",
       sth: "Super Treasure Hunt lists",
       th: "Treasure Hunt lists",
+      cases: "Cases A to Q by year",
     },
     publisher: "Published by",
   },

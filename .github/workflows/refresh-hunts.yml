@@ -1,0 +1,70 @@
+# Daily refresh of the hunt and case pages (docs/SEO_STRATEGY.md, step 1).
+# The app's release-watch job reads the Hot Wheels Wiki at 05:20 UTC; this runs after it, takes a new snapshot of
+# the catalog (scripts/fetch-hunts.mjs) and, only when something changed, rebuilds, deploys and tells IndexNow.
+#
+# Needs one repository secret: CLOUDFLARE_API_TOKEN, a token limited to deploying this Worker
+# (Account: Workers Scripts Edit + Account Settings Read; Zone kastr.app: Workers Routes Edit, Zone Read, DNS Read).
+name: Refresh hunt pages
+
+on:
+  schedule:
+    - cron: "50 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-hunts
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Snapshot the catalog
+        run: node scripts/fetch-hunts.mjs
+
+      - name: Anything new?
+        id: diff
+        run: |
+          if git diff --quiet -- content/hunts.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change in the catalog."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- content/hunts.json
+          fi
+
+      - name: Build
+        if: steps.diff.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          npm ci
+          npm run verify
+
+      - name: Deploy
+        if: steps.diff.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy
+
+      - name: Save the snapshot
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "kastr-bot"
+          git config user.email "kastr-bot@users.noreply.github.com"
+          git add content/hunts.json
+          git commit -m "Refresh hunt data from the catalog"
+          git push
+
+      - name: Tell IndexNow
+        if: steps.diff.outputs.changed == 'true'
+        run: node scripts/indexnow.mjs
