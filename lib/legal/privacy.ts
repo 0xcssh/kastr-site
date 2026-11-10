@@ -138,7 +138,7 @@ const en: LegalDoc = {
       blocks: [
         "A car missing from the catalog that you add yourself stays private in your garage. If you choose to propose it to the catalog, we store the proposal (brand, name, year, series, colour, toy number, notes and photo) with your account; the photo is in private storage that only moderators can see. Once approved, the car data joins the public catalog without your name. Prices are never published individually.",
         "When you share the price you paid for a car, it is sent without your account, with only a hashed identifier of your app installation, and is shown only as part of an aggregate (for example a median of several collectors).",
-        "Feedback you send from the app is stored with your account and the app version, so we can answer and fix the problem.",
+        "Feedback you send from the app is stored with your account, the app version and your iPhone model (for example iPhone16,2), so we can answer and fix the problem.",
         "If you enter a friend's referral code, we record who invited whom, to give the reward. This stays private.",
       ],
     },
@@ -427,7 +427,7 @@ const fr: LegalDoc = {
       blocks: [
         "Une voiture absente du catalogue que vous ajoutez vous-même reste privée dans votre garage. Si vous choisissez de la proposer au catalogue, nous conservons la proposition (marque, nom, année, série, couleur, numéro de jouet, notes et photo) avec votre compte ; la photo est dans un stockage privé visible seulement par les modérateurs. Une fois validée, la voiture rejoint le catalogue public sans votre nom. Les prix ne sont jamais publiés un par un.",
         "Quand vous partagez le prix payé pour une voiture, il est envoyé sans votre compte, avec seulement un identifiant haché de votre installation de l'app, et n'est affiché que dans un agrégat (par exemple la médiane de plusieurs collectionneurs).",
-        "Les retours envoyés depuis l'app sont conservés avec votre compte et la version de l'app, pour vous répondre et corriger le problème.",
+        "Les retours envoyés depuis l'app sont conservés avec votre compte, la version de l'app et le modèle de votre iPhone (par exemple iPhone16,2), pour vous répondre et corriger le problème.",
         "Si vous saisissez le code de parrainage d'un ami, nous enregistrons qui a invité qui, pour attribuer la récompense. Cela reste privé.",
       ],
     },
