@@ -48,11 +48,12 @@ export const mdxComponents: MDXComponents = {
   td: ({ children }) => <td className="border-b border-line px-4 py-3 align-top text-muted">{children}</td>,
 };
 
-/** <HuntRanking year={2026} />: the year's Treasure Hunts and Supers, ranked live by value (hunt-ranking.tsx). */
+/** <HuntRanking year="2026" />: the year's Treasure Hunts and Supers, ranked live by value (hunt-ranking.tsx).
+ * The year is a string: next-mdx-remote v6 strips JavaScript expressions such as year={2026}. */
 function huntRanking(locale: Locale) {
-  return function HuntRanking({ year }: { year: number }) {
+  return function HuntRanking({ year }: { year: string }) {
     const cars = (["sth", "th"] as const).flatMap((r) =>
-      huntsOfYear(r, year).map((h) => ({
+      huntsOfYear(r, Number(year)).map((h) => ({
         id: h.id,
         name: h.name,
         rarity: r,

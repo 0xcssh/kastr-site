@@ -137,7 +137,7 @@ async function listingsResponse(variationId: string, request: Request): Promise<
 /** ?ids=a,b,c (at most PHOTO_BATCH): the photo of each car's cheapest fresh listing, for the cards of a year's list. */
 // Each car costs up to three subrequests (cache read, function call, cache write) and a Worker on the free plan
 // gets 50 per request: past about 15 cars the request fails (error 1101). Pages ask in batches of 12.
-export const PHOTO_BATCH = 12;
+const PHOTO_BATCH = 12;
 
 export function photoIds(url: URL): string[] | null {
   if (url.pathname !== "/api/photos") return null;
@@ -306,8 +306,14 @@ const worker = {
 
     // Next prefetches route payloads as "__next.$d$locale.support.__PAGE__.txt", but the static export
     // writes them as folders ("__next.$d$locale/support/__PAGE__.txt"): map one to the other.
+    // Builds differ: the Windows build writes folders, the Linux one (GitHub Actions) may write the flat name.
+    // Try the path as asked first, then the folder form.
     const payload = rscPayloadPath(url.pathname);
-    const asset = await env.ASSETS.fetch(payload ? new Request(new URL(payload, url), request) : request);
+    let asset = await env.ASSETS.fetch(request);
+    if (payload && asset.status !== 200) {
+      const folder = await env.ASSETS.fetch(new Request(new URL(payload, url), request));
+      if (folder.status === 200) asset = folder;
+    }
     const response = new Response(asset.body, asset);
     for (const [key, value] of Object.entries(SECURITY_HEADERS)) response.headers.set(key, value);
     if (PNG_ROUTES.some((route) => route.test(url.pathname))) response.headers.set("Content-Type", "image/png");
