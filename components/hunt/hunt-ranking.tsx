@@ -58,16 +58,16 @@ export function HuntRankingList({ cars, locale }: { cars: RankingCar[]; locale: 
           : null;
         return (
           <li key={car.id}>
-            <Link href={car.href} className="flex items-center gap-4 px-4 py-3 hover:bg-ink/[0.03]">
+            <Link href={car.href} className="flex items-center gap-3 px-3 py-3 sm:gap-4 sm:px-4 hover:bg-ink/[0.03]">
               <span className="w-7 shrink-0 text-right font-display text-lg font-black italic tabular-nums text-faint">{i + 1}</span>
-              <span className="flex h-14 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-studio">
+              <span className="flex h-14 w-16 shrink-0 items-center sm:w-20 justify-center overflow-hidden rounded-xl bg-studio">
                 {p?.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={p.image} alt={car.name} loading="lazy" decoding="async" className="h-full w-full object-contain" />
                 ) : null}
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-semibold text-ink">{car.name}</span>
+                <span className="line-clamp-2 font-semibold leading-tight text-ink">{car.name}</span>
                 <span className="block text-sm text-muted">
                   {car.rarity === "sth" ? c.sth : c.th}
                   {car.caseCode ? ` · ${c.case} ${car.caseCode}` : ""}

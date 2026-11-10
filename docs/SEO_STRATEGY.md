@@ -45,7 +45,7 @@
 
 | Fait le 9 nov. | Reste à faire, par Cash |
 |---|---|
-| HTTPS forcé sur tout le domaine (http://kastr.app restait en clair). | **Google Search Console** (voir §5) : valider le domaine, envoyer les deux sitemaps, demander l'indexation de /en et /fr. |
+| HTTPS forcé sur tout le domaine (http://kastr.app restait en clair). | ~~Google Search Console~~ : fait par Cash le 10 nov. Le sitemap affichait « Impossible de récupérer » sans date de lecture : Google ne l'avait pas encore lu (il répond 200 avec 1 808 adresses valides). À revoir sous 48 h. |
 | IndexNow branché : Bing, Yandex, Seznam et Naver sont prévenus à chaque déploiement (`npm run indexnow`). Bing alimente ChatGPT Search et Copilot. Premier envoi : 11 adresses acceptées. | **Bing Webmaster Tools** : « Importer depuis Google Search Console », un clic une fois la console validée. |
 | Lighthouse mobile, accessibilité : 96 → 100 (contraste du rouge, nom du lien de langue). SEO déjà à 100. | |
 | Les 404 sur les données de page en prélecture sont corrigés. | |
@@ -75,11 +75,15 @@ Comment ça marche :
 - données : `node scripts/fetch-hunts.mjs` écrit `content/hunts.json`, puis `npm run deploy` et `npm run indexnow` ;
 - le bloc eBay lit la fonction `ebay-listings` de l'app : annonces de moins de 5 h 30, rien pour les robots.
 
-Restent à faire :
-- le calendrier des sorties ;
-- la reconstruction quotidienne automatique après `release-watch` (pour l'instant, à la main). Ce sont les pages à publier en premier : la demande y est forte, la concurrence faible et nous avons les données.
+**Fait depuis :**
+- le suivi des caisses (`/en/cases/2026`…) remplace le calendrier des sorties : Mattel ne publie pas de dates, la page n'en invente pas ;
+- la reconstruction quotidienne : workflow `refresh-hunts.yml` à 5 h 50 UTC (lancement manuel possible, il déploie à chaque fois), envoi IndexNow si la liste change ;
+- photos et valeur (annonce sous blister la moins chère) sur chaque carte, chargées à la visite ;
+- section « listes de chasse » sur l'accueil et lien « Chasse » visible sur téléphone.
 
 ### Étape 2. Les guides et la page d'app (novembre et décembre)
+
+**Fait le 10 nov. :** les huit articles ci-dessous, en anglais et en français, et les deux pages d'outil. Le classement 2026 (n° 5) est calculé à chaque visite à partir des annonces en cours (licence eBay §8.1.3 : rien de figé de plus de 6 h), donc Google n'en voit que le texte. La comparaison (n° 7) cite les notes App Store du 10 nov. : à rafraîchir tous les trimestres.
 
 Huit articles de blog bilingues, écrits avec `/blog`, chacun avec un bloc réponse et une FAQ. Pas de remplissage.
 
@@ -95,6 +99,8 @@ Huit articles de blog bilingues, écrits avec `/blog`, chacun avec un bloc répo
 S'y ajoutent deux pages d'atterrissage pour les requêtes d'outil :
 - `/en/hot-wheels-scanner` pour « value scanner », « scanner app » ;
 - `/en/value` pour « value checker », « value lookup » : une recherche par nom ou par numéro de jouet qui affiche la valeur et renvoie vers l'app.
+
+Fonctionnement : `/api/search` dans le Worker interroge la table `variation` de Supabase (clé publique, cache d'une heure), puis chaque résultat demande sa photo et sa valeur à `/api/photos`, par lots de 12 voitures au plus (limite de 50 sous-requêtes du plan gratuit de Cloudflare). **Risque :** le site et l'app se partagent le budget de 60 rafraîchissements eBay par heure de `ebay-listings`. Au lancement, si le trafic du site monte, lui donner un budget à part.
 
 ### Étape 3. Le lancement (décembre)
 
