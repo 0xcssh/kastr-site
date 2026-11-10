@@ -3,6 +3,7 @@
 // locale redirects for short URLs (kastr.app/privacy is what App Store Connect links to),
 // www to apex, security headers, and a PNG content type for the extensionless image routes.
 
+import hunts from "../content/hunts.json";
 import { config, isAppLive } from "../lib/config";
 import { APPLE_APP_SITE_ASSOCIATION, parseCreatorPath, renderCreatorPage } from "./creator";
 import { fetchProfile, fetchProfileIndex, parseProfilePath, profileSitemap, renderNotFound, renderProfile } from "./profile";
@@ -55,7 +56,7 @@ async function profileResponse(url: URL, request: Request, env: Env): Promise<Re
 }
 
 const APEX = "kastr.app";
-const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits", "super-treasure-hunt", "treasure-hunt", "cases"]);
+const LOCALIZED = new Set(["", "privacy", "terms", "support", "credits", "super-treasure-hunt", "treasure-hunt", "cases", "value", "hot-wheels-scanner"]);
 const PNG_ROUTES = [/^\/icon$/, /^\/apple-icon$/, /^\/(en|fr)\/opengraph-image$/];
 
 const SECURITY_HEADERS: Record<string, string> = {
@@ -161,6 +162,73 @@ async function photosResponse(ids: string[], request: Request): Promise<Response
   return new Response(JSON.stringify({ photos }), { headers: { ...JSON_HEADERS, "Cache-Control": "private, max-age=300" } });
 }
 
+// Value lookup (/[locale]/value): the catalog searched by toy number, or by name words and an optional year.
+// Public catalog rows only (text under CC BY-SA); the value of each result comes from /api/photos, live.
+const HUNT_PATHS = new Map(
+  (hunts as { id: string; rarity: "sth" | "th"; year: number; slug: string }[]).map((h) => [
+    h.id,
+    `/${h.rarity === "sth" ? "super-treasure-hunt" : "treasure-hunt"}/${h.year}/${h.slug}`,
+  ]),
+);
+
+export type SearchQuery = { toyNumber: string } | { words: string[]; year: number | null };
+
+export function parseSearch(raw: string): SearchQuery | null {
+  const q = raw.normalize("NFKC").trim().slice(0, 60);
+  if (/^[a-z]{2,4}[- ]?\d{2,4}$/i.test(q)) return { toyNumber: q.replace(/[- ]/g, "").toUpperCase() };
+  let year: number | null = null;
+  const words: string[] = [];
+  for (const token of q.toLowerCase().split(/\s+/)) {
+    const clean = token.replace(/[^\p{L}\p{N}'-]/gu, "");
+    if (!clean) continue;
+    if (year === null && /^(19[6-9]\d|20[0-3]\d)$/.test(clean)) year = Number(clean);
+    else if (clean !== "hot" && clean !== "wheels" && words.length < 5) words.push(clean);
+  }
+  return words.length && words.join("").length >= 2 ? { words, year } : null;
+}
+
+export function searchUrl(query: SearchQuery): string {
+  const params = new URLSearchParams({
+    select: "id,toy_number,year,rarity,colour,series,casting!inner(name,brand)",
+    order: "year.desc.nullslast,id",
+    limit: "24",
+  });
+  if ("toyNumber" in query) params.append("toy_number", `ilike.*${query.toyNumber}*`);
+  else {
+    for (const w of query.words) params.append("casting.name", `ilike.*${w}*`);
+    if (query.year) params.append("year", `eq.${query.year}`);
+  }
+  return `${SUPABASE_URL}/rest/v1/variation?${params}`;
+}
+
+type Row = { id: string; toy_number: string | null; year: number | null; rarity: string; colour: string | null; series: string | null; casting: { name: string; brand: string } };
+
+async function searchResponse(url: URL): Promise<Response> {
+  const query = parseSearch(url.searchParams.get("q") ?? "");
+  if (!query) return new Response(JSON.stringify({ results: [] }), { headers: JSON_HEADERS });
+  const key = "toyNumber" in query ? `t:${query.toyNumber}` : `n:${query.words.join("+")}:${query.year ?? ""}`;
+  return cached(`https://${APEX}/__search/v1/${encodeURIComponent(key)}`, async () => {
+    try {
+      const res = await fetch(searchUrl(query), { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } });
+      if (!res.ok) throw new Error(String(res.status));
+      const results = ((await res.json()) as Row[]).map((r) => ({
+        id: r.id,
+        name: r.casting.name,
+        brand: r.casting.brand,
+        year: r.year,
+        rarity: r.rarity,
+        colour: r.colour,
+        series: r.series,
+        toyNumber: r.toy_number,
+        path: HUNT_PATHS.get(r.id) ?? null,
+      }));
+      return new Response(JSON.stringify({ results }), { headers: { ...JSON_HEADERS, "Cache-Control": "public, max-age=3600" } });
+    } catch {
+      return new Response(JSON.stringify({ results: [], error: true }), { status: 502, headers: { ...JSON_HEADERS, "Cache-Control": "no-store" } });
+    }
+  });
+}
+
 export function rscPayloadPath(pathname: string): string | null {
   const decoded = decodeURIComponent(pathname);
   const match = /^(.*\/__next\.)([^/]+)\.txt$/.exec(decoded);
@@ -210,6 +278,7 @@ const worker = {
     if (listings) return listingsResponse(listings, request);
     const photos = photoIds(url);
     if (photos) return photosResponse(photos, request);
+    if (url.pathname === "/api/search") return searchResponse(url);
 
     const profile = await profileResponse(url, request, env);
     if (profile) return profile;

@@ -6,7 +6,7 @@ export const en = {
   meta: {
     title: "Kastr: Hot Wheels Collection App, Scanner & Value Guide",
     description:
-      "What's your Hot Wheels worth? Scan the card to see its recent sales and whether it's already in your collection. 78,256 diecast cars offline, free search, no ads.",
+      "What's your Hot Wheels worth? Scan the card to see its recent sales and whether it's already in your collection. 87,922 diecast cars offline, free search, no ads.",
   },
   nav: {
     features: "Features",
@@ -30,7 +30,7 @@ export const en = {
     title: ["What's this Hot Wheels worth?", "Got it already?"],
     cta: "Scan it to find out.",
     subtitle:
-      "The collection app for diecast hunters. Recent sales in your currency, doubles flagged before you buy, and the year's Treasure Hunts in one list. 78,256 cars, offline.",
+      "The collection app for diecast hunters. Recent sales in your currency, doubles flagged before you buy, and the year's Treasure Hunts in one list. 87,922 cars, offline.",
     note: "Free to download · No ads · Works offline",
     imageAlt: "Kastr car page for the 2026 '23 Ram 1500 Super Treasure Hunt: median of 24 carded sales with the sales chart, already in the garage",
   },
@@ -44,12 +44,12 @@ export const en = {
   },
   answer: {
     question: "What is Kastr?",
-    text: "Kastr is an iPhone app for diecast car collectors. It carries an offline catalog of 78,256 cars from 1968 to today: Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions. In the store aisle it reads the card, tells you whether the car is already in your garage and whether it is a Treasure Hunt, and shows recent sales in your own currency.",
+    text: "Kastr is an iPhone app for diecast car collectors. It carries an offline catalog of 87,922 cars from 1968 to today: Hot Wheels first, plus Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race. In the store aisle it reads the card, tells you whether the car is already in your garage and whether it is a Treasure Hunt, and shows recent sales in your own currency.",
   },
   stats: [
-    { value: "78,256", label: "cars in the catalog" },
+    { value: "87,922", label: "cars in the catalog" },
     { value: "1968", label: "to this year's releases" },
-    { value: "7", label: "brands, Hot Wheels first" },
+    { value: "10", label: "brands, Hot Wheels first" },
     { value: "Offline", label: "search, garage and hunt list" },
   ],
   hunt: {
@@ -77,11 +77,11 @@ export const en = {
     items: {
       catalog: {
         title: "Every car since 1968",
-        body: "78,256 cars stored in the app. Search by name, year, series or toy number, even in a store basement with no signal.",
+        body: "87,922 cars stored in the app. Search by name, year, series or toy number, even in a store basement with no signal.",
       },
       brands: {
         title: "Seven brands, one garage",
-        body: "Hot Wheels first, then Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.",
+        body: "Hot Wheels first, then Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race.",
       },
       prices: {
         label: "Recent sales",
@@ -143,7 +143,7 @@ export const en = {
     items: [
       {
         q: "What is Kastr?",
-        a: "Kastr is an iPhone app for diecast collectors. It holds an offline catalog of 78,256 cars from 1968 to today and tells you, in the aisle, whether a car is already in your garage, whether it is a Treasure Hunt, and what it sold for recently.",
+        a: "Kastr is an iPhone app for diecast collectors. It holds an offline catalog of 87,922 cars from 1968 to today and tells you, in the aisle, whether a car is already in your garage, whether it is a Treasure Hunt, and what it sold for recently.",
       },
       {
         q: "Does Kastr work without a signal?",
@@ -151,7 +151,7 @@ export const en = {
       },
       {
         q: "Which brands are in the catalog?",
-        a: "Hot Wheels first, then Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions. Hot Wheels has the deepest coverage, including Treasure Hunts and Super Treasure Hunts.",
+        a: "Hot Wheels first, then Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race. Hot Wheels has the deepest coverage, including Treasure Hunts and Super Treasure Hunts.",
       },
       {
         q: "How does scanning work?",
@@ -194,7 +194,7 @@ export const en = {
   footer: {
     disclaimer: "Kastr is independent and not affiliated with Mattel, Inc.",
     trademarks:
-      "Hot Wheels and Matchbox are trademarks of Mattel, Inc. Tomica, Mini GT, M2 Machines, Maisto and Racing Champions belong to their respective owners. Brand names are used only to describe the cars in the catalog.",
+      "Hot Wheels and Matchbox are trademarks of Mattel, Inc. Majorette, Tomica, Mini GT, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race belong to their respective owners. Brand names are used only to describe the cars in the catalog.",
     links: {
       privacy: "Privacy",
       terms: "Terms",
@@ -204,6 +204,8 @@ export const en = {
       th: "Treasure Hunt lists",
       cases: "Cases A to Q by year",
       guides: "Guides",
+      value: "Value checker",
+      scanner: "Hot Wheels scanner",
     },
     publisher: "Published by",
   },

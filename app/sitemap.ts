@@ -9,6 +9,8 @@ import { alternatesFor, localeUrl, locales } from "@/lib/i18n";
 
 const STATIC_PAGES: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
+  { path: "/value", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/hot-wheels-scanner", priority: 0.8, changeFrequency: "monthly" },
   { path: "/support", priority: 0.6, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.4, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.4, changeFrequency: "yearly" },

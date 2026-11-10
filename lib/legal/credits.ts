@@ -12,6 +12,9 @@ export const catalogSources = [
   { brand: "M2 Machines", url: "https://m2machines.fandom.com" },
   { brand: "Maisto", url: "https://maisto.fandom.com" },
   { brand: "Racing Champions", url: "https://racingchampions.fandom.com" },
+  { brand: "Majorette", url: "https://majorette-model-cars.fandom.com" },
+  { brand: "Tarmac Works", url: "https://tarmacworks.fandom.com" },
+  { brand: "Pop Race", url: "https://pop-race.fandom.com" },
 ] as const;
 
 const CC = "https://creativecommons.org/licenses/by-sa/3.0/";
@@ -60,7 +63,7 @@ const en: LegalDoc = {
       id: "trademarks",
       heading: "Trademarks",
       blocks: [
-        "Kastr is independent and not affiliated with Mattel, Inc. Hot Wheels and Matchbox are trademarks of Mattel, Inc. Tomica, Mini GT, M2 Machines, Maisto and Racing Champions belong to their respective owners. These names are used only to describe the cars in the catalog.",
+        "Kastr is independent and not affiliated with Mattel, Inc. Hot Wheels and Matchbox are trademarks of Mattel, Inc. Majorette, Tomica, Mini GT, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race belong to their respective owners. These names are used only to describe the cars in the catalog.",
       ],
     },
   ],
@@ -107,7 +110,7 @@ const fr: LegalDoc = {
       id: "trademarks",
       heading: "Marques",
       blocks: [
-        "Kastr est indépendante et n'est pas affiliée à Mattel, Inc. Hot Wheels et Matchbox sont des marques de Mattel, Inc. Tomica, Mini GT, M2 Machines, Maisto et Racing Champions appartiennent à leurs propriétaires respectifs. Ces noms servent uniquement à décrire les voitures du catalogue.",
+        "Kastr est indépendante et n'est pas affiliée à Mattel, Inc. Hot Wheels et Matchbox sont des marques de Mattel, Inc. Majorette, Tomica, Mini GT, M2 Machines, Maisto, Racing Champions, Tarmac Works et Pop Race appartiennent à leurs propriétaires respectifs. Ces noms servent uniquement à décrire les voitures du catalogue.",
       ],
     },
   ],

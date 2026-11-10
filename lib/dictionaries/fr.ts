@@ -6,7 +6,7 @@ export const fr: Dictionary = {
   meta: {
     title: "Kastr : appli collection Hot Wheels, scanner et cote",
     description:
-      "Combien vaut ta Hot Wheels ? Scanne le blister pour voir ses ventes récentes et si tu l'as déjà. 78 256 voitures hors ligne, recherche gratuite, sans pub.",
+      "Combien vaut ta Hot Wheels ? Scanne le blister pour voir ses ventes récentes et si tu l'as déjà. 87 922 voitures hors ligne, recherche gratuite, sans pub.",
   },
   nav: {
     features: "Fonctions",
@@ -29,7 +29,7 @@ export const fr: Dictionary = {
     title: ["Cette Hot Wheels, elle vaut combien ?", "Tu l'as déjà ?"],
     cta: "Scanne-la pour le savoir.",
     subtitle:
-      "L'appli de collection des chasseurs de miniatures. Les ventes récentes dans ta devise, les doublons signalés avant d'acheter, et les Treasure Hunt de l'année dans une liste. 78 256 voitures, hors ligne.",
+      "L'appli de collection des chasseurs de miniatures. Les ventes récentes dans ta devise, les doublons signalés avant d'acheter, et les Treasure Hunt de l'année dans une liste. 87 922 voitures, hors ligne.",
     note: "Téléchargement gratuit · Sans pub · Hors ligne",
     imageAlt: "Fiche Kastr de la '23 Ram 1500 Super Treasure Hunt 2026 : médiane de 24 ventes sous blister avec le graphique des ventes, déjà au garage",
   },
@@ -43,12 +43,12 @@ export const fr: Dictionary = {
   },
   answer: {
     question: "Qu'est-ce que Kastr ?",
-    text: "Kastr est une app iPhone pour les collectionneurs de voitures miniatures. Elle embarque un catalogue hors ligne de 78 256 voitures, de 1968 à aujourd'hui : Hot Wheels d'abord, puis Matchbox, Mini GT, Tomica, M2 Machines, Maisto et Racing Champions. En rayon, elle lit le blister, te dit si la voiture est déjà dans ton garage et si c'est une Treasure Hunt, et affiche les ventes récentes dans ta devise.",
+    text: "Kastr est une app iPhone pour les collectionneurs de voitures miniatures. Elle embarque un catalogue hors ligne de 87 922 voitures, de 1968 à aujourd'hui : Hot Wheels d'abord, puis Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works et Pop Race. En rayon, elle lit le blister, te dit si la voiture est déjà dans ton garage et si c'est une Treasure Hunt, et affiche les ventes récentes dans ta devise.",
   },
   stats: [
-    { value: "78 256", label: "voitures au catalogue" },
+    { value: "87 922", label: "voitures au catalogue" },
     { value: "1968", label: "jusqu'aux sorties de l'année" },
-    { value: "7", label: "marques, Hot Wheels en tête" },
+    { value: "10", label: "marques, Hot Wheels en tête" },
     { value: "Hors ligne", label: "recherche, garage et liste de chasse" },
   ],
   hunt: {
@@ -76,11 +76,11 @@ export const fr: Dictionary = {
     items: {
       catalog: {
         title: "Toutes les voitures depuis 1968",
-        body: "78 256 voitures stockées dans l'app. Cherche par nom, année, série ou numéro de jouet, même au sous-sol d'un magasin sans réseau.",
+        body: "87 922 voitures stockées dans l'app. Cherche par nom, année, série ou numéro de jouet, même au sous-sol d'un magasin sans réseau.",
       },
       brands: {
         title: "Sept marques, un seul garage",
-        body: "Hot Wheels d'abord, puis Matchbox, Mini GT, Tomica, M2 Machines, Maisto et Racing Champions.",
+        body: "Hot Wheels d'abord, puis Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works et Pop Race.",
       },
       prices: {
         label: "Ventes récentes",
@@ -142,7 +142,7 @@ export const fr: Dictionary = {
     items: [
       {
         q: "Qu'est-ce que Kastr ?",
-        a: "Kastr est une app iPhone pour les collectionneurs de miniatures. Elle contient un catalogue hors ligne de 78 256 voitures, de 1968 à aujourd'hui, et te dit en rayon si une voiture est déjà dans ton garage, si c'est une Treasure Hunt et à combien elle s'est vendue récemment.",
+        a: "Kastr est une app iPhone pour les collectionneurs de miniatures. Elle contient un catalogue hors ligne de 87 922 voitures, de 1968 à aujourd'hui, et te dit en rayon si une voiture est déjà dans ton garage, si c'est une Treasure Hunt et à combien elle s'est vendue récemment.",
       },
       {
         q: "Kastr marche-t-elle sans réseau ?",
@@ -150,7 +150,7 @@ export const fr: Dictionary = {
       },
       {
         q: "Quelles marques sont au catalogue ?",
-        a: "Hot Wheels d'abord, puis Matchbox, Mini GT, Tomica, M2 Machines, Maisto et Racing Champions. Hot Wheels est la plus complète, Treasure Hunt et Super Treasure Hunt comprises.",
+        a: "Hot Wheels d'abord, puis Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works et Pop Race. Hot Wheels est la plus complète, Treasure Hunt et Super Treasure Hunt comprises.",
       },
       {
         q: "Comment marche le scan ?",
@@ -193,7 +193,7 @@ export const fr: Dictionary = {
   footer: {
     disclaimer: "Kastr est indépendante et n'est pas affiliée à Mattel, Inc.",
     trademarks:
-      "Hot Wheels et Matchbox sont des marques de Mattel, Inc. Tomica, Mini GT, M2 Machines, Maisto et Racing Champions appartiennent à leurs propriétaires respectifs. Les noms de marques servent uniquement à décrire les voitures du catalogue.",
+      "Hot Wheels et Matchbox sont des marques de Mattel, Inc. Majorette, Tomica, Mini GT, M2 Machines, Maisto, Racing Champions, Tarmac Works et Pop Race appartiennent à leurs propriétaires respectifs. Les noms de marques servent uniquement à décrire les voitures du catalogue.",
     links: {
       privacy: "Confidentialité",
       terms: "Conditions",
@@ -203,6 +203,8 @@ export const fr: Dictionary = {
       th: "Listes des Treasure Hunt",
       cases: "Caisses de A à Q par année",
       guides: "Guides",
+      value: "Cote Hot Wheels",
+      scanner: "Scanner Hot Wheels",
     },
     publisher: "Éditeur",
   },

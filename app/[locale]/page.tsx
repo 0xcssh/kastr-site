@@ -25,7 +25,7 @@ import { faqPageSchema, graph, organizationSchema, softwareApplicationSchema } f
 import { pageMetadata } from "@/lib/seo";
 
 // Brand names as plain text: no brand logos on the site (CLAUDE.md §9).
-const BRANDS = ["Hot Wheels", "Matchbox", "Mini GT", "Tomica", "M2 Machines", "Maisto", "Racing Champions"];
+const BRANDS = ["Hot Wheels", "Matchbox", "Mini GT", "Tomica", "M2 Machines", "Maisto", "Racing Champions", "Majorette", "Tarmac Works", "Pop Race"];
 
 const H2 = "mt-4 font-display text-4xl font-black uppercase leading-[0.95] tracking-tight text-ink md:text-5xl";
 const CARD = "reveal relative overflow-hidden rounded-[20px] border border-ink/10 bg-surface p-7";

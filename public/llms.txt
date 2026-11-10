@@ -4,7 +4,7 @@
 
 ## What it does today
 
-- Offline catalog of 78,256 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Mini GT, Tomica, M2 Machines, Maisto and Racing Champions.
+- Offline catalog of 87,922 diecast cars, from 1968 to this year's releases. Hot Wheels first, plus Matchbox, Majorette, Mini GT, Tomica, M2 Machines, Maisto, Racing Champions, Tarmac Works and Pop Race.
 - Search by name, year, series or toy number, free and unlimited, with no signal needed.
 - Hunt: scan cards in a row (barcode and toy number read on the iPhone, AI identification as a fallback with the user's permission), then review. Each result shows "already in my garage", duplicate, and the car's rarity as listed in the catalog.
 - The year's TH and STH list as a photo grid, with found cars ticked; a gold reveal with haptic feedback.

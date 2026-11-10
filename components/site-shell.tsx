@@ -106,6 +106,12 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
             <Link href={`${home}/blog`} className="hover:text-ink">
               {d.footer.links.guides}
             </Link>
+            <Link href={`${home}/value`} className="hover:text-ink">
+              {d.footer.links.value}
+            </Link>
+            <Link href={`${home}/hot-wheels-scanner`} className="hover:text-ink">
+              {d.footer.links.scanner}
+            </Link>
           </nav>
         </div>
       </footer>

@@ -1,6 +1,7 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import { SectionLabel } from "@/components/kit";
+import { getDict } from "@/lib/dictionaries";
 import { huntCopy } from "@/lib/hunt-copy";
 import { casesPath, huntPath, huntYears, huntsOfYear } from "@/lib/hunts";
 import type { Locale } from "@/lib/i18n";
@@ -70,6 +71,9 @@ export function HomeHunts({ locale }: { locale: Locale }) {
         </Link>
         <Link href={`${home}/blog/how-to-spot-a-super-treasure-hunt`} className={chip}>
           {c.home.guide}
+        </Link>
+        <Link href={`${home}/value`} className={chip}>
+          {getDict(locale).footer.links.value}
         </Link>
       </nav>
     </section>

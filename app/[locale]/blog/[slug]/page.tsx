@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { AnswerBlock } from "@/components/answer-block";
 import { Faq } from "@/components/faq";
 import { AppCta, Crumbs, Title } from "@/components/hunt/hunt-views";
 import { JsonLd } from "@/components/json-ld";
-import { mdxComponents } from "@/components/mdx";
+import { mdxComponentsFor } from "@/components/mdx";
 import { SiteShell } from "@/components/site-shell";
 import { getAllSlugs, getPost } from "@/lib/blog";
 import { config } from "@/lib/config";
@@ -76,7 +77,7 @@ export default async function BlogPost({ params }: PageProps<"/[locale]/blog/[sl
         <AnswerBlock question={post.title}>{post.answer}</AnswerBlock>
       </div>
       <article className="mx-auto max-w-3xl px-5 sm:px-8">
-        <MDXRemote source={post.content} components={mdxComponents} />
+        <MDXRemote source={post.content} components={mdxComponentsFor(locale)} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         {post.faq?.length ? (
           <div className="mt-14">
             <Faq items={post.faq} />
