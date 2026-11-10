@@ -128,7 +128,7 @@
   "interior": "Chrome",
   "wheels": "Gold D7RR",
   "country": "Malaysia",
-  "notes": "Super Treasure Hunt / Base code(s):",
+  "notes": "Super Treasure Hunt / Base code(s): V36N",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Aston_Martin_DB5_Safari_Edition",
   "updated": "2026-10-31",
   "twin": {
@@ -1875,7 +1875,11 @@
   "notes": "Super Treasure Hunt / Base code(s): S42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'89_Mercedes-Benz_560_SEC_AMG",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HTB70",
+   "colour": "Red",
+   "series": "HW Modified / 8/10"
+  }
  },
  {
   "id": "0bce4a47-cb67-52d1-8aed-aee4bfeb5b8e",
@@ -1896,7 +1900,11 @@
   "notes": "Treasure Hunt / Base code(s): S47, S48, S49",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Batman_Forever_Batmobile",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "JBX17",
+   "colour": "Black",
+   "series": "85th Anniversary Batmobile Collection"
+  }
  },
  {
   "id": "2009a5ee-e807-5dd5-8ea7-854b33bd84c4",
@@ -1959,7 +1967,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'71_El_Camino",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HTC34",
+   "colour": "Purple",
+   "series": "HW Hot Trucks / 7/10"
+  }
  },
  {
   "id": "bab69586-9449-5fc9-ab7f-596f95d5164b",
@@ -2110,11 +2122,7 @@
   "notes": "Treasure Hunt / Base code(s): T12",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Bone_Shaker",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X6999",
-   "colour": "Metalflake Mint Green",
-   "series": "Multipack Exclusive"
-  }
+  "twin": null
  },
  {
   "id": "2fa17bcf-f436-500a-91a3-5905b924620f",
@@ -2135,7 +2143,11 @@
   "notes": "Super Treasure Hunt / Base code(s): T10",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mazda_787B",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HTC79",
+   "colour": "Orange",
+   "series": "HW Race Day / 7/10"
+  }
  },
  {
   "id": "009d59a1-fc87-5ceb-8d7b-36aeec117172",
@@ -2177,11 +2189,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'77_Pontiac_Firebird_T/A",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HTC60",
-   "colour": "Matte black",
-   "series": "Muscle Mania / 4/5"
-  }
+  "twin": null
  },
  {
   "id": "b02394fd-7406-5882-b574-41f4f2f1fed8",
@@ -2265,7 +2273,11 @@
   "notes": "Hot Wheels Let's Race / Super Treasure Hunt / Base code(s): T20",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Celero_GT",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HTB87",
+   "colour": "Purple",
+   "series": "Quarter Mile Heroes / 3/5"
+  }
  },
  {
   "id": "de42484c-190b-5d69-a364-3dc8be3eb989",
@@ -2307,7 +2319,11 @@
   "notes": "Super Treasure Hunt / Base code(s): T24",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lamborghini_Huracán_LP_620-2_Super_Trofeo",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HTC25",
+   "colour": "Red",
+   "series": "HW Exotics / 8/10"
+  }
  },
  {
   "id": "3dfdd455-d1cd-58f0-9e4c-0e1dc441d0e9",
@@ -2349,11 +2365,7 @@
   "notes": "Super Treasure Hunt / Base code(s): T13",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'83_Chevy_Silverado",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HTC73",
-   "colour": "Metallic Blue",
-   "series": "Then and Now / 9/10"
-  }
+  "twin": null
  },
  {
   "id": "a4f78976-790e-5495-9808-bd3a79eb3c22",
@@ -2395,7 +2407,11 @@
   "notes": "Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Poison_Pinto_(Monster_Truck)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "JDG02",
+   "colour": "Light green",
+   "series": "Hot Wheels Monster Trucks Demolition Doubles"
+  }
  },
  {
   "id": "4c0e6498-edd4-59e7-8601-b0d79a64ca23",
@@ -2558,7 +2574,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R30",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Classic_TV_Series_Batmobile_(Tooned)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKG97",
+   "colour": "Dark Red",
+   "series": "Batman / 1/5"
+  }
  },
  {
   "id": "72318be4-47e7-5a2b-9b92-97a032df1a09",
@@ -2600,7 +2620,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mercedes-Benz_300_SL",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKH02",
+   "colour": "Red",
+   "series": "Retro Racers / 3/10"
+  }
  },
  {
   "id": "fe0dc3a8-a458-54d6-98ed-fed65f5543d6",
@@ -2642,7 +2666,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R37",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'68_COPO_Camaro",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKH49",
+   "colour": "Mustard",
+   "series": "HW Art Cars / 5/10"
+  }
  },
  {
   "id": "bd921056-9ef4-5585-8f71-d8e786b6a59b",
@@ -2684,7 +2712,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lotus_Evija",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKH56",
+   "colour": "Atomic Red",
+   "series": "HW Green Speed / 3/10"
+  }
  },
  {
   "id": "14a14e54-5312-510f-a867-00c4bf9a9d01",
@@ -2726,7 +2758,11 @@
   "notes": "New in Mainline / Super Treasure Hunt / Base code(s): R40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/1968_Mazda_Cosmo_Sport",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKJ14",
+   "colour": "Orange",
+   "series": "HW J-Imports / 9/10"
+  }
  },
  {
   "id": "2c6b8b07-f95a-5903-a16a-0e82227136af",
@@ -2768,7 +2804,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R47",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Renault_Sport_R.S._01",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKJ38",
+   "colour": "Glossy Red",
+   "series": "HW Turbo / 3/5"
+  }
  },
  {
   "id": "11ab03b0-98e2-58e4-bd0a-8f34dfacb83e",
@@ -2852,7 +2892,11 @@
   "notes": "Super Treasure Hunt / Base code(s): S02",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Glory_Chaser",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKH42",
+   "colour": "Gulf Racing Blue",
+   "series": "HW Roadsters / 9/10"
+  }
  },
  {
   "id": "3a9a0e64-5631-53a5-b040-371d076f875e",
@@ -2894,7 +2938,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'82_Toyota_Supra",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKG87",
+   "colour": "Red",
+   "series": "HW: The '80s / 10/10"
+  }
  },
  {
   "id": "4578462b-a83b-51e7-9326-0fc1744ee516",
@@ -2936,7 +2984,11 @@
   "notes": "Super Treasure Hunt / New loop logo on base / Base code(s): S11",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Shelby_GT-500",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKJ50",
+   "colour": "Metalflake purple",
+   "series": "Muscle Mania / 9/10"
+  }
  },
  {
   "id": "598c30be-466b-56a3-864d-7d7a0f4ba01c",
@@ -2978,11 +3030,7 @@
   "notes": "New in Mainline / Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Mercury_Comet_Cyclone",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HKH62",
-   "colour": "Black",
-   "series": "HW Gassers / 4/5"
-  }
+  "twin": null
  },
  {
   "id": "c7e552e1-1d15-5aa4-9a63-d1ebe7802ed1",
@@ -3108,11 +3156,7 @@
   "notes": "Super Treasure Hunt / Base code(s): S23",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'71_Datsun_Bluebird_510_Wagon",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HKH72",
-   "colour": "Purple Chameleon",
-   "series": "HW Wagons / 4/5"
-  }
+  "twin": null
  },
  {
   "id": "fc876e82-3c0d-5247-8b23-48e1acba951d",
@@ -3154,7 +3198,11 @@
   "notes": "Super Treasure Hunt / Base code(s): S25",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Volvo_240_Drift_Wagon",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HKJ07",
+   "colour": "Bright Metallic Green",
+   "series": "HW Slammed / 4/5"
+  }
  },
  {
   "id": "479a1696-d8ef-5196-9833-fba8a7a5da33",
@@ -3217,7 +3265,11 @@
   "notes": "Treasure Hunts / Base code(s): S08",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Twin_Mill_(Monster_Truck)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCR24",
+   "colour": "White",
+   "series": "Hot Wheels Monster Trucks: Hot Wheels Racing / 1/5"
+  }
  },
  {
   "id": "9c1f8765-639a-56d0-a64e-4eae9f4510ac",
@@ -3239,9 +3291,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HNG20",
+   "toyNumber": "HNG21",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Undisputed / 3/4"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/8"
   }
  },
  {
@@ -3264,9 +3316,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HNG20",
+   "toyNumber": "HNG21",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Undisputed / 3/4"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/8"
   }
  },
  {
@@ -3289,9 +3341,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HNG20",
+   "toyNumber": "HNG21",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Undisputed / 3/4"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/8"
   }
  },
  {
@@ -3405,11 +3457,7 @@
   "notes": "Super Treasure Hunt / Base code(s): P35",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'73_BMW_3.0_CSL_Race_Car",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HCW51",
-   "colour": "Yellow",
-   "series": "Retro Racers / 2/10"
-  }
+  "twin": null
  },
  {
   "id": "08f88008-6867-547b-8b4f-fb1339832ac9",
@@ -3493,11 +3541,7 @@
   "notes": "Super Treasure Hunt / Base code(s): P40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'63_Studebaker_Champ",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HCT51",
-   "colour": "Glossy Black",
-   "series": "HW Hot Trucks / 5/10"
-  }
+  "twin": null
  },
  {
   "id": "67de3a82-2ced-5c39-a220-9d36dc3a3ad7",
@@ -3539,7 +3583,11 @@
   "notes": "New in Mainline / Super Treasure Hunt / Base code(s): P43",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2020_Corvette",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCW39",
+   "colour": "Elkhart Lake Blue",
+   "series": "Factory Fresh / 3/10"
+  }
  },
  {
   "id": "9236fa0f-3e18-5d44-9664-9eac76c5d82a",
@@ -3623,7 +3671,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P52",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Volkswagen_Käfer_Racer",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCW48",
+   "colour": "Deep Red",
+   "series": "HW Contoured / 5/5"
+  }
  },
  {
   "id": "2bec0c90-9c0f-5d5a-9c59-54875f885d24",
@@ -3665,7 +3717,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R04",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2020_Jaguar_F-Type",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCT71",
+   "colour": "Santorini Black",
+   "series": "HW Turbo / 10/10"
+  }
  },
  {
   "id": "0723893a-d425-5ccb-b90a-b01283ae370d",
@@ -3707,7 +3763,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Custom_'18_Ford_Mustang_GT",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCV87",
+   "colour": "Boysenberry",
+   "series": "Spoiler Alert / 5/5"
+  }
  },
  {
   "id": "641e0a60-e03f-58c3-a4e2-62ae52b0a0cc",
@@ -3795,7 +3855,11 @@
   "notes": "New in Mainline / Super Treasure Hunt / Base code(s): R13",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'71_Lamborghini_Miura_SV",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCV34",
+   "colour": "Arancio Miura",
+   "series": "HW Exotics / 5/10"
+  }
  },
  {
   "id": "66c05712-7cae-58ba-bfb4-9c019d2f1971",
@@ -3921,11 +3985,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'32_Ford",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "HCV75",
-   "colour": "Gulf Racing Blue",
-   "series": "Rod Squad / 5/5"
-  }
+  "twin": null
  },
  {
   "id": "d8bd1d4d-270b-50d0-b5c9-fdf1ae723853",
@@ -3967,7 +4027,11 @@
   "notes": "Super Treasure Hunt / Base code(s): R28",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'81_Camaro",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HCV81",
+   "colour": "Metalflake green",
+   "series": "Then and Now / 10/10"
+  }
  },
  {
   "id": "f80f7aef-517f-5722-b2e4-8ecfdba62d78",
@@ -4013,7 +4077,11 @@
   "notes": "Treasure Hunt / Same deco as 2021 Mattel Games / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rodger_Dodger_(Monster_Truck)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HGC99",
+   "colour": "Green",
+   "series": "Hot Wheels Monster Trucks: Twisted Tredz / 6/7"
+  }
  },
  {
   "id": "c3aa7c4e-e91b-54f4-8eb7-b5dc4b345060",
@@ -4034,7 +4102,11 @@
   "notes": "Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Oscar_Mayer_Wienermobile_(Monster_Truck)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "HHG76",
+   "colour": "Yellow & Red",
+   "series": "Hot Wheels Monster Trucks: Snack Pack / 1/6"
+  }
  },
  {
   "id": "381a3520-26fd-5b06-86a8-8a599f611107",
@@ -4077,9 +4149,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HGT68",
+   "toyNumber": "HGT49",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Abstrakt / 2/5"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/5"
   }
  },
  {
@@ -4102,9 +4174,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HGT68",
+   "toyNumber": "HGT49",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Abstrakt / 2/5"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/5"
   }
  },
  {
@@ -4127,9 +4199,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HGT68",
+   "toyNumber": "HGT49",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Abstrakt / 2/5"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/5"
   }
  },
  {
@@ -4152,9 +4224,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fingerboard",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "HGT68",
+   "toyNumber": "HGT49",
    "colour": null,
-   "series": "Hot Wheels Skate: HW Abstrakt / 2/5"
+   "series": "Hot Wheels Skate: Tony Hawk Originals / 1/5"
   }
  },
  {
@@ -4197,7 +4269,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Nissan_300ZX_Twin_Turbo",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY55",
+   "colour": "Metalflake Blue",
+   "series": "HW Turbo / 1/5"
+  }
  },
  {
   "id": "135fb11a-038d-558e-981f-037279e78554",
@@ -4239,11 +4315,7 @@
   "notes": "Super Treasure Hunt / Base code(s): N34",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Corvette_Grand_Sport_Roadster",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "GRX92",
-   "colour": "Pearl Blue",
-   "series": "HW Race Day / 3/10"
-  }
+  "twin": null
  },
  {
   "id": "ecac9d73-d7fa-580d-ad4a-dbc9531fdf2a",
@@ -4285,11 +4357,7 @@
   "notes": "Super Treasure Hunt / Playable in Unleashed / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rodger_Dodger",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "GRY70",
-   "colour": "Black",
-   "series": "Mattel Games / 2/5"
-  }
+  "twin": null
  },
  {
   "id": "129a44e5-8616-5060-80f3-f3c5e6002cd7",
@@ -4310,7 +4378,11 @@
   "notes": "Treasure Hunt / Base code(s): N42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Motosaurus",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GYL84",
+   "colour": "Metalflake Aqua",
+   "series": "Monster Truck + Original Car Pack"
+  }
  },
  {
   "id": "aa791896-1781-5050-b511-17592569d87f",
@@ -4331,7 +4403,11 @@
   "notes": "Super Treasure Hunt / Base code(s): N40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'95_Mazda_RX-7",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY28",
+   "colour": "Black",
+   "series": "Factory Fresh / 6/10"
+  }
  },
  {
   "id": "c6651c95-8c8e-59a5-a549-5ce116b1aed2",
@@ -4352,7 +4428,11 @@
   "notes": "Super Treasure Hunt / Base code(s): N40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'95_Mazda_RX-7",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY28",
+   "colour": "Black",
+   "series": "Factory Fresh / 6/10"
+  }
  },
  {
   "id": "57b47015-326b-59b4-8e82-42fd29698b86",
@@ -4394,7 +4474,11 @@
   "notes": "Super Treasure Hunt / Base code(s): N42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Corvette_C7_Z06_Convertible",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY41",
+   "colour": "Black",
+   "series": "HW Speed Graphics / 4/10"
+  }
  },
  {
   "id": "527e6c18-60fd-55e0-bf2b-aea32741a33b",
@@ -4436,7 +4520,11 @@
   "notes": "Super Treasure Hunt / Base code(s): H46,",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mazda_RX-3",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTB27",
+   "colour": "White",
+   "series": "HW Drift / 5/5"
+  }
  },
  {
   "id": "9e3628d7-61ee-5038-90bf-666027fb1ad7",
@@ -4520,11 +4608,7 @@
   "notes": "Super Treasure Hunt / Base code(s): N52",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Datsun_Bluebird_510",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "GTB02",
-   "colour": "Seafoam Green",
-   "series": "HW J&#8209;Imports / 4/10"
-  }
+  "twin": null
  },
  {
   "id": "de3a1e62-ea56-5425-8a09-7de2aac89129",
@@ -4566,7 +4650,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P02",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_356_Outlaw",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY45",
+   "colour": "Sky Blue",
+   "series": "HW Speed Graphics / 7/10"
+  }
  },
  {
   "id": "088cef59-5374-58db-9df6-ec869162d78b",
@@ -4608,7 +4696,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P02, P05",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2018_Honda_Civic_Type_R",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTB06",
+   "colour": "Dark Grey Metallic",
+   "series": "HW J&#8209;Imports / 6/10"
+  }
  },
  {
   "id": "05004278-c284-5232-b4bf-bfb954a9665a",
@@ -4650,7 +4742,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P09",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'68_Mercury_Cougar_(2014)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTB17",
+   "colour": "Metalflake Dark Green",
+   "series": "HW Flames / 2/5"
+  }
  },
  {
   "id": "594b909f-0ade-56c1-b2f2-713d5e14b0a5",
@@ -4692,7 +4788,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P12",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2019_Audi_R8_Spyder",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY87",
+   "colour": "Santorini Blue",
+   "series": "HW Exotics / 4/10"
+  }
  },
  {
   "id": "486d1400-7959-557d-84c1-c520f34ff5b5",
@@ -4734,7 +4834,11 @@
   "notes": "Super Treasure Hunt / Base code(s): P16",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'49_Ford_F1",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GRY95",
+   "colour": "Metalflake Purple",
+   "series": "HW Hot Trucks / 6/10"
+  }
  },
  {
   "id": "8565387b-b35f-50b4-b2ad-344abafeb6b8",
@@ -4755,7 +4859,11 @@
   "notes": "Treasure Hunt / NO Loop Logo on Base (See Gallery) / Base code(s): P20, P21, P27, P28, P29",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Ford_Galaxie",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTD74",
+   "colour": "Spectraflame aqua green",
+   "series": "Collector Edition"
+  }
  },
  {
   "id": "daa37f99-6082-51ac-9311-c2e4ec79a67b",
@@ -4776,7 +4884,11 @@
   "notes": "Treasure Hunt / New Loop Logo on Base / Base code(s): P20, P21",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Ford_Galaxie",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTD74",
+   "colour": "Spectraflame aqua green",
+   "series": "Collector Edition"
+  }
  },
  {
   "id": "ff7f9173-0e09-58e2-9144-f8143ff886ed",
@@ -4906,7 +5018,11 @@
   "notes": "Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rodger_Dodger_(Monster_Truck)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GWJ94",
+   "colour": "Blue",
+   "series": "Hot Wheels Monster Trucks: Crash Legends / 1/7"
+  }
  },
  {
   "id": "3db14756-6c89-54dd-bdbf-39d359db08a5",
@@ -4927,7 +5043,11 @@
   "notes": "Treasure Hunt / Base code(s): P26",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Snake_Bite",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GTH56",
+   "colour": "Green",
+   "series": "Hot Wheels Monster Trucks: Fan Favorites / 1/6"
+  }
  },
  {
   "id": "48600f02-1cbc-5714-a6cf-330a256266cd",
@@ -5011,11 +5131,7 @@
   "notes": "Super Treasure Hunt / Base code(s): M28, M32",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ford_GT-40",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "GHC55",
-   "colour": "Light Blue",
-   "series": "HW Race Day / 8/10"
-  }
+  "twin": null
  },
  {
   "id": "ae60b3ee-bfdf-5238-9344-7eb24bd19e9b",
@@ -5057,7 +5173,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M34, M40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Jeepster_Commando",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHB84",
+   "colour": "Metallic Light Blue",
+   "series": "Baja Blazers / 1/10"
+  }
  },
  {
   "id": "ff870ff9-0c23-58be-9a7e-50fed18150eb",
@@ -5099,7 +5219,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M39",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_918_Spyder",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHD22",
+   "colour": "Blue",
+   "series": "Porsche / 5/5"
+  }
  },
  {
   "id": "14e55593-2210-5ccf-842e-f1d581993da2",
@@ -5141,7 +5265,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M24, M42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'88_Honda_CR-X",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHC10",
+   "colour": "White",
+   "series": "Honda / 5/5"
+  }
  },
  {
   "id": "8595e61c-8965-5029-8160-6df19786ad90",
@@ -5183,7 +5311,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M43",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mazda_RX-7",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHD32",
+   "colour": "Orange",
+   "series": "Speed Blur / 5/5"
+  }
  },
  {
   "id": "a474417c-4751-5176-b18f-d5604e560c34",
@@ -5313,11 +5445,7 @@
   "notes": "Super Treasure Hunt / Base code(s): N02",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lamborghini_Sesto_Elemento",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "GHC35",
-   "colour": "Light Blue",
-   "series": "HW Exotics / 10/10"
-  }
+  "twin": null
  },
  {
   "id": "c9b27b95-085d-5aae-b53a-168d1838377e",
@@ -5451,7 +5579,11 @@
   "notes": "Super Treasure Hunt / Base code(s): N12, N20",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Ford_Galaxie",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHD63",
+   "colour": "Black",
+   "series": "HW Flames / 10/10"
+  }
  },
  {
   "id": "3226b430-282a-5963-ae80-bd090aa6a892",
@@ -5483,7 +5615,7 @@
   "toyNumber": "GHG24",
   "series": "Muscle Mania / 10/10",
   "caseCode": "N",
-  "colour": "Spectraflame Yellow",
+  "colour": "Spectraflame Yellow Jacket",
   "tampo": "Black stripes on hood, roof, trunk & sides, \"JEGS\" & other brands on sides, black Demon logo on front fenders, white \"25\" & red TH logo on rear fenders",
   "base": "Black / Plastic",
   "window": "Smoke tint",
@@ -5556,7 +5688,11 @@
   "notes": "Super Treasure Hunt / Base code(s): N26, N29",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'17_Pagani_Huayra_Roadster",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHC72",
+   "colour": "Pearl Verde Firenze",
+   "series": "HW Roadsters / 5/5"
+  }
  },
  {
   "id": "972bed37-866b-5eb8-a58d-5f40b3ab9dca",
@@ -5598,7 +5734,11 @@
   "notes": "Urban Outlaw / Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'64_Chevy_Chevelle_SS",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GHD15",
+   "colour": null,
+   "series": "Nightburnerz / 10/10"
+  }
  },
  {
   "id": "131764f3-ae93-5bcf-95ed-2fc22714f3fe",
@@ -5686,11 +5826,7 @@
   "notes": "Super Treasure Hunt / Base code(s): L26, L31",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Nissan_Skyline_GT-R_(BNR34)",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FYC52",
-   "colour": "Metalflake Olive Green",
-   "series": "Nissan / 2/5"
-  }
+  "twin": null
  },
  {
   "id": "30121b44-c8fd-54e2-b92c-e4962af3e543",
@@ -5732,11 +5868,7 @@
   "notes": "Super Treasure Hunt / Base code(s): L39",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Corvette_Grand_Sport_Roadster",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FYC55",
-   "colour": "Yellow",
-   "series": "HW Roadsters / 3/5"
-  }
+  "twin": null
  },
  {
   "id": "28e50081-571c-5b40-a09e-f96acc87c213",
@@ -5757,11 +5889,7 @@
   "notes": "Treasure Hunt / Base code(s): L41",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Twin_Mill",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FXB53",
-   "colour": "Spectraflame Ice Blue",
-   "series": "Hot Wheels id Race Portal"
-  }
+  "twin": null
  },
  {
   "id": "96ec2588-ab9d-539d-bfa2-b2a3f2dc89ed",
@@ -5782,7 +5910,11 @@
   "notes": "Super Treasure Hunt / Base code(s): L40",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Volkswagen_T2_Pickup",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYD71",
+   "colour": "Metallic Orange",
+   "series": "Volkswagen / 3/10"
+  }
  },
  {
   "id": "01df2f36-a21d-5c81-9ad4-f4ea155b2d4a",
@@ -5824,7 +5956,11 @@
   "notes": "Super Treasure Hunt / Base code(s): L42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Back_to_the_Future_Time_Machine_-_Hover_Mode",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC50",
+   "colour": "Silver",
+   "series": "HW Screen Time / 9/10"
+  }
  },
  {
   "id": "78e1bf7f-c718-5f1f-ad6b-ce1831441371",
@@ -5845,7 +5981,11 @@
   "notes": "Treasure Hunt / Base code(s): L49",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Humvee",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "GBB99",
+   "colour": "Dark Olive Green",
+   "series": "Throwback / 6/8"
+  }
  },
  {
   "id": "de6fcc00-2925-57c7-853b-ff2e89a1598d",
@@ -5866,7 +6006,11 @@
   "notes": "Super Treasure Hunt / Base code(s): L46",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mazda_REPU",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYD72",
+   "colour": "Metalflake Dark Blue",
+   "series": "Nightburnerz / 7/10"
+  }
  },
  {
   "id": "f3670c46-a25e-5ec8-b030-4681c662c4a6",
@@ -5908,11 +6052,7 @@
   "notes": "Super Treasure Hunts / Base code(s): L49",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'92_Ford_Mustang",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FYC53",
-   "colour": "Metalflake Aquamarine Blue",
-   "series": "Speed Blur / 9/10"
-  }
+  "twin": null
  },
  {
   "id": "57891b12-0ed9-51cd-add7-a53c5869b73c",
@@ -5954,7 +6094,11 @@
   "notes": "Super Treasure Hunt / Base code(s): L51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'68_Mercury_Cougar_(2014)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC37",
+   "colour": "Matte Dark Green",
+   "series": "HW Flames / 2/10"
+  }
  },
  {
   "id": "a8dc9b62-35fc-554c-bf3c-e1ee900c4dd0",
@@ -5996,7 +6140,11 @@
   "notes": "Super Treasure Hunt / Base codes: L50, MO3",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Corvette_Racer",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC46",
+   "colour": "Metalflake Red",
+   "series": "HW Race Day / 8/10"
+  }
  },
  {
   "id": "d570fe48-09e9-506b-ba39-40dc7d983708",
@@ -6032,7 +6180,7 @@
   "toyNumber": "FYG12",
   "series": "Muscle Mania / 2/10",
   "caseCode": "K",
-  "colour": "Spectraflame Red",
+  "colour": "Spectraflame Octane Red",
   "tampo": "Black graphics on sides & hood, white Dodge & SRT wordmarks on hood / sides, black Hot Wheels & Demon logos on front fenders / doors, TH logo on trunk",
   "base": "Black / Plastic",
   "window": "Smoke tint",
@@ -6063,7 +6211,11 @@
   "notes": "Super Treasure Hunt / Playable in Unleashed / Base code(s): M08",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Street_Creeper",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC49",
+   "colour": "Matte Black",
+   "series": "Rod Squad / 3/10"
+  }
  },
  {
   "id": "c0603589-8635-5ebb-b9f6-5e66807aefdf",
@@ -6126,7 +6278,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M14",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lamborghini_Aventador_J",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYD74",
+   "colour": "Arancio Atlas",
+   "series": "HW Exotics / 8/10"
+  }
  },
  {
   "id": "4856ecdf-2a8b-5ef2-80cb-8ad834aeda6d",
@@ -6147,11 +6303,7 @@
   "notes": "Treasure Hunt / Base code(s): M20, M22",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Sharkruiser",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FYL21",
-   "colour": "Red",
-   "series": "Wave Cravers 5-Pack"
-  }
+  "twin": null
  },
  {
   "id": "eaff6a34-00a4-5f15-ab94-70a9becfa662",
@@ -6172,7 +6324,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M17",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Tesla_Model_S",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC48",
+   "colour": "Metallic Blue",
+   "series": "HW Green Speed / 4/5"
+  }
  },
  {
   "id": "820c9c4e-6937-5af8-8337-6f91fbf24e84",
@@ -6214,11 +6370,7 @@
   "notes": "Super Treasure Hunt / Base code(s): M20",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mini_Cooper",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FYC54",
-   "colour": "Blue",
-   "series": "HW Race Team / 5/10"
-  }
+  "twin": null
  },
  {
   "id": "c8af8dba-f4c1-5a48-886d-54f66a13f202",
@@ -6260,7 +6412,11 @@
   "notes": "Super Treasure Hunt / Base code(s): M24",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_911_GT3_RS_(2016)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FYC47",
+   "colour": "Metalflake Purple",
+   "series": "Factory Fresh / 10/10"
+  }
  },
  {
   "id": "386bfe45-ed9a-557e-b359-6a7aeaf93b13",
@@ -6306,7 +6462,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K28",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Datsun_620",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW57",
+   "colour": "Light Green",
+   "series": "HW Hot Trucks / 4/10"
+  }
  },
  {
   "id": "5b3b4431-073c-5e7b-89e7-0b0705e6cbd6",
@@ -6327,7 +6487,11 @@
   "notes": "Treasure Hunt / Base code(s): K33, K35, K36",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/El_Viento",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FKB94",
+   "colour": "Green",
+   "series": "X-Raycers / 1/10"
+  }
  },
  {
   "id": "103dd458-a739-5068-b460-8f02dab807d6",
@@ -6398,11 +6562,7 @@
   "notes": "Super Treasure Hunt / Base code(s): K36",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_934.5",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FJX65",
-   "colour": "Blue",
-   "series": "Nightburnerz / 2/10"
-  }
+  "twin": null
  },
  {
   "id": "876ebf4f-3a9d-51f6-88b9-07301abc0ba2",
@@ -6423,7 +6583,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K44",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2015_Ford_Mustang_GT",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW44",
+   "colour": "Black",
+   "series": "HW Speed Graphics / 4/10"
+  }
  },
  {
   "id": "6e74b9ab-e490-5383-b5ec-ecf60fc533ca",
@@ -6444,7 +6608,11 @@
   "notes": "Treasure Hunt / Base Code(s): K41, K43, K44",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Street_Stealth",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJX07",
+   "colour": "Blue",
+   "series": "HW Moto / 1/5"
+  }
  },
  {
   "id": "ace64b6d-64a3-5538-92c4-7789e5675c7b",
@@ -6490,11 +6658,7 @@
   "notes": "Super Treasure Hunt / Base code(s): K46",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Nissan_Skyline_2000GT-R",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FJX88",
-   "colour": "Blue",
-   "series": "Then and Now / 1/10"
-  }
+  "twin": null
  },
  {
   "id": "a371137f-f8b0-5bb7-bc74-59cc86a34958",
@@ -6515,11 +6679,7 @@
   "notes": "Treasure Hunt / Base code(s): K48, K50",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rockster",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FJW32",
-   "colour": "Red",
-   "series": "HW Sports / 9/10"
-  }
+  "twin": null
  },
  {
   "id": "d5934243-4b30-5ca9-b0fe-41e3afbff06a",
@@ -6540,7 +6700,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K46",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Indy_500_Oval",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW09",
+   "colour": "Baby Blue",
+   "series": "Legends of Speed / 5/10"
+  }
  },
  {
   "id": "bfff8180-fea2-58e6-9119-6425cc0008eb",
@@ -6586,7 +6750,11 @@
   "notes": "Super Treasure Hunt / Named '68 Mustang / Base code(s): K49",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/1968_Mustang_('Tooned)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW53",
+   "colour": "Metalflake Gold",
+   "series": "Tooned / 5/5"
+  }
  },
  {
   "id": "6f71d440-c816-556b-8c0a-2572151ea27b",
@@ -6607,7 +6775,11 @@
   "notes": "Treasure Hunt / Base code(s): L02",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/RRRoadster",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW22",
+   "colour": "Fuchsia",
+   "series": "Holiday Racers / 5/6"
+  }
  },
  {
   "id": "f7efdd61-5d4e-53dd-b6a5-3e036f8492cf",
@@ -6628,7 +6800,11 @@
   "notes": "Super Treasure Hunt / Card Variation: See Notes / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2017_Camaro_ZL1",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJX73",
+   "colour": "Krypton Green",
+   "series": "Muscle Mania / 1/10"
+  }
  },
  {
   "id": "0191e847-57d9-5520-8619-7344957b5db6",
@@ -6649,7 +6825,11 @@
   "notes": "Treasure Hunt / Base code(s): L01, L04, L05, L06, L07, L08",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Kool_Kombi",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW77",
+   "colour": "Gray",
+   "series": "HW Art Cars / 8/10"
+  }
  },
  {
   "id": "051d4f74-0b26-51dd-97dd-64ff4e4c1e84",
@@ -6741,11 +6921,7 @@
   "notes": "Treasure Hunt / Base code(s): L12, L13, L14, L15",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Hollowback",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FJX22",
-   "colour": "Orange",
-   "series": "HW Glow Wheels / 6/10"
-  }
+  "twin": null
  },
  {
   "id": "d28c9751-5237-5a81-950e-f4be535e8c3b",
@@ -6816,7 +6992,11 @@
   "notes": "New Model / Super Treasure Hunt / Base code(s): L15",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'17_Audi_RS_6_Avant",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW00",
+   "colour": "Red",
+   "series": "Factory Fresh / 5/10"
+  }
  },
  {
   "id": "4f75cd5c-757b-58c8-8f29-75669dfa9810",
@@ -6908,11 +7088,7 @@
   "notes": "Super Treasure Hunt / Base code(s): L13, L20",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Ford_Escort_RS1600",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "FJX45",
-   "colour": "Matte Blue",
-   "series": "HW 50th Race Team / 2/10"
-  }
+  "twin": null
  },
  {
   "id": "c51f4283-2314-59cd-ac3b-e3d2ef94913f",
@@ -6933,7 +7109,11 @@
   "notes": "New Model / Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cruella_de_Vil",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW04",
+   "colour": "Red",
+   "series": "HW Screen Time / 9/10"
+  }
  },
  {
   "id": "0e913984-bb34-5c44-904a-721bb5042503",
@@ -6954,7 +7134,11 @@
   "notes": "Treasure Hunt / Base code(s): L26, L28",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Crate_Racer",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "FJW17",
+   "colour": "Yellow",
+   "series": "Experimotors / 6/10"
+  }
  },
  {
   "id": "9f6edaaf-bd57-5a4c-bb6d-e48e3f47281e",
@@ -6975,11 +7159,7 @@
   "notes": "Super Treasure Hunt / Base code(s): J30",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'63_Chevy_II",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DTX85",
-   "colour": "Metalflake Pink",
-   "series": "HW Flames / 7/10"
-  }
+  "twin": null
  },
  {
   "id": "5c3469da-ead2-55ef-9fce-1cf076859776",
@@ -7000,7 +7180,11 @@
   "notes": "Treasure Hunt / Base code(s): J30, J32",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Winning_Formula",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVB32",
+   "colour": "Yellow",
+   "series": "Legends of Speed / 9/10"
+  }
  },
  {
   "id": "eb84e4f1-4817-5643-ab4a-f74ff49b0c97",
@@ -7021,7 +7205,11 @@
   "notes": "Super Treasure Hunt / Base code(s): J33",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/The_Mystery_Machine",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DTX34",
+   "colour": "Turquoise",
+   "series": "HW Screen Time / 6/10"
+  }
  },
  {
   "id": "461a6cba-95fb-59a3-81cc-948ed68a0164",
@@ -7109,11 +7297,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Toyota_Off-Road_Truck",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DTX61",
-   "colour": "Blue",
-   "series": "HW Speed Graphics / 5/10"
-  }
+  "twin": null
  },
  {
   "id": "b86d5980-8d8f-5404-9dcc-dc87fe747216",
@@ -7184,11 +7368,7 @@
   "notes": "Super Treasure Hunt / Base code(s): J42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Surf_Crate",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DVC21",
-   "colour": "Dark Red",
-   "series": "Surf's Up / 4/5"
-  }
+  "twin": null
  },
  {
   "id": "5e39b3ab-9484-5ce3-bbc5-563c11acb4f4",
@@ -7209,11 +7389,7 @@
   "notes": "Super Treasure Hunt / Base code(s): J44, J46",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'17_Acura_NSX",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DTX56",
-   "colour": "Yellow",
-   "series": "Factory Fresh / 7/10"
-  }
+  "twin": null
  },
  {
   "id": "3e800a53-029e-5cbd-b5e2-74a151666805",
@@ -7234,7 +7410,11 @@
   "notes": "Treasure Hunt / Base code(s): J50",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/So_Plowed",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVB91",
+   "colour": "Pearl Red",
+   "series": "HW Snow Stormers / 4/5"
+  }
  },
  {
   "id": "0911cf04-bd51-5b56-a6e1-884c3dc8dd04",
@@ -7276,7 +7456,11 @@
   "notes": "Treasure Hunt / Base code(s): J51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/HW_Pursuit",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVC52",
+   "colour": "Maroon",
+   "series": "HW Rescue / 1/10"
+  }
  },
  {
   "id": "fbd46712-43fd-5f1c-bcc2-ee48c19e6f09",
@@ -7318,11 +7502,7 @@
   "notes": "Updated tooling / Treasure Hunt / Base code(s): K02, K03, K04",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fandango",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DVB21",
-   "colour": "Red",
-   "series": "HW Art Cars / 4/10"
-  }
+  "twin": null
  },
  {
   "id": "3de154ee-b98d-5345-9226-886a20f3ae7f",
@@ -7389,7 +7569,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K03",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cruise_Bruiser",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DTY56",
+   "colour": "Blue",
+   "series": "HW Daredevils / 2/10"
+  }
  },
  {
   "id": "a0d92054-3121-568a-9414-90a006219454",
@@ -7410,7 +7594,11 @@
   "notes": "Treasure Hunt / Base code(s): K10",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Blade_Raider",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVB96",
+   "colour": "Aqua",
+   "series": "HW Digital Circuit / 3/5"
+  }
  },
  {
   "id": "ebd59752-029a-5317-8e51-83b7a1a2e272",
@@ -7424,18 +7612,14 @@
   "colour": "Spectraflame Yellow",
   "tampo": "Red & Silver stripes & TH logo on sides",
   "base": null,
-  "window": "Tinted (Gray)",
+  "window": "Smoke tint",
   "interior": "Black",
   "wheels": "Chrome Red, Black / RR5SP",
   "country": "Malaysia",
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Chevelle_SS_396",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DTY86",
-   "colour": "Yellow",
-   "series": "Muscle Mania / 3/10"
-  }
+  "twin": null
  },
  {
   "id": "1dcdf3ed-6001-53ff-bf70-4fd61d711d80",
@@ -7456,7 +7640,11 @@
   "notes": "Treasure Hunt / Base code(s): K13",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Arrow_Dynamic",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVC09",
+   "colour": "Clear Aqua",
+   "series": "X&#8209;Raycers / 8/10"
+  }
  },
  {
   "id": "4df446ce-84a8-5c0c-98e0-95e896af1d27",
@@ -7477,7 +7665,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K14",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/2005_Ford_Mustang",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DTY65",
+   "colour": "Metalic Blue",
+   "series": "HW Race Team / 1/5"
+  }
  },
  {
   "id": "cc84398b-e8f2-5495-b95d-6c99da6ba0a5",
@@ -7519,11 +7711,7 @@
   "notes": "Super Treasure Hunt / Based on the 1983 version / Hood no longer opens / Base code(s): K18",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DTY99",
-   "colour": "Red",
-   "series": "Camaro Fifty / 5/5"
-  }
+  "twin": null
  },
  {
   "id": "64032a1f-f4b8-589d-9b6d-507044b62cd6",
@@ -7544,7 +7732,11 @@
   "notes": "Treasure Hunt / Base code(s): K19",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Hot_Wheels_Ford_Transit_Connect",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVC42",
+   "colour": "Pearl Dark Pink",
+   "series": "HW City Works / 6/10"
+  }
  },
  {
   "id": "f686db6c-10e1-5420-8d82-257eb0df85a5",
@@ -7590,7 +7782,11 @@
   "notes": "Super Treasure Hunt / Base code(s): K20",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Velocita",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DVB11",
+   "colour": "Purple",
+   "series": "HW Exotics / 8/10"
+  }
  },
  {
   "id": "e567ccbc-b7c2-5408-a408-782c92105d87",
@@ -7724,7 +7920,11 @@
   "notes": "Super Treasure Hunt / Base code(s): H34",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'52_Hudson_Hornet",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHR12",
+   "colour": "Red",
+   "series": "HW Flames / 7/10"
+  }
  },
  {
   "id": "7abf2f0b-5691-5783-ae14-466d3186bd37",
@@ -7787,11 +7987,7 @@
   "notes": "Super Treasure Hunt / Base code(s): H36",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'90_Acura_NSX",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DHR18",
-   "colour": "Pearl Blue",
-   "series": "Then and Now / 3/10"
-  }
+  "twin": null
  },
  {
   "id": "56f33d75-5ac3-552c-8beb-0f3d62cb592e",
@@ -7833,7 +8029,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'14_Corvette_Stingray",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHR76",
+   "colour": "Black",
+   "series": "HW Speed Graphics / 5/10"
+  }
  },
  {
   "id": "79c5d456-c2ad-524a-a406-71652fe9a28b",
@@ -7875,7 +8075,11 @@
   "notes": "Super Treasure Hunt / Half Roll Cage variation / Base code(s): H42, H43, H44",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_993_GT2",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHT11",
+   "colour": "Dark Blue",
+   "series": "HW Showroom / 4/10"
+  }
  },
  {
   "id": "f2f02ecd-d1ac-5b0a-aec0-c76f0ce125de",
@@ -7896,7 +8100,11 @@
   "notes": "Super Treasure Hunt / Full Roll Cage variation (RARE) / Base code(s): H42, H43",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Porsche_993_GT2",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHT11",
+   "colour": "Dark Blue",
+   "series": "HW Showroom / 4/10"
+  }
  },
  {
   "id": "03baacdd-3180-58ec-92c7-5cd0047e2e8a",
@@ -7917,7 +8125,11 @@
   "notes": "Treasure Hunt / Base code(s): H49",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mountain_Mauler",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHY13",
+   "colour": "Purple",
+   "series": "Kroger Exclusive Special Edition / 1/4"
+  }
  },
  {
   "id": "6458cdce-a0f4-5be7-83cc-1816d229bcb8",
@@ -7938,11 +8150,7 @@
   "notes": "Super Treasure Hunt / Base code(s): H45",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Bad_Mudder_2",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DHR51",
-   "colour": "Turquoise",
-   "series": "HW Hot Trucks / 5/10"
-  }
+  "twin": null
  },
  {
   "id": "528be997-0ce9-5e2c-802e-327753ea6188",
@@ -8068,11 +8276,7 @@
   "notes": "Super Treasure Hunt / Base code(s): J05",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/TV_Series_Batmobile",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "DHT15",
-   "colour": "Flat Black",
-   "series": "Batman / 1/5"
-  }
+  "twin": null
  },
  {
   "id": "bdcf97ac-15a4-56d7-b146-a166b31bfb10",
@@ -8114,7 +8318,11 @@
   "notes": "Super Treasure Hunt / Base code(s): J09, J10, J12, J14",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/BMW_Z4_M_Motorsport",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHR82",
+   "colour": "Metalflake Dark Blue",
+   "series": "BMW / 3/5"
+  }
  },
  {
   "id": "a1200a1c-abb8-56f4-9d92-e75132bbc4c8",
@@ -8198,7 +8406,11 @@
   "notes": "Super Treasure Hunt / Base code(s): J11, J14",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Driftsta",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHR01",
+   "colour": "Metalflake Pink",
+   "series": "Night Burnerz / 1/10"
+  }
  },
  {
   "id": "2639046e-3578-58aa-8a67-9e6dac126e4c",
@@ -8240,7 +8452,11 @@
   "notes": "New Model / Super Treasure Hunt / Base code(s): J17",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'17_Ford_GT",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHP28",
+   "colour": "Metalflake Liquid Blue",
+   "series": "HW Exotics / 3/10"
+  }
  },
  {
   "id": "191caceb-c8a7-5b8d-8e33-4ef8874dc7b9",
@@ -8261,7 +8477,11 @@
   "notes": "Treasure Hunt / Base code(s): J23",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Repo_Duty",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CMJ88",
+   "colour": "Steel Blue",
+   "series": "Ultimate Spider-Man vs The Sinister 6"
+  }
  },
  {
   "id": "67350ef5-2419-5210-b8aa-8abe76cb7fe2",
@@ -8307,7 +8527,11 @@
   "notes": "Treasure Hunt / Base code(s): J26, J27, J28",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Dune_Crusher",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DJD21",
+   "colour": "Pearl Grey",
+   "series": "HW Snow Stormers 5&#8209;Pack"
+  }
  },
  {
   "id": "9bfabb1b-f49e-5e86-b07c-8d1df957fb7c",
@@ -8328,7 +8552,11 @@
   "notes": "Super Treasure Hunt / Base code(s): J18, J24",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Carbonic",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "DHP41",
+   "colour": "Metalflake Blue",
+   "series": "HW Race Team / 5/10"
+  }
  },
  {
   "id": "d60586bd-3e99-5e39-b005-78882e65641b",
@@ -8349,7 +8577,11 @@
   "notes": "Super Treasure Hunt / Base code(s): G22, G27, G28, G29",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Kool_Kombi",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFK30",
+   "colour": "Turquoise",
+   "series": "HW City: Surf Patrol"
+  }
  },
  {
   "id": "6cb986d7-9981-5af1-9e75-60ee276b6c4e",
@@ -8391,7 +8623,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/RRRoadster",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFK76",
+   "colour": "Metalflake Blue",
+   "series": "HW Race: HW Race Team"
+  }
  },
  {
   "id": "f1d2befb-d8fe-5d6a-8a20-f4c10f6596e1",
@@ -8412,7 +8648,11 @@
   "notes": "Super Treasure Hunt / Base code(s): G32",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/RRRoadster",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFK76",
+   "colour": "Metalflake Blue",
+   "series": "HW Race: HW Race Team"
+  }
  },
  {
   "id": "da46ee40-d244-566f-81bc-a24fcfa179eb",
@@ -8521,11 +8761,7 @@
   "notes": "Treasure Hunt / Base code(s): G42",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fast_FeLion",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "CFJ42",
-   "colour": "Flat Gray",
-   "series": "Star Wars: Factions / 7/8"
-  }
+  "twin": null
  },
  {
   "id": "b6524e30-827a-52c6-8e63-cf9acfaf6cbd",
@@ -8613,11 +8849,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pass'n_Gasser",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "CFH95",
-   "colour": "Blue",
-   "series": "HW Workshop: Heat Fleet"
-  }
+  "twin": null
  },
  {
   "id": "71e8f82b-ae7a-56d1-893d-0fcfb78161c6",
@@ -8680,7 +8912,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mastretta_MXR",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFK94",
+   "colour": "Red",
+   "series": "HW Race: World Race"
+  }
  },
  {
   "id": "c2636726-c1ba-5d3a-99a4-14eaf473fcc2",
@@ -8722,11 +8958,7 @@
   "notes": "Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Enforcer",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "CKJ44",
-   "colour": "White",
-   "series": "Star Wars: Factions / 5/8"
-  }
+  "twin": null
  },
  {
   "id": "458f078f-2901-51d0-92aa-76b3cc9d6652",
@@ -8860,7 +9092,11 @@
   "notes": "Same graphics as 1981 Turismo / Super Treasure Hunt / Base code(s): H15, H16",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/DMC_DeLorean",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFH80",
+   "colour": "Red",
+   "series": "HW Race: Track Aces"
+  }
  },
  {
   "id": "0b8587de-6291-5907-8d70-ab353df22431",
@@ -8902,7 +9138,11 @@
   "notes": "Treasure Hunt / Base code(s): H21",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Team_Hot_Wheels_Corkscrew_Buggy",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "CFM36",
+   "colour": "Dark Blue (cold) / Gray (warm)",
+   "series": "Color Shifters / 17/48"
+  }
  },
  {
   "id": "381030c4-4df5-5bd8-bf85-33ab1e41005e",
@@ -8923,11 +9163,7 @@
   "notes": "Super Treasure Hunt / Base code(s): H21, H22",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Plymouth_Superbird",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "CFJ07",
-   "colour": "Metalflake Teal",
-   "series": "HW Workshop: Muscle Mania"
-  }
+  "twin": null
  },
  {
   "id": "77695470-f4cc-53ad-ad92-1e896465bf2d",
@@ -8969,11 +9205,7 @@
   "notes": "Super Treasure Hunt / Base code(s): H22, H24, H25",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Toyota_Off-Road_Truck",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "CFK67",
-   "colour": "Red",
-   "series": "HW Off-Road: HW Hot Trucks"
-  }
+  "twin": null
  },
  {
   "id": "b827ae3c-a460-529a-98ea-a270716be536",
@@ -9078,7 +9310,11 @@
   "notes": "Super Treasure Hunt / Base code(s): F27",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Chevrolet_SS",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "BFG77",
+   "colour": "ZAMAC",
+   "series": "HW Workshop: HW All Stars"
+  }
  },
  {
   "id": "3dcf64ea-1f20-50e6-abad-c789d4e240c9",
@@ -9292,11 +9528,7 @@
   "notes": "Super Treasure Hunt / Base code(s): F46,F47",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'55_Chevy_Bel_Air_Gasser",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "BFF17",
-   "colour": "Metallic Blue",
-   "series": "HW Workshop: HW Performance"
-  }
+  "twin": null
  },
  {
   "id": "354d81f6-2be8-588b-b6b4-ad21afb64436",
@@ -9338,7 +9570,11 @@
   "notes": "Named '70 Chevy Chevelle / Super Treasure Hunt / Base code(s): F51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Chevy_Chevelle_SS",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "BFF19",
+   "colour": "Metalflake Purple",
+   "series": "HW Workshop: HW Performance"
+  }
  },
  {
   "id": "c4d151e4-3810-5936-ab8d-77a93bd3d0bd",
@@ -9380,11 +9616,7 @@
   "notes": "Super Treasure Hunt / Playable in Unleashed / Base code(s): G01, G03",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Twin_Mill",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "BFF00",
-   "colour": "Metalflake Pearl Green",
-   "series": "HW Workshop: Then and Now"
-  }
+  "twin": null
  },
  {
   "id": "407359aa-31aa-5d79-ae83-b99095b70c1a",
@@ -9468,11 +9700,7 @@
   "notes": "Super Treasure Hunt / Base code(s): G07, G08",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'83_Chevy_Silverado",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "BFD62",
-   "colour": "Yellow",
-   "series": "HW Off-Road: HW Hot Trucks"
-  }
+  "twin": null
  },
  {
   "id": "7f6e671f-860f-519f-83cd-f88bcc44cdac",
@@ -9514,7 +9742,11 @@
   "notes": "Super Treasure Hunt / Base code(s): G11",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'76_Greenwood_Corvette",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "BFF14",
+   "colour": "Orange",
+   "series": "HW Workshop: Muscle Mania"
+  }
  },
  {
   "id": "8eaefc29-05d4-512f-8790-10e84e2a928d",
@@ -9556,7 +9788,11 @@
   "notes": "Super Treasure Hunt / Base code(s): G14, G16",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Corvette",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "BFD93",
+   "colour": "Pearl Purple",
+   "series": "HW Workshop: Heat Fleet"
+  }
  },
  {
   "id": "7d01c5e2-2b77-583b-ba49-739b9b9aa733",
@@ -9598,7 +9834,11 @@
   "notes": "Super Treasure Hunt / Base code(s): G17",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Chevy_Impala",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "BFD97",
+   "colour": "Metalflake Copper",
+   "series": "HW Workshop: Heat Fleet"
+  }
  },
  {
   "id": "f39fa838-b37f-54b6-82c4-b4c9b867f3a8",
@@ -9745,11 +9985,7 @@
   "notes": "Super Treasure Hunt / Base code(s): E27",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'72_Ford_Gran_Torino_Sport",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1809",
-   "colour": "Blue",
-   "series": "HW Showroom: HW Performance"
-  }
+  "twin": null
  },
  {
   "id": "7980c793-6a55-59ce-b000-d403348ccb15",
@@ -9845,11 +10081,7 @@
   "notes": "Treasure Hunt / Base code(s): E37, E38",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'10_Camaro_SS",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1804",
-   "colour": "Black",
-   "series": "HW Showroom: Then and Now"
-  }
+  "twin": null
  },
  {
   "id": "7bf341d3-8a11-5355-85fa-6b0722c627c7",
@@ -9912,7 +10144,11 @@
   "notes": "Super Treasure Hunt / New in Mainline / Base code(s): E39",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'71_El_Camino",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "X1849",
+   "colour": "Orange",
+   "series": "HW Showroom: Muscle Mania"
+  }
  },
  {
   "id": "8f6242cc-2a0a-57c2-9c4f-bd81d1757a16",
@@ -9954,7 +10190,11 @@
   "notes": "Super Treasure Hunts / Base code(s): E41",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'10_Ford_Shelby_GT500_Super_Snake",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "X1783",
+   "colour": "Metalflake Green",
+   "series": "HW Showroom: Asphalt Assault"
+  }
  },
  {
   "id": "708c9f01-fb70-5502-ad99-7b336b4de3c4",
@@ -9996,11 +10236,7 @@
   "notes": "Super Treasure Hunt / Base code(s):E44, E49, E50",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'64_Buick_Riviera",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1854",
-   "colour": "Metallic Purple",
-   "series": "HW Workshop: Muscle Mania"
-  }
+  "twin": null
  },
  {
   "id": "c7d8ad89-0508-5718-b755-05fd3b576c58",
@@ -10046,11 +10282,7 @@
   "notes": "Super Treasure Hunt / Base code(s): E47",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Bone_Shaker",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1833",
-   "colour": "Pink",
-   "series": "HW Showroom: American Turbo"
-  }
+  "twin": null
  },
  {
   "id": "6a12188c-9fb1-58cc-ad8a-425a36a878b3",
@@ -10260,11 +10492,7 @@
   "notes": "Super Treasure Hunt / Base code(s): F11",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1811",
-   "colour": "Black",
-   "series": "HW Workshop: HW Performance"
-  }
+  "twin": null
  },
  {
   "id": "897cbf12-89cc-589b-a56a-133521525f99",
@@ -10285,11 +10513,7 @@
   "notes": "Super Treasure Hunt / Base code(s): F11",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "X1811",
-   "colour": "Black",
-   "series": "HW Workshop: HW Performance"
-  }
+  "twin": null
  },
  {
   "id": "63acbb4c-1194-5664-8011-453c241ed8cb",
@@ -10486,7 +10710,11 @@
   "notes": "Base Code(s): D34",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ducati_1098R",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "Y2085",
+   "colour": "Red",
+   "series": "Motor Cycles"
+  }
  },
  {
   "id": "84790dce-63f6-527c-8f21-3f4890151822",
@@ -10507,11 +10735,7 @@
   "notes": "Super Treasure Hunt. / Also found with Gray Interior, maybe HTF variation. / Base codes: D33",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Chevelle_SS_396",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "V5413",
-   "colour": "Metalflake Maroon",
-   "series": "Muscle Mania: GM / 10/10"
-  }
+  "twin": null
  },
  {
   "id": "3e400e83-86a4-5c3d-87d8-aa6c98eba282",
@@ -10546,7 +10770,7 @@
   "colour": "Pearl Silver & Metalflake Teal",
   "tampo": "'T-Hunt Racing' & sponsor logos on sides, '32' on roof & sides, '468 C.I.' on hood",
   "base": null,
-  "window": "Pink",
+  "window": "Pink tint",
   "interior": "Black",
   "wheels": "Chrome Red / Goodyear Eagle 5SP",
   "country": "Malaysia",
@@ -10595,11 +10819,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'73_Ford_Falcon_XB",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "V5423",
-   "colour": "Metallic Purple",
-   "series": "Muscle Mania: Ford / 10/10"
-  }
+  "twin": null
  },
  {
   "id": "ce3832b3-c51c-5ddd-9d46-dc277be60c79",
@@ -10620,11 +10840,7 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'73_Ford_Falcon_XB",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "V5423",
-   "colour": "Metallic Purple",
-   "series": "Muscle Mania: Ford / 10/10"
-  }
+  "twin": null
  },
  {
   "id": "5ad02cd9-5fac-5bc9-ac4d-3b85b9b5be17",
@@ -10670,7 +10886,11 @@
   "notes": "Super Treasure Hunt / Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Ford_Mustang_Coupe",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "V5606",
+   "colour": "Metallic Green",
+   "series": "Muscle Mania - Ford / 6/10"
+  }
  },
  {
   "id": "820b4c26-33d9-56e9-816d-f8f785db8252",
@@ -11073,11 +11293,7 @@
   "notes": "Base code(s): E23",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'92_Ford_Mustang",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "W4003",
-   "colour": "Metalflake Blue over White",
-   "series": "Cars of the Decades / 25/32"
-  }
+  "twin": null
  },
  {
   "id": "37ec423d-3bb0-5c88-8487-21e10dcd80b2",
@@ -11098,11 +11314,7 @@
   "notes": "Tampos on bonnet, roof top. / Matt Flat Black painted spoiler. Super Treasure Hunt / Base code(s): E21",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'09_Ford_Focus_RS",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "V5432",
-   "colour": "Bright Red",
-   "series": "HW All Stars / 9/10"
-  }
+  "twin": null
  },
  {
   "id": "38f8d7b0-5538-5313-a2b5-661ec936bacd",
@@ -11165,7 +11377,11 @@
   "notes": "Named '70 Camaro Road Race / Super Treasure Hunt / Base code(s): D37",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Camaro",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "V5704",
+   "colour": "Metalflake Black",
+   "series": "HW Performance / 4/10"
+  }
  },
  {
   "id": "25fcee34-695c-5e27-bdbe-ef77db082dcb",
@@ -11232,7 +11448,11 @@
   "notes": "New in Mainline / Base code(s): C34, C38",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'58_Impala",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "T9738",
+   "colour": "Spectraflame Magenta",
+   "series": "Trea$ure Hunt$ / 3/12"
+  }
  },
  {
   "id": "6378d761-aba0-5ca7-8f75-df0f15716888",
@@ -11370,11 +11590,7 @@
   "notes": "Base code(s): C43, C44, C46",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Corvette_Grand_Sport",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "T9744",
-   "colour": "Spectraflame Orange",
-   "series": "Trea$ure Hunt$ / 9/15"
-  }
+  "twin": null
  },
  {
   "id": "348fba61-dcb7-59f5-a355-3856c47b5e7b",
@@ -11682,8 +11898,8 @@
   "toyNumber": "R7436",
   "series": "Treasure Hunts / 3/12",
   "caseCode": null,
-  "colour": "Metalflake Blue & Flat Black roof",
-  "tampo": "White pinstripes on sides & hood",
+  "colour": "Metalflake Blue",
+  "tampo": "White pinstripes on sides & hood, flat black roof",
   "base": "Unpainted / Metal",
   "window": "Blue tint",
   "interior": "Blue",
@@ -11692,11 +11908,7 @@
   "notes": "Base code(s): B43, B44, B45",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Classic_Packard",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R7448",
-   "colour": "Spectraflame Blue & Flat Black roof",
-   "series": "Trea$ure Hunt$ / 3/12"
-  }
+  "twin": null
  },
  {
   "id": "99a33f36-d512-5104-a5e1-248fd34f6a3c",
@@ -11707,8 +11919,8 @@
   "toyNumber": "R7436",
   "series": "Treasure Hunts / 3/12",
   "caseCode": null,
-  "colour": "Metalflake Blue & Flat Black roof",
-  "tampo": "White pinstripes on sides & hood",
+  "colour": "Metalflake Blue",
+  "tampo": "White pinstripes on sides & hood, flat black roof",
   "base": "Unpainted / Metal",
   "window": "Blue tint",
   "interior": "Blue",
@@ -11717,11 +11929,7 @@
   "notes": "Base code(s): B43, B44, B45",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Classic_Packard",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R7448",
-   "colour": "Spectraflame Blue & Flat Black roof",
-   "series": "Trea$ure Hunt$ / 3/12"
-  }
+  "twin": null
  },
  {
   "id": "aae7d939-77fb-5e6b-a40d-102b72668538",
@@ -11892,7 +12100,11 @@
   "notes": "International card / Base Code: C21",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ford_GTX-1",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "R7452",
+   "colour": "Spectraflame Blue",
+   "series": "Trea$ure Hunt$ / 7/12"
+  }
  },
  {
   "id": "eba62b50-ab5d-5da8-9e32-012e1790f081",
@@ -11913,7 +12125,11 @@
   "notes": "Base Code: C21",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ford_GTX-1",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "R7452",
+   "colour": "Spectraflame Blue",
+   "series": "Trea$ure Hunt$ / 7/12"
+  }
  },
  {
   "id": "d43e432f-ca3d-5df1-9dd1-8df64efbbee5",
@@ -11976,11 +12192,7 @@
   "notes": "Base code(s): B51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Ford_Torino_Talladega",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R7454",
-   "colour": "Spectraflame Olive",
-   "series": "Trea$ure Hunt$ / 9/12"
-  }
+  "twin": null
  },
  {
   "id": "85396f10-3652-5e3a-b86c-c072f6dcb4ff",
@@ -12001,11 +12213,7 @@
   "notes": "International card / Base code(s): B50, B51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Ford_Torino_Talladega",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R7454",
-   "colour": "Spectraflame Olive",
-   "series": "Trea$ure Hunt$ / 9/12"
-  }
+  "twin": null
  },
  {
   "id": "db47a1a0-7938-528e-a3ac-3174e97c497f",
@@ -12026,11 +12234,7 @@
   "notes": "Base code(s): B50, B51",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Ford_Torino_Talladega",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R7454",
-   "colour": "Spectraflame Olive",
-   "series": "Trea$ure Hunt$ / 9/12"
-  }
+  "twin": null
  },
  {
   "id": "2f532e57-d04b-50db-8ccb-44cc24f49e33",
@@ -12444,7 +12648,11 @@
   "notes": "Base variation (see Gallery) / Base code(s): B09",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Custom_'53_Chevy",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "P2369",
+   "colour": "Spectraflame Purple",
+   "series": "Trea$ure Hunt$ / 7/12"
+  }
  },
  {
   "id": "9bb18b00-e168-5d79-a8a7-75d968d1e1eb",
@@ -12465,11 +12673,7 @@
   "notes": "Base code(s): B31, B33",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Bone_Shaker",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R5517",
-   "colour": "Spectraflame Pink",
-   "series": "The Wild Weekend of Hot Wheels"
-  }
+  "twin": null
  },
  {
   "id": "504cb47c-8017-55a5-899e-a0ee10073ff2",
@@ -12536,7 +12740,11 @@
   "notes": "Base code(s): B02, B03, B04, B06",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/GMC_Motorhome",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "P2361",
+   "colour": "Metalflake Silver",
+   "series": "Trea$ure Hunt$ / 11/12"
+  }
  },
  {
   "id": "419ebc6c-5125-5ad2-928a-d29306b80eff",
@@ -12578,11 +12786,7 @@
   "notes": "Super Treasure Hunt / Base code(s): B28",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Bone_Shaker",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "R5517",
-   "colour": "Spectraflame Pink",
-   "series": "The Wild Weekend of Hot Wheels"
-  }
+  "twin": null
  },
  {
   "id": "133f7d2a-ef5b-5411-8df5-16b7092aa788",
@@ -12674,11 +12878,7 @@
   "notes": "Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Plymouth_Roadrunner_(1998)",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "M6968S",
-   "colour": "Spectraflame Lime Gold",
-   "series": "Trea$ure Hunt$ / 2/12"
-  }
+  "twin": null
  },
  {
   "id": "7084ba9a-6956-5fad-a338-3cfff5a497e2",
@@ -13000,11 +13200,7 @@
   "notes": "Base code(s):",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'64_Buick_Riviera",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "M6976",
-   "colour": "Spectraflame Magenta",
-   "series": "Trea$ure Hunt$ / 10/12"
-  }
+  "twin": null
  },
  {
   "id": "2882b552-f69a-5450-8168-22250473504e",
@@ -13309,7 +13505,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Hammer_Sled",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "L3192",
+   "colour": "Blue",
+   "series": "Truckin' Transporters"
+  }
  },
  {
   "id": "e8b9ec47-b5a4-59f7-9e07-e693a57ea4b8",
@@ -13330,7 +13530,11 @@
   "notes": "Super Treasure Hunt",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Hammer_Sled",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "L3192",
+   "colour": "Blue",
+   "series": "Truckin' Transporters"
+  }
  },
  {
   "id": "e44dbbfc-7d4f-5c5c-9628-c975939d6f7c",
@@ -13443,11 +13647,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Enzo_Ferrari_(2003)",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "K7620S",
-   "colour": "Spectraflame Dark Red",
-   "series": "Trea$ure Hunt$ / 9/12"
-  }
+  "twin": null
  },
  {
   "id": "deb2d5aa-14bd-50a0-b108-4d65951b3964",
@@ -13468,11 +13668,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Enzo_Ferrari_(2003)",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "K7620S",
-   "colour": "Spectraflame Dark Red",
-   "series": "Trea$ure Hunt$ / 9/12"
-  }
+  "twin": null
  },
  {
   "id": "20aae324-5f06-5319-a84f-7320f936e649",
@@ -13493,7 +13689,11 @@
   "notes": "New bed: no grain, bolts. No logo on tailgate.",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Custom_'69_Chevy",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "K7621S",
+   "colour": "Spectraflame Gold",
+   "series": "Trea$ure Hunt$ / 10/12"
+  }
  },
  {
   "id": "627fae5d-49fc-5fa9-a063-469741d41e80",
@@ -13766,7 +13966,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Mustang",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "J2850",
+   "colour": "Metalflake Avocado Green",
+   "series": "Ultra Hots"
+  }
  },
  {
   "id": "bded7519-455d-5348-b97d-0ad041ff6b39",
@@ -13787,7 +13991,11 @@
   "notes": "Named 1967 Mustang on International Card",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Mustang",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "J2850",
+   "colour": "Metalflake Avocado Green",
+   "series": "Ultra Hots"
+  }
  },
  {
   "id": "121b4f19-64d8-5302-8cc4-c5f15b1e679d",
@@ -13808,11 +14016,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'69_Dodge_Charger",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "L0497",
-   "colour": "Metalflake Lime Green",
-   "series": "Ultra Hots"
-  }
+  "twin": null
  },
  {
   "id": "3432c248-e46a-586e-a2d2-04547e2a8776",
@@ -13833,11 +14037,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Hummer_H3T_Concept",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "J3475",
-   "colour": "Metalflake Gray",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "39d4751c-4656-5840-ac28-4c78fd106872",
@@ -13996,11 +14196,7 @@
   "notes": "hard to find",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "H9265",
-   "colour": "Metalflake Red & Silver",
-   "series": "5th Annual Hot Wheels Collectors Nationals / 1/5"
-  }
+  "twin": null
  },
  {
   "id": "dd76dbaf-8a01-5e05-b77d-e1dfd02be201",
@@ -14021,11 +14217,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "H9265",
-   "colour": "Metalflake Red & Silver",
-   "series": "5th Annual Hot Wheels Collectors Nationals / 1/5"
-  }
+  "twin": null
  },
  {
   "id": "448d7e7a-da2a-57aa-8dfb-d292c252d698",
@@ -14222,7 +14414,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Pontiac_GTO",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "H2931",
+   "colour": "Spectraflame Dark Blue",
+   "series": "HWC.com 4: Real Riders / 3/6"
+  }
  },
  {
   "id": "53e12bc7-b5f5-5cdc-8a9e-cd85e2171af2",
@@ -14243,11 +14439,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rodger_Dodger",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "54486",
-   "colour": "Metalflake Light Blue",
-   "series": "Hot Wheels 10-Pack Exclusive"
-  }
+  "twin": null
  },
  {
   "id": "ed49f70e-a966-50ca-bf8a-fb6da02dfc8d",
@@ -14415,7 +14607,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cadillac_Cien_Concept",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "C2638",
+   "colour": "Green",
+   "series": "Auto Affinity: Got Speed? / 2/4"
+  }
  },
  {
   "id": "dfe3c9e9-746b-57c1-be32-fa27b7f3e149",
@@ -14654,11 +14850,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Meyers_Manx_(2003)",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "G3768",
-   "colour": "Lime Green",
-   "series": "Auto Affinity: Down & Dirty / 4/4"
-  }
+  "twin": null
  },
  {
   "id": "82b9c058-ff64-5c5d-a65c-bd2add2b7f92",
@@ -14679,7 +14871,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Taurus_Stocker_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Black",
+   "series": "Pro Racing Artist Collection"
+  }
  },
  {
   "id": "ffb44638-5032-5bb2-9ad5-6bc6fbcae5e0",
@@ -14721,11 +14917,7 @@
   "notes": "Front end flips forward",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'56_Ford_Truck",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "57117",
-   "colour": "Metalflake Dark Gray",
-   "series": "Work Crewsers / 2/10"
-  }
+  "twin": null
  },
  {
   "id": "bf7d6fab-eebc-5ac4-9a4d-eb439d1a3f9f",
@@ -14817,11 +15009,7 @@
   "notes": "Raised \"SS\" on tailgate - difficult to see",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'68_El_Camino",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "57192",
-   "colour": "Metalflake Yellow",
-   "series": "Wild Wave / 1/5"
-  }
+  "twin": null
  },
  {
   "id": "6ff303c9-84b0-5b70-ba03-74362802ed3f",
@@ -14864,9 +15052,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Midnight_Otto",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "B2253",
-   "colour": "Black & Red",
-   "series": "100% Preferred: Street Rodder / 2/4"
+   "toyNumber": "B8536",
+   "colour": "Gold",
+   "series": "3rd Annual Hot Wheels Collectors Nationals"
   }
  },
  {
@@ -14972,7 +15160,11 @@
   "notes": "Named 1971 Plymouth GTX",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Plymouth_Barracuda_(hardtop)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "B0943",
+   "colour": "Spectraflame Dark Blue & White",
+   "series": "Hall of Fame: Legends"
+  }
  },
  {
   "id": "676798cb-9392-59e0-8444-55aba36d25a4",
@@ -14993,7 +15185,11 @@
   "notes": "Named 1971 Plymouth GTX",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'70_Plymouth_Barracuda_(hardtop)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "B0943",
+   "colour": "Spectraflame Dark Blue & White",
+   "series": "Hall of Fame: Legends"
+  }
  },
  {
   "id": "f3da8a22-def6-547f-87c7-f8671f8ae5d4",
@@ -15060,11 +15256,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'71_Plymouth_GTX",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "55001",
-   "colour": "Yellow",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "26b82146-2d54-5c77-ba26-5362fc0b07ae",
@@ -15215,11 +15407,7 @@
   "notes": "See gallery for card mispelling",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Fat_Fendered_'40",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "55567",
-   "colour": "Aqua with Black Fenders",
-   "series": "Motor City Classics"
-  }
+  "twin": null
  },
  {
   "id": "64f16df3-48de-550e-8e03-4b1cd3b02992",
@@ -15282,11 +15470,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Mini_Cooper",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "55085",
-   "colour": "Dark Green",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "edd73fe6-d496-5708-86d1-75ffe2e1f132",
@@ -15328,7 +15512,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "309d82d5-4e0f-57cc-a6ee-84840ffdb528",
@@ -15349,7 +15537,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "c35c9e98-664b-519e-8caf-9018f2473709",
@@ -15370,7 +15562,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "bd9eba2d-5c88-5e9e-b699-abbc4431c901",
@@ -15391,7 +15587,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "9a79d03c-53b7-581a-9726-8db9ab6d032d",
@@ -15412,7 +15612,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "b4c4591a-b524-57ad-bd47-78dfbb13f2d2",
@@ -15433,7 +15637,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "16b660a0-2bf3-5fb4-acbc-4eeb02030e51",
@@ -15454,7 +15662,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "07dd2d0f-d64f-576e-a348-8134de38fac9",
@@ -15475,7 +15687,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "b79944fc-3702-5849-b96a-b958ffdd7860",
@@ -15496,7 +15712,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "8e20846e-f43b-5333-bb0d-f03c3472c900",
@@ -15517,7 +15737,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "55078",
+   "colour": "Metalflake Blue",
+   "series": "Mainline"
+  }
  },
  {
   "id": "45390076-8204-58df-a7c2-6f779559e899",
@@ -15538,7 +15762,11 @@
   "notes": "Came with '57 T-Bird (1978) / Treasure Hunt",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Long_Nose_Day_Cab_Truck",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "89344",
+   "colour": "Burgundy Cab, Cream Trailer",
+   "series": "Pavement Pounders"
+  }
  },
  {
   "id": "20542ed1-e155-5193-a8e4-e3c79b51486e",
@@ -15584,7 +15812,11 @@
   "notes": "Came with '58 Corvette Coupe / Treasure Hunt",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Long_Nose_Day_Cab_Truck",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "89344",
+   "colour": "Burgundy Cab, Cream Trailer",
+   "series": "Pavement Pounders"
+  }
  },
  {
   "id": "4894d249-d405-5a9b-9267-8c979435a1c0",
@@ -15794,7 +16026,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'65_Corvette",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "50639",
+   "colour": null,
+   "series": "Mainline"
+  }
  },
  {
   "id": "a7cce3e8-b802-5a84-ab37-0c90f7254f20",
@@ -15815,7 +16051,11 @@
   "notes": "Playable in Burnin' Rubber",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Roll_Cage",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "24387",
+   "colour": "Red",
+   "series": "Mainline"
+  }
  },
  {
   "id": "71491fb1-7df7-58a4-87a0-526d114929c3",
@@ -15861,11 +16101,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rodger_Dodger",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "53725",
-   "colour": "Yellow",
-   "series": "Mainline / 90/144"
-  }
+  "twin": null
  },
  {
   "id": "184f378e-a3d4-5136-8865-07f1e251e802",
@@ -15932,7 +16168,11 @@
   "notes": "Featured in Hot Wheels: Velocity X and Burnin' Rubber",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Vulture",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Pearl Blue",
+   "series": "THQ promo"
+  }
  },
  {
   "id": "07d090c4-a521-580c-98ab-da47738a5f3f",
@@ -16045,7 +16285,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Cabbin'_Fever_(2000)",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "53702",
+   "colour": "Metalflake Green",
+   "series": "Mainline"
+  }
  },
  {
   "id": "b8e74a01-bccb-5931-9a86-6cf9b345d7e4",
@@ -16087,7 +16331,11 @@
   "notes": "Came with Scorchin' Scooter / Treasure Hunt",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Long_Nose_Day_Cab_Truck",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "89308",
+   "colour": "Yellow Cab, Black Trailer",
+   "series": "Pavement Pounders"
+  }
  },
  {
   "id": "4655c570-52ef-5673-b869-a7727ea8c84f",
@@ -16179,11 +16427,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Tow_Jam",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "29266",
-   "colour": "Metalflake Blue",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "3998c3ff-7843-5a99-a1ce-57d42f2bb13c",
@@ -16267,7 +16511,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lakester",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "27134",
+   "colour": "Black",
+   "series": "Virtual Collection"
+  }
  },
  {
   "id": "8ea5cf36-5e72-54b0-b1af-f260b433f560",
@@ -16288,7 +16536,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lakester",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "27134",
+   "colour": "Black",
+   "series": "Virtual Collection"
+  }
  },
  {
   "id": "d22c7b52-a0d6-5539-be4f-cf867f9c407c",
@@ -16309,11 +16561,7 @@
   "notes": "Gold chromed metal engine and steering column",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Go_Kart",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "27117",
-   "colour": "Metallic Purple",
-   "series": "Virtual Collection"
-  }
+  "twin": null
  },
  {
   "id": "0e7e2c66-2d53-5f92-855a-ba334c48fe9e",
@@ -16376,7 +16624,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pikes_Peak_Celica",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "27132",
+   "colour": "White",
+   "series": "Mainline"
+  }
  },
  {
   "id": "f9300214-b5fe-5760-96e8-0c619587301d",
@@ -16397,7 +16649,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pikes_Peak_Celica",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "27132",
+   "colour": "White",
+   "series": "Mainline"
+  }
  },
  {
   "id": "6f7014ef-c69d-5954-a343-847ffe88690c",
@@ -16460,11 +16716,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ford_GT-40",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "27104",
-   "colour": "Red",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "3310b15c-64fb-5f56-95c4-f3ce7291f078",
@@ -16506,7 +16758,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "07c766f0-e792-51ea-a6fb-ee000c20d1b1",
@@ -16527,7 +16783,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "47eb658e-9508-517a-986f-ac235dd41a5a",
@@ -16548,7 +16808,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "4b612913-29b7-533c-aa18-d1ec83898b20",
@@ -16569,7 +16833,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "58324b21-4523-5e9f-ba08-15287420360f",
@@ -16590,7 +16858,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "8ab340fe-a801-58dd-973e-657b2b1620ff",
@@ -16611,7 +16883,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "9eb35fa6-f850-58bd-91af-a61db63050a3",
@@ -16632,7 +16908,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "a2079b56-83db-5104-b0ec-e185f9ed6a91",
@@ -16653,7 +16933,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "dcf406b7-1903-5a5f-af7d-7a811bd96f9b",
@@ -16674,7 +16958,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "fbabe045-11b9-5b57-a18a-d6ca9157bfdd",
@@ -16695,7 +16983,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Pontiac_Grand_Prix_Stocker",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": null,
+   "colour": "Green",
+   "series": "2000 Pro Racing"
+  }
  },
  {
   "id": "033724ac-4efd-57a4-9da5-a4583cca6f5c",
@@ -16787,11 +17079,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Rigor_Motor",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "24066",
-   "colour": "Red",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "e8684f85-2f14-5ab6-a8b7-d95ae02b5167",
@@ -16812,11 +17100,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ferrari_F512M",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "23802",
-   "colour": "Red",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "f766dcf5-7db6-517a-9c26-b706222ac61a",
@@ -16837,11 +17121,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ferrari_F512M",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "23802",
-   "colour": "Red",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "fabd5352-71fb-5807-bc03-e51686e2eb20",
@@ -16862,11 +17142,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ferrari_F512M",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "23802",
-   "colour": "Red",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "95c9b53c-6828-5517-91e9-a1c794f42aea",
@@ -16933,7 +17209,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Jaguar_D-Type",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "23807",
+   "colour": "Red",
+   "series": "Mainline"
+  }
  },
  {
   "id": "7dee1dc6-1644-5480-8ca7-e3ca886db88b",
@@ -17025,11 +17305,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Express_Lane",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "24081",
-   "colour": "Neon Orange",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "1a9c43bb-a2db-53ba-a24a-4b0f980073de",
@@ -17096,7 +17372,11 @@
   "notes": "Named Kenworth T600A for this release",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Big_Rig",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "18837",
+   "colour": "Yellow",
+   "series": "Race Team Crew 5-Pack"
+  }
  },
  {
   "id": "ffaedcfe-8ffd-51b2-bb3c-ddc687c9d9a7",
@@ -17235,9 +17515,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Sol-Aire_CX4",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "65612",
-   "colour": "Metalflake Blue",
-   "series": "Race Team Hauler 3-Pack"
+   "toyNumber": "18805",
+   "colour": "Yellow",
+   "series": "Flyin' Aces / 3/4"
   }
  },
  {
@@ -17260,9 +17540,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'57_Chevy",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "19758",
-   "colour": "Metalflake Blue",
-   "series": "FAO Schwarz Cruisin' the '50s Car Set"
+   "toyNumber": "18796",
+   "colour": "Gray",
+   "series": "Artistic License / 2/4"
   }
  },
  {
@@ -17418,7 +17698,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/GM_Lean_Machine",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "11084",
+   "colour": "Metallic Dark Green & Black",
+   "series": "Bonus Car"
+  }
  },
  {
   "id": "12e66308-25e0-5939-b59c-4c0baa826654",
@@ -17531,7 +17815,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Blimp",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "17458",
+   "colour": null,
+   "series": "City Action 5-Pack"
+  }
  },
  {
   "id": "8f84e04c-fbeb-51dc-a4e4-746c729b9374",
@@ -17673,11 +17961,7 @@
   "notes": "Ultra Rare",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lamborghini_Countach",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "4384",
-   "colour": "White",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "e9366dbd-a37b-5fec-b320-682777ee22d4",
@@ -17698,11 +17982,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Lamborghini_Countach",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": "4384",
-   "colour": "White",
-   "series": "Mainline"
-  }
+  "twin": null
  },
  {
   "id": "b5f2f076-c792-5ffc-8ec7-f9d6bacdb54d",
@@ -17723,7 +18003,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Ferrari_250",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "12936",
+   "colour": "Metalflake Dark Green",
+   "series": "Mainline"
+  }
  },
  {
   "id": "b83ba42b-964e-556e-9116-76c949fba346",
@@ -17769,11 +18053,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'59_Caddy",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": null,
-   "colour": "Black",
-   "series": "50's Favorites 5-Pack"
-  }
+  "twin": null
  },
  {
   "id": "b9b971a9-b4f0-5b7e-a7f3-0daaf327bc87",
@@ -18012,9 +18292,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Purple_Passion",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "12356",
-   "colour": "Enamel Light Green",
-   "series": "Mainline"
+   "toyNumber": "13272",
+   "colour": "Metalflake Black",
+   "series": "Steel Stamp / 1/4"
   }
  },
  {
@@ -18037,9 +18317,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Purple_Passion",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "12356",
-   "colour": "Enamel Light Green",
-   "series": "Mainline"
+   "toyNumber": "13272",
+   "colour": "Metalflake Black",
+   "series": "Steel Stamp / 1/4"
   }
  },
  {
@@ -18061,11 +18341,7 @@
   "notes": "Chrome rear hub",
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": null,
-   "colour": "Metalflake Dark Blue",
-   "series": "Bonus Car"
-  }
+  "twin": null
  },
  {
   "id": "8ef45219-640b-56b4-8a65-e9fa785209ed",
@@ -18086,11 +18362,7 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'67_Camaro",
   "updated": "2026-10-31",
-  "twin": {
-   "toyNumber": null,
-   "colour": "Metalflake Dark Blue",
-   "series": "Bonus Car"
-  }
+  "twin": null
  },
  {
   "id": "816bff9b-2cd1-5ebd-96a7-f91553b01dc4",
@@ -18111,7 +18383,11 @@
   "notes": null,
   "sourceUrl": "https://hotwheels.fandom.com/wiki/'57_T-Bird",
   "updated": "2026-10-31",
-  "twin": null
+  "twin": {
+   "toyNumber": "12404",
+   "colour": "Yellow",
+   "series": "Ford 5-Pack"
+  }
  },
  {
   "id": "a09636a0-8650-5145-8ac2-c2c6968f2590",
@@ -18133,9 +18409,9 @@
   "sourceUrl": "https://hotwheels.fandom.com/wiki/Split_Window_'63",
   "updated": "2026-10-31",
   "twin": {
-   "toyNumber": "13269",
-   "colour": "Light Green",
-   "series": "Krackle Car / 3/4"
+   "toyNumber": "3092",
+   "colour": "Blue",
+   "series": "Mainline"
   }
  },
  {
