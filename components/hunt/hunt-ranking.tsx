@@ -24,7 +24,8 @@ export function HuntRankingList({ cars, locale }: { cars: RankingCar[]; locale: 
     let alive = true;
     const ids = cars.map((car) => car.id);
     const batches: string[][] = [];
-    for (let i = 0; i < ids.length; i += 40) batches.push(ids.slice(i, i + 40));
+    // 12 per request, the Worker's limit (worker/index.ts, PHOTO_BATCH).
+    for (let i = 0; i < ids.length; i += 12) batches.push(ids.slice(i, i + 12));
     Promise.all(
       batches.map((b) =>
         fetch(`/api/photos?ids=${b.join(",")}`)

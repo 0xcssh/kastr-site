@@ -134,11 +134,15 @@ async function listingsResponse(variationId: string, request: Request): Promise<
   return cachedListings(variationId);
 }
 
-/** ?ids=a,b,c (at most 40): the photo of each car's cheapest fresh listing, for the cards of a year's list. */
+/** ?ids=a,b,c (at most PHOTO_BATCH): the photo of each car's cheapest fresh listing, for the cards of a year's list. */
+// Each car costs up to three subrequests (cache read, function call, cache write) and a Worker on the free plan
+// gets 50 per request: past about 15 cars the request fails (error 1101). Pages ask in batches of 12.
+export const PHOTO_BATCH = 12;
+
 export function photoIds(url: URL): string[] | null {
   if (url.pathname !== "/api/photos") return null;
   const ids = (url.searchParams.get("ids") ?? "").split(",").filter((id) => /^[0-9a-f-]{36}$/.test(id));
-  return [...new Set(ids)].slice(0, 40);
+  return [...new Set(ids)].slice(0, PHOTO_BATCH);
 }
 
 async function photosResponse(ids: string[], request: Request): Promise<Response> {

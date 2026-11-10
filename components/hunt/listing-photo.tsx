@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 type Value = { price: number; currency: string; listings: number | null };
 type Photo = { image: string | null; fetchedAt: string; value: Value | null };
 
+// At most 12 cars per request: the Worker's subrequest limit (worker/index.ts, PHOTO_BATCH).
+const BATCH = 12;
 const waiting = new Map<string, ((photo: Photo | null) => void)[]>();
 let timer: ReturnType<typeof setTimeout> | null = null;
 
@@ -19,8 +21,8 @@ function flush() {
   const ids = [...waiting.keys()];
   const callbacks = new Map(waiting);
   waiting.clear();
-  for (let i = 0; i < ids.length; i += 40) {
-    const batch = ids.slice(i, i + 40);
+  for (let i = 0; i < ids.length; i += BATCH) {
+    const batch = ids.slice(i, i + BATCH);
     fetch(`/api/photos?ids=${batch.join(",")}`)
       .then((r) => (r.ok ? (r.json() as Promise<{ photos: Record<string, Photo> }>) : { photos: {} as Record<string, Photo> }))
       .catch(() => ({ photos: {} as Record<string, Photo> }))
