@@ -148,7 +148,7 @@ const en: LegalDoc = {
       blocks: [
         "Scanning first reads the barcode and the toy number on the card on your iPhone, with Apple's on-device frameworks. That image stays on your device.",
         "When on-device reading cannot identify the car, or when you photograph a loose car, Kastr can identify it with AI. The app asks for your permission the first time, and you can turn this off at any time in Settings > Scanner. The photo is then sent over an encrypted connection to our server in the European Union, which forwards it to OpenAI for the sole purpose of identifying the car. Our scan server does not store the photo, and asks OpenAI not to store the request. OpenAI does not use API data to train its models and may keep it for up to 30 days to detect abuse, then deletes it.",
-        "Helping train Kastr's recognition: when you add a car to your garage from a scan, the photo and the car you confirmed can be kept to build Kastr's own recognition model. The permission prompt explains this when you allow AI identification, and you can turn it off at any time in Settings > Scanner. These photos are kept in private storage with the car and a hashed identifier of your app installation, without your account or your name. Their retention period has not been set yet and will be stated here; until then, you can ask us to delete them.",
+        "Helping train Kastr's recognition: when a scan gives an answer, the photo can be kept to build Kastr's own recognition model, with the car the scan named, the car you picked among those it offered, or the car you added to your garage. When AI identification is on, the photo can also be compared by Kastr's own recognition model on a server we rent; it is not kept on that server. The permission prompt explains this when you allow AI identification, and you can turn it off at any time in Settings > Scanner. These photos are kept in private storage with the car and a hashed identifier of your app installation, without your account or your name. Their retention period has not been set yet and will be stated here; until then, you can ask us to delete them.",
         "To count scan credits, we keep a scan counter linked to your account, or to a hashed identifier of your app installation if you have no account.",
       ],
     },
@@ -224,6 +224,7 @@ const en: LegalDoc = {
             "Resend, Inc. (USA): sending sign-in codes and, later, the newsletter.",
             "RevenueCat, Inc. (USA): subscription status.",
             "OpenAI, L.L.C. (USA): identification of scanned cars, only when you use AI identification.",
+            "Contabo GmbH (Germany): hosting of the server that runs Kastr's own recognition model, only when you use AI identification.",
             "Cloudflare, Inc. (USA): website hosting, domain and forwarding of emails to support@kastr.app.",
             "Google LLC (USA): the mailbox where support emails arrive.",
             "Fandom, Inc. (USA): delivery of most catalog photos.",
@@ -437,7 +438,7 @@ const fr: LegalDoc = {
       blocks: [
         "Le scan lit d'abord le code-barres et le numéro de jouet du blister sur votre iPhone, avec les outils embarqués d'Apple. Cette image reste sur votre appareil.",
         "Quand la lecture sur l'iPhone ne suffit pas, ou quand vous photographiez une voiture hors blister, Kastr peut l'identifier avec l'IA. L'app vous demande votre accord la première fois, et vous pouvez désactiver cette option à tout moment dans Réglages > Scanner. La photo est alors envoyée par une connexion chiffrée à notre serveur situé dans l'Union européenne, qui la transmet à OpenAI dans le seul but d'identifier la voiture. Notre serveur de scan ne stocke pas la photo et demande à OpenAI de ne pas conserver la requête. OpenAI n'utilise pas les données de son API pour entraîner ses modèles et peut les conserver jusqu'à 30 jours pour détecter les abus, puis les supprime.",
-        "Aider à entraîner la reconnaissance de Kastr : quand vous ajoutez une voiture à votre garage depuis un scan, la photo et la voiture confirmée peuvent être conservées pour construire le propre modèle de reconnaissance de Kastr. La demande d'accord l'explique quand vous autorisez l'identification par IA, et vous pouvez désactiver ce réglage à tout moment dans Réglages > Scanner. Ces photos sont gardées dans un stockage privé avec la voiture et un identifiant haché de votre installation de l'app, sans votre compte ni votre nom. Leur durée de conservation n'est pas encore fixée et sera indiquée ici ; en attendant, vous pouvez nous demander de les supprimer.",
+        "Aider à entraîner la reconnaissance de Kastr : quand un scan donne une réponse, la photo peut être conservée pour construire le propre modèle de reconnaissance de Kastr, avec la voiture que le scan a nommée, celle que vous avez choisie parmi les propositions, ou celle que vous avez ajoutée à votre garage. Quand l'identification par IA est activée, la photo peut aussi être comparée par le modèle de reconnaissance de Kastr sur un serveur que nous louons ; elle n'y est pas conservée. La demande d'accord l'explique quand vous autorisez l'identification par IA, et vous pouvez désactiver ce réglage à tout moment dans Réglages > Scanner. Ces photos sont gardées dans un stockage privé avec la voiture et un identifiant haché de votre installation de l'app, sans votre compte ni votre nom. Leur durée de conservation n'est pas encore fixée et sera indiquée ici ; en attendant, vous pouvez nous demander de les supprimer.",
         "Pour compter les crédits de scan, nous conservons un compteur lié à votre compte, ou à un identifiant haché de votre installation de l'app si vous n'avez pas de compte.",
       ],
     },
@@ -513,6 +514,7 @@ const fr: LegalDoc = {
             "Resend, Inc. (États-Unis) : envoi des codes de connexion et, plus tard, de la newsletter.",
             "RevenueCat, Inc. (États-Unis) : statut des abonnements.",
             "OpenAI, L.L.C. (États-Unis) : identification des voitures scannées, seulement quand vous utilisez l'identification par IA.",
+            "Contabo GmbH (Allemagne) : hébergement du serveur qui fait tourner le modèle de reconnaissance de Kastr, seulement quand vous utilisez l'identification par IA.",
             "Cloudflare, Inc. (États-Unis) : hébergement du site, nom de domaine et transfert des emails adressés à support@kastr.app.",
             "Google LLC (États-Unis) : la boîte où arrivent les emails d'assistance.",
             "Fandom, Inc. (États-Unis) : diffusion de la plupart des photos du catalogue.",
