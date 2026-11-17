@@ -203,6 +203,13 @@ export const fr: Dictionary = {
     slow: "Trop d'essais depuis ici. Réessaie dans une heure.",
     privacy: "Ce qu'on en fait",
   },
+  consent: {
+    label: "Mesure des publicités",
+    text: "Peut-on mesurer lesquelles de nos publicités amènent des visiteurs ici ? Cela dépose des cookies des plateformes publicitaires que nous utilisons. Le site marche pareil si vous refusez.",
+    more: "Détails",
+    accept: "Autoriser",
+    decline: "Non merci",
+  },
   cta: {
     title: "Ton garage, dans ta poche.",
     body: "Téléchargement gratuit. Pour iPhone avec iOS 17 ou plus récent.",

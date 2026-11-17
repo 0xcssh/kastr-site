@@ -2,6 +2,7 @@ import Link from "next/link";
 import { config } from "@/lib/config";
 import { getDict } from "@/lib/dictionaries";
 import { localeName, locales, type Locale } from "@/lib/i18n";
+import { AdPixels } from "./ad-pixels";
 import { AppStoreBadge } from "./app-store-badge";
 
 // The app's wordmark (Diecast/Views/SplashView.swift, KastrWordmark): three red speed stripes of
@@ -115,6 +116,7 @@ export function SiteShell({ locale, path, children }: { locale: Locale; path: st
           </nav>
         </div>
       </footer>
+      <AdPixels d={d} locale={locale} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { config } from "@/lib/config";
+import { config, hasPixels, pixelVendors } from "@/lib/config";
 import type { Locale } from "@/lib/i18n";
 import type { LegalDoc } from "./types";
 
@@ -8,6 +8,15 @@ import type { LegalDoc } from "./types";
 
 const mail = `[${config.supportEmail}](mailto:${config.supportEmail})`;
 const L = config.legal;
+// The website's ad pixels (components/ad-pixels.tsx): the text follows what lib/config.ts turns on.
+const vendors = pixelVendors.join(" and ");
+const vendorsFr = pixelVendors.join(" et ");
+const siteScriptsEn = hasPixels
+  ? `With your permission only, asked in a banner on your first visit, the website loads the advertising pixel of ${vendors}. It sets cookies and tells ${vendors} which pages you opened and whether you sent the early access form, so that we can measure our ads and show them to people likely to be interested. Your email address is never passed to it. ${vendors} may combine this with what they already know about you, under their own privacy policies. Say no and nothing is loaded; to change your answer, clear this site's data in your browser. Without these pixels the website sets no cookies and runs no analytics.`
+  : "The website sets no cookies and runs no analytics or advertising scripts.";
+const siteScriptsFr = hasPixels
+  ? `Avec votre accord seulement, demandé dans un bandeau à votre première visite, le site charge le pixel publicitaire de ${vendorsFr}. Il dépose des cookies et indique à ${vendorsFr} quelles pages vous avez ouvertes et si vous avez envoyé le formulaire d'accès anticipé, pour mesurer nos publicités et les montrer à des personnes susceptibles d'être intéressées. Votre adresse email ne lui est jamais transmise. ${vendorsFr} peut recouper ces informations avec ce qu'il sait déjà de vous, selon sa propre politique de confidentialité. Si vous refusez, rien n'est chargé ; pour changer de réponse, effacez les données de ce site dans votre navigateur. Sans ces pixels, le site ne dépose aucun cookie et n'utilise aucun script de statistiques.`
+  : "Le site ne dépose aucun cookie et n'utilise aucun script de statistiques ou de publicité.";
 
 const en: LegalDoc = {
   title: "Privacy policy",
@@ -195,7 +204,7 @@ const en: LegalDoc = {
       id: "website",
       heading: "This website and email",
       blocks: [
-        "kastr.app is hosted by Cloudflare. Like any web host, Cloudflare processes your IP address and basic request data in server logs to deliver pages and protect the site. The website sets no cookies and runs no analytics or advertising scripts.",
+        `kastr.app is hosted by Cloudflare. Like any web host, Cloudflare processes your IP address and basic request data in server logs to deliver pages and protect the site. ${siteScriptsEn}`,
         "Emails sent to support@kastr.app are forwarded by Cloudflare to our mailbox hosted by Google. We use your message and email address only to answer you.",
       ],
     },
@@ -493,7 +502,7 @@ const fr: LegalDoc = {
       id: "website",
       heading: "Ce site et les emails",
       blocks: [
-        "kastr.app est hébergé par Cloudflare. Comme tout hébergeur, Cloudflare traite votre adresse IP et des données de requête de base dans des journaux serveur, pour afficher les pages et protéger le site. Le site ne dépose aucun cookie et n'utilise aucun script de statistiques ou de publicité.",
+        `kastr.app est hébergé par Cloudflare. Comme tout hébergeur, Cloudflare traite votre adresse IP et des données de requête de base dans des journaux serveur, pour afficher les pages et protéger le site. ${siteScriptsFr}`,
         "Les emails envoyés à support@kastr.app sont transférés par Cloudflare vers notre boîte hébergée par Google. Votre message et votre adresse servent uniquement à vous répondre.",
       ],
     },

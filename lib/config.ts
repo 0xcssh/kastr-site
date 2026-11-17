@@ -35,6 +35,10 @@ export const config = {
   // eBay Partner Network campaign of the "On eBay now" links (the Worker's EBAY_EPN_CAMPAIGN_ID, public in every link).
   ebayCampaignId: "5339238871",
 
+  // Ad pixels of the website (components/ad-pixels.tsx). Empty = nothing loads and no consent banner shows.
+  // Set an id the day a paid campaign starts; the privacy page changes its wording by itself.
+  pixels: { meta: "", tiktok: "" },
+
   // Platform requirements, shown in the FAQ and structured data.
   platform: { os: "iOS", minVersion: "17", device: "iPhone" },
 } as const;
@@ -45,5 +49,8 @@ export type SiteConfig = typeof config;
 if (!/^https:\/\//.test(config.siteUrl) || /example\.|localhost|REPLACE/i.test(config.siteUrl)) {
   throw new Error("[config] siteUrl must be the real HTTPS origin of the site (lib/config.ts).");
 }
+
+export const pixelVendors: string[] = [config.pixels.meta && "Meta", config.pixels.tiktok && "TikTok"].filter(Boolean) as string[];
+export const hasPixels = pixelVendors.length > 0;
 
 export const isAppLive = !config.appStoreUrl.includes("TODO");

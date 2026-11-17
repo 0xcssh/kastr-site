@@ -2,6 +2,7 @@
 
 import { useId, useState, type FormEvent } from "react";
 import type { Dictionary } from "@/lib/dictionaries";
+import { trackLead } from "./ad-pixels";
 
 // Early access before the app is on the App Store: an email address and the phone the visitor owns.
 // The Worker (/api/beta) hands the post to the app's beta-signup function, which sends the TestFlight
@@ -30,6 +31,7 @@ export function BetaSignup({ d, locale }: { d: Dictionary; locale: string }) {
         body: JSON.stringify({ email, platform, locale, website }),
       });
       setState(response.ok ? "done" : response.status === 429 ? "slow" : "error");
+      if (response.ok) trackLead();
     } catch {
       setState("error");
     }

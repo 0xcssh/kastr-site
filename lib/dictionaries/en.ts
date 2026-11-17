@@ -205,6 +205,14 @@ export const en = {
     slow: "Too many tries from here. Try again in an hour.",
     privacy: "How we use it",
   },
+  // Shown only while lib/config.ts has an ad pixel id (components/ad-pixels.tsx).
+  consent: {
+    label: "Ad measurement",
+    text: "Can we measure which of our ads bring people here? It sets cookies from the ad platforms we use. The site works the same if you say no.",
+    more: "Details",
+    accept: "Allow",
+    decline: "No thanks",
+  },
   cta: {
     title: "Your garage, in your pocket.",
     body: "Free to download. For iPhone with iOS 17 or later.",
