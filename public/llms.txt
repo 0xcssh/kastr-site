@@ -19,7 +19,7 @@
 
 ## Business model
 
-- Free to download. No ads, no ad tracking.
+- Free to download. No ads in the app.
 - Kastr Pro is an optional auto-renewing subscription sold through the App Store. Prices are shown in the app.
 
 ## Data and privacy

@@ -21,7 +21,7 @@ const siteScriptsFr = hasPixels
 const en: LegalDoc = {
   title: "Privacy policy",
   description:
-    "What Kastr collects, why, who processes it, what is public in the community and how to delete it. No ads, no ad tracking, no data sold.",
+    "What Kastr collects, why, who processes it, what is public in the community and how to delete it. No ads in the app, no data sold.",
   dated: true,
   intro: [
     "This policy explains what data the Kastr iPhone app and the kastr.app website collect, why, who helps us process it, what other collectors can see, and the rights you have.",
@@ -41,7 +41,7 @@ const en: LegalDoc = {
       blocks: [
         {
           list: [
-            "There are no ads in Kastr, no ad tracking, and we do not sell your data.",
+            "There are no ads in Kastr and we do not sell your data. Measuring our own ads with Meta happens only if you allow tracking.",
             "Your garage works without an account and then stays on your iPhone.",
             "An account is optional. With one, your garage is backed up and synced privately, and you can join the community.",
             "In the community, your username, bio, avatar (your profile photo or a car), posts and, unless you turn it off, the list of cars in your garage are visible to other collectors, and on your public page at kastr.app/@username unless you turn that page off. What you paid, where you found a car, your notes and your own photos of your cars are never shown to anyone.",
@@ -179,9 +179,12 @@ const en: LegalDoc = {
     },
     {
       id: "analytics",
-      heading: "Analytics",
+      heading: "Analytics and ad measurement",
       blocks: [
-        "Kastr does not use any analytics, crash reporting or tracking tool today. We do not use the advertising identifier (IDFA), we do not track you across other companies' apps or websites, and the app does not ask for tracking permission because it does not track. If we add anonymous usage analytics later, we will update this policy before the update that adds them.",
+        "Kastr does not use any analytics or crash reporting tool.",
+        "To measure the ads we run on Facebook and Instagram, the app contains Meta's software kit. It stays off until you answer the iPhone's question \"Allow Kastr to track your activity across other companies' apps and websites?\", which is asked once. If you choose not to be tracked, the kit never starts and nothing is sent to Meta.",
+        "If you allow it, Meta receives your iPhone's advertising identifier (IDFA), the fact that you installed and opened Kastr, and whether you started a trial, a subscription or a one-time purchase, with its price. Meta links this to its own data to tell us which ads worked and to show our ads to people likely to be interested, under its own privacy policy. Meta never receives your garage, your scans, your photos, your email address or what you do in the community. You can change your answer at any time in the iPhone's Settings > Privacy & Security > Tracking.",
+        "Whatever you answer, Apple may tell the ad platform that an install followed one of our ads, through its own attribution system, which identifies neither you nor your iPhone.",
       ],
     },
     {
@@ -223,7 +226,7 @@ const en: LegalDoc = {
           list: [
             "To provide the service you ask for (account, sign-in emails, sync, scanning, community, notifications you allowed, Kastr Pro): performance of our contract with you.",
             "To keep Kastr secure, moderate content, prevent abuse of free credits and referral rewards, and compute aggregate prices: our legitimate interests, balanced against your rights.",
-            "To keep scan photos for improving recognition, and to send you the newsletter: your consent, which you can withdraw at any time.",
+            "To keep scan photos for improving recognition, to send you the newsletter, and to measure our ads with Meta: your consent, which you can withdraw at any time.",
             "To keep records we are required to keep, or to answer lawful requests: legal obligation.",
           ],
         },
@@ -233,13 +236,14 @@ const en: LegalDoc = {
       id: "processors",
       heading: "Who processes data for us",
       blocks: [
-        "We share data only with the service providers below, who process it on our behalf and under contract, and never for their own advertising.",
+        "We share data only with the service providers below, who process it on our behalf and under contract, and never for their own advertising. The one exception is Meta, and only if you allowed tracking (see Analytics and ad measurement).",
         {
           list: [
             "Apple Inc. and its affiliates (USA, Ireland): Sign in with Apple, App Store payments and push notifications.",
             "Supabase, Inc. (USA), with data hosted in the European Union (Paris, France): accounts, database, file storage and server functions.",
             "Resend, Inc. (USA): sending sign-in codes and, later, the newsletter.",
             "RevenueCat, Inc. (USA): subscription status.",
+            "Meta Platforms Ireland Ltd. (Ireland, USA): measurement of our ads, only if you allowed tracking in the app or accepted it on the website.",
             "OpenAI, L.L.C. (USA): identification of scanned cars, only when you use AI identification.",
             "Contabo GmbH (Germany): hosting of the server that runs Kastr's own recognition model, only when you use AI identification.",
             "Cloudflare, Inc. (USA): website hosting, domain and forwarding of emails to support@kastr.app.",
@@ -319,7 +323,7 @@ const en: LegalDoc = {
 const fr: LegalDoc = {
   title: "Politique de confidentialité",
   description:
-    "Ce que Kastr collecte, pourquoi, qui le traite, ce qui est public dans la communauté et comment le supprimer. Pas de publicité, pas de pistage publicitaire, aucune donnée vendue.",
+    "Ce que Kastr collecte, pourquoi, qui le traite, ce qui est public dans la communauté et comment le supprimer. Pas de publicité dans l'app, aucune donnée vendue.",
   dated: true,
   intro: [
     "Cette politique explique quelles données l'app iPhone Kastr et le site kastr.app collectent, pourquoi, qui nous aide à les traiter, ce que les autres collectionneurs peuvent voir et quels sont vos droits.",
@@ -339,7 +343,7 @@ const fr: LegalDoc = {
       blocks: [
         {
           list: [
-            "Pas de publicité dans Kastr, pas de pistage publicitaire, et nous ne vendons pas vos données.",
+            "Pas de publicité dans Kastr, et nous ne vendons pas vos données. La mesure de nos propres publicités avec Meta n'a lieu que si vous autorisez le suivi.",
             "Votre garage fonctionne sans compte et reste alors sur votre iPhone.",
             "Le compte est facultatif. Avec un compte, votre garage est sauvegardé et synchronisé en privé, et vous pouvez rejoindre la communauté.",
             "Dans la communauté, votre pseudo, votre bio, votre avatar (votre photo de profil ou une voiture), vos publications et, sauf si vous la masquez, la liste des voitures de votre garage sont visibles par les autres collectionneurs, ainsi que sur votre page publique kastr.app/@pseudo, sauf si vous la désactivez. Le prix payé, le lieu de la trouvaille, vos notes et vos propres photos de vos voitures ne sont jamais montrés à personne.",
@@ -477,9 +481,12 @@ const fr: LegalDoc = {
     },
     {
       id: "analytics",
-      heading: "Statistiques",
+      heading: "Statistiques et mesure des publicités",
       blocks: [
-        "Kastr n'utilise aujourd'hui aucun outil de statistiques, de rapport de plantage ni de pistage. Nous n'utilisons pas l'identifiant publicitaire (IDFA), nous ne vous suivons pas dans les apps ou sites d'autres sociétés, et l'app ne demande pas l'autorisation de suivi parce qu'elle ne suit pas. Si nous ajoutons plus tard des statistiques d'usage anonymes, nous mettrons cette politique à jour avant la version qui les ajoute.",
+        "Kastr n'utilise aucun outil de statistiques ni de rapport de plantage.",
+        "Pour mesurer les publicités que nous diffusons sur Facebook et Instagram, l'app contient le kit logiciel de Meta. Il reste éteint tant que vous n'avez pas répondu à la question de l'iPhone « Autoriser Kastr à suivre vos activités dans les apps et sur les sites web d'autres sociétés ? », posée une seule fois. Si vous refusez le suivi, le kit ne démarre jamais et rien n'est envoyé à Meta.",
+        "Si vous l'autorisez, Meta reçoit l'identifiant publicitaire de votre iPhone (IDFA), le fait que vous avez installé et ouvert Kastr, et si vous avez démarré un essai, un abonnement ou un achat unique, avec son prix. Meta relie ces informations à ses propres données pour nous dire quelles publicités ont fonctionné et pour montrer nos publicités à des personnes susceptibles d'être intéressées, selon sa propre politique de confidentialité. Meta ne reçoit jamais votre garage, vos scans, vos photos, votre adresse email ni ce que vous faites dans la communauté. Vous pouvez changer de réponse à tout moment dans Réglages > Confidentialité et sécurité > Suivi sur l'iPhone.",
+        "Quelle que soit votre réponse, Apple peut indiquer à la plateforme publicitaire qu'une installation a suivi l'une de nos publicités, par son propre système d'attribution, qui n'identifie ni vous ni votre iPhone.",
       ],
     },
     {
@@ -521,7 +528,7 @@ const fr: LegalDoc = {
           list: [
             "Fournir le service demandé (compte, emails de connexion, synchronisation, scan, communauté, notifications autorisées, Kastr Pro) : exécution du contrat qui nous lie.",
             "Sécuriser Kastr, modérer les contenus, empêcher les abus de crédits gratuits et de parrainage, et calculer des prix agrégés : notre intérêt légitime, mis en balance avec vos droits.",
-            "Conserver des photos de scan pour améliorer la reconnaissance, et vous envoyer la newsletter : votre consentement, que vous pouvez retirer à tout moment.",
+            "Conserver des photos de scan pour améliorer la reconnaissance, vous envoyer la newsletter et mesurer nos publicités avec Meta : votre consentement, que vous pouvez retirer à tout moment.",
             "Conserver les données exigées par la loi ou répondre à une demande légale : obligation légale.",
           ],
         },
@@ -531,13 +538,14 @@ const fr: LegalDoc = {
       id: "processors",
       heading: "Qui traite des données pour nous",
       blocks: [
-        "Nous ne partageons des données qu'avec les prestataires ci-dessous, qui les traitent pour notre compte et sous contrat, jamais pour leur propre publicité.",
+        "Nous ne partageons des données qu'avec les prestataires ci-dessous, qui les traitent pour notre compte et sous contrat, jamais pour leur propre publicité. Seule exception : Meta, et seulement si vous avez autorisé le suivi (voir Statistiques et mesure des publicités).",
         {
           list: [
             "Apple Inc. et ses filiales (États-Unis, Irlande) : Se connecter avec Apple, paiements App Store et notifications push.",
             "Supabase, Inc. (États-Unis), données hébergées dans l'Union européenne (Paris, France) : comptes, base de données, stockage de fichiers et fonctions serveur.",
             "Resend, Inc. (États-Unis) : envoi des codes de connexion et, plus tard, de la newsletter.",
             "RevenueCat, Inc. (États-Unis) : statut des abonnements.",
+            "Meta Platforms Ireland Ltd. (Irlande, États-Unis) : mesure de nos publicités, seulement si vous avez autorisé le suivi dans l'app ou l'avez accepté sur le site.",
             "OpenAI, L.L.C. (États-Unis) : identification des voitures scannées, seulement quand vous utilisez l'identification par IA.",
             "Contabo GmbH (Allemagne) : hébergement du serveur qui fait tourner le modèle de reconnaissance de Kastr, seulement quand vous utilisez l'identification par IA.",
             "Cloudflare, Inc. (États-Unis) : hébergement du site, nom de domaine et transfert des emails adressés à support@kastr.app.",

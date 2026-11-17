@@ -129,7 +129,7 @@ export const fr: Dictionary = {
       },
       {
         title: "Pas de publicité",
-        body: "Aucune publicité dans Kastr et aucun pistage publicitaire. C'est Kastr Pro qui fait vivre l'app.",
+        body: "Aucune publicité dans Kastr. C'est Kastr Pro qui fait vivre l'app.",
       },
       {
         title: "Ton garage reste sur ton téléphone",

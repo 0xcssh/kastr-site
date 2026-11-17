@@ -130,7 +130,7 @@ export const en = {
       },
       {
         title: "No ads",
-        body: "There are no ads in Kastr and no ad tracking. Kastr Pro is how the app pays for itself.",
+        body: "There are no ads in Kastr. Kastr Pro is how the app pays for itself.",
       },
       {
         title: "Your garage stays on your phone",
