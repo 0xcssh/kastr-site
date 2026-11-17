@@ -124,6 +124,14 @@ const en: LegalDoc = {
       ],
     },
     {
+      id: "beta",
+      heading: "Early access list",
+      blocks: [
+        "Before the app is on the App Store, you can leave your email address on kastr.app. We keep the address, the phone you say you own (iPhone or Android), the language of the page and the date. We use them for two things only: to send you the link to the beta version, and to send you one email when the app is released on your phone.",
+        "To limit abuse of the form, we also keep a scrambled form of the internet address the request came from, which cannot be turned back into the address. These emails are sent with Resend. Every email has an unsubscribe link that works in one click; you can also write to us to be removed. The list is deleted six months after the release on your phone.",
+      ],
+    },
+    {
       id: "newsletter",
       heading: "Newsletter",
       blocks: [
@@ -411,6 +419,14 @@ const fr: LegalDoc = {
       heading: "Notifications",
       blocks: [
         "Si vous autorisez les notifications, votre iPhone donne à l'app un jeton de notification. Nous le conservons avec votre compte, le type de version (test ou App Store), votre langue et vos choix de notifications (activité des autres collectionneurs, et alertes de sorties si vous avez Kastr Pro). Les notifications sont acheminées par le service de notifications push d'Apple. Le jeton est supprimé quand vous vous déconnectez, quand Apple nous indique qu'il n'est plus valable, ou quand vous supprimez votre compte. Vous pouvez couper les notifications à tout moment dans les Réglages de l'iPhone.",
+      ],
+    },
+    {
+      id: "beta",
+      heading: "Liste d'accès anticipé",
+      blocks: [
+        "Avant la sortie de l'app sur l'App Store, vous pouvez laisser votre adresse email sur kastr.app. Nous conservons l'adresse, le téléphone que vous indiquez (iPhone ou Android), la langue de la page et la date. Nous nous en servons pour deux choses seulement : vous envoyer le lien de la version bêta, et vous envoyer un email à la sortie de l'app sur votre téléphone.",
+        "Pour limiter les abus du formulaire, nous conservons aussi une forme brouillée de l'adresse internet d'où vient la demande, qui ne permet pas de retrouver cette adresse. Ces emails sont envoyés avec Resend. Chaque email contient un lien de désinscription qui fonctionne en un clic ; vous pouvez aussi nous écrire pour être retiré. La liste est supprimée six mois après la sortie sur votre téléphone.",
       ],
     },
     {

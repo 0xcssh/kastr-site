@@ -245,6 +245,31 @@ export function preferredLocale(acceptLanguage: string | null): "en" | "fr" {
   return /^\s*fr\b/i.test(acceptLanguage ?? "") ? "fr" : "en";
 }
 
+/**
+ * The early access form (components/beta-signup.tsx): the post goes to the app's beta-signup function,
+ * with the visitor's address for its hourly limit. Only the status comes back.
+ */
+async function betaResponse(request: Request): Promise<Response> {
+  if (request.method !== "POST") return new Response(null, { status: 405, headers: JSON_HEADERS });
+  const body = await request.text();
+  if (body.length > 2000) return new Response(null, { status: 413, headers: JSON_HEADERS });
+  try {
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/beta-signup`, {
+      method: "POST",
+      headers: {
+        apikey: SUPABASE_KEY,
+        "Content-Type": "application/json",
+        "x-client-ip": request.headers.get("CF-Connecting-IP") ?? "",
+      },
+      body,
+    });
+    const status = res.ok ? 200 : res.status === 429 ? 429 : res.status === 400 ? 400 : 502;
+    return new Response(JSON.stringify({ ok: res.ok }), { status, headers: { ...JSON_HEADERS, "Cache-Control": "no-store" } });
+  } catch {
+    return new Response(JSON.stringify({ ok: false }), { status: 502, headers: { ...JSON_HEADERS, "Cache-Control": "no-store" } });
+  }
+}
+
 const worker = {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -283,6 +308,7 @@ const worker = {
     const photos = photoIds(url);
     if (photos) return photosResponse(photos, request);
     if (url.pathname === "/api/search") return searchResponse(url);
+    if (url.pathname === "/api/beta") return betaResponse(request);
 
     const profile = await profileResponse(url, request, env);
     if (profile) return profile;

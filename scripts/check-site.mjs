@@ -87,7 +87,11 @@ for (const locale of LOCALES) {
     // Copy rules (CLAUDE.md §10, §11, §16.5).
     if (/[—–]/.test(text)) fail(`${rel}: em or en dash in visible text`);
     if (/[$€£]\s?\d|\d\s?[$€£]|\b\d+[.,]\d{2}\s?(USD|EUR|GBP)\b/.test(text)) fail(`${rel}: looks like a price in visible text`);
-    if (/<form[\s>]|type="email"/.test(html)) fail(`${rel}: no forms or email capture allowed (no waitlist)`);
+    // One form is allowed: early access before launch (components/beta-signup.tsx, founder, 17 Nov 2026).
+    // It reverses the "no waitlist" rule of 31 Oct for as long as the app is not on the App Store.
+    const forms = html.match(/<form[^>]*>/g) ?? [];
+    if (forms.some((f) => !f.includes("data-beta-signup"))) fail(`${rel}: a form that is not the early access form`);
+    if ((html.match(/type="email"/g) ?? []).length > forms.length) fail(`${rel}: email field outside the early access form`);
     if (/waitlist|liste d'attente/i.test(text)) fail(`${rel}: waitlist wording`);
     if (/\p{Extended_Pictographic}/u.test(text)) fail(`${rel}: emoji in visible text`);
 

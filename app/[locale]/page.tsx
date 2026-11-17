@@ -11,6 +11,8 @@ import {
 import { AnswerBlock } from "@/components/answer-block";
 import { AppScreen } from "@/components/app-screen";
 import { AppStoreBadge } from "@/components/app-store-badge";
+import { BetaSignup } from "@/components/beta-signup";
+import { isAppLive } from "@/lib/config";
 import { Faq } from "@/components/faq";
 import { GarageWall, RevealCard } from "@/components/garage-wall";
 import { HomeHunts } from "@/components/hunt/home-hunts";
@@ -96,10 +98,17 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             </span>
           </h1>
           <p className="enter enter-delay mt-6 max-w-[40ch] text-lg leading-relaxed text-muted sm:text-xl">{d.hero.subtitle}</p>
-          <div className="enter enter-delay-2 mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <AppStoreBadge d={d} />
-            <p className="text-sm text-muted">{d.hero.note}</p>
-          </div>
+          {isAppLive ? (
+            <div className="enter enter-delay-2 mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <AppStoreBadge d={d} />
+              <p className="text-sm text-muted">{d.hero.note}</p>
+            </div>
+          ) : (
+            // Before launch: the email that brings the beta, not a button that leads nowhere.
+            <div id="beta" className="enter enter-delay-2 mt-9 scroll-mt-24">
+              <BetaSignup d={d} locale={locale} />
+            </div>
+          )}
         </div>
         <div className="enter enter-delay-2 relative mx-auto w-full max-w-[27rem]">
           <div aria-hidden="true" className="absolute -inset-[4%] bg-[radial-gradient(closest-side,rgba(248,197,65,0.2),transparent)]" />
@@ -322,9 +331,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
               <span>{d.cta.title}</span>
             </h2>
             <p className="mt-5 text-lg text-muted">{d.cta.body}</p>
-            <div className="mt-9">
-              <AppStoreBadge d={d} />
-            </div>
+            <div className="mt-9">{isAppLive ? <AppStoreBadge d={d} /> : <BetaSignup d={d} locale={locale} />}</div>
           </div>
           <div aria-hidden="true" className="relative mx-auto w-full max-w-sm">
             <div className="absolute -inset-[4%] bg-[radial-gradient(closest-side,rgba(248,197,65,0.25),transparent)]" />
