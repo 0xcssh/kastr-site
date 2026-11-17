@@ -37,7 +37,7 @@ export const config = {
 
   // Ad pixels of the website (components/ad-pixels.tsx). Empty = nothing loads and no consent banner shows.
   // Set an id the day a paid campaign starts; the privacy page changes its wording by itself.
-  pixels: { meta: "", tiktok: "" },
+  pixels: { meta: "2312621556247309", tiktok: "" },
 
   // Platform requirements, shown in the FAQ and structured data.
   platform: { os: "iOS", minVersion: "17", device: "iPhone" },
